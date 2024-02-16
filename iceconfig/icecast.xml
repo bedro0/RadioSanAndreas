@@ -1,0 +1,66 @@
+<icecast>
+    <location>San Andreas</location>
+    <hostname>localhost</hostname>
+    <admin>admin</admin>
+    <fileserve>1</fileserve>
+
+    <limits>
+        <clients>128</clients>
+        <sources>16</sources>
+        <queue-size>65536</queue-size>
+        <client-timeout>30</client-timeout>
+        <header-timeout>15</header-timeout>
+        <source-timeout>10</source-timeout>
+        <burst-on-connect>1</burst-on-connect>
+        <burst-size>65536</burst-size>
+    </limits>
+
+    <authentication>
+        <source-password>hackme</source-password>
+        <relay-password>hackme</relay-password>
+        <admin-user>admin</admin-user>
+        <admin-password>hackme</admin-password>
+    </authentication>
+
+    <listen-socket>
+        <port>8000</port>
+    </listen-socket>
+
+    <logging>
+        <accesslog>access.log</accesslog>
+        <errorlog>error.log</errorlog>
+        <!--<playlistlog>playlist.log</playlistlog>-->
+        <loglevel>4</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
+        <logsize>32768</logsize>
+    </logging>
+
+    <security>
+        <chroot>0</chroot>
+        <changeowner>
+            <user>icecast2</user>
+            <group>icecast</group>
+        </changeowner>
+    </security>
+
+    <http-headers>
+        <header name="Access-Control-Allow-Origin" value="*" />
+<!--    
+        <header name="X-Robots-Tag" value="index, noarchive" />
+        <header name="foo" value="bar" status="200" />
+        <header name="Nelson" value="Ha-Ha!" status="404" />
+-->
+    </http-headers>
+
+    <paths>
+    <!--
+        <basedir>./</basedir>
+        <allow-ip>/path/to/ip_allowlist</allow-ip>
+        <deny-ip>/path_to_ip_denylist</deny-ip>
+    -->
+        <alias source="/" destination="/status.xsl"/>
+        <logdir>/.icecast/logs</logdir>
+        <pidfile>/.icecast/pid</pidfile>
+        <webroot>/usr/share/icecast2/web</webroot>
+        <adminroot>/usr/share/icecast2/admin</adminroot>
+    </paths>
+</icecast>

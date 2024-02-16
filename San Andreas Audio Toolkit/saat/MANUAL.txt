@@ -1,0 +1,547 @@
+
+                  The San Andreas Audio Toolkit (SAAT) User Manual
+
+Current Version: 1.10
+
+   The San Andreas Audio Toolkit (SAAT) is a set of commandline tools useful
+   for modding the PC version of the video game Grand Theft Auto: San Andreas.
+   SAAT allows the importing of music files into SA audio streams and the
+   importing of WAVe files into SA sfx archives. It will also necessarily
+   allow exporting from each type of archive into individual files.
+
+   SAAT was written by Dave Schmitt (AKA "P.D. Escobar") in C++; it is an
+   open-source program released under the [1]GNU General Public License. It
+   was based on the open-source program [2]Radio Free San Andreas and uses
+   several open-source libraries: [3]libogg and libvorbis for Ogg Vorbis
+   processing and [4]libsndfile for other sound processing.
+
+Resources
+
+  Download Locations for Version 1.10
+
+   SAAT is distributed in two primary locations.
+     * From the official website:
+       [5]http://pdescobar.home.comcast.net/gta/saat/SAAT_release_1_10.zip
+     * From GTA Garage: [6]http://www.gtagarage.com/mods/show.php?id=1186
+
+  Official Website
+
+   The official SAAT website is
+   [7]http://pdescobar.home.comcast.net/gta/saat/. It contains the most recent
+   version of this README file, other documentation, and the distribution
+   downloads.
+
+  Feedback
+
+   The main place for discussion and feedback on SAAT is its GTA Forums
+   thread: [8]http://www.gtaforums.com/index.php?showtopic=225049. You may
+   also contact the author directly via email at <pdescobar@comcast.net>.
+
+Installation
+
+  Windows Binaries
+
+   To install, simply unzip the archive and copy/move saat_stream.exe,
+   saat_sfx.exe, and all INI files to a useful location such as the GTASA main
+   directory. To use, follow the directions below and then follow the usage or
+   examples.
+    1. Open a Command Prompt window. On Windows XP this is done by choosing
+       Start -> All Programs -> Accessories -> Command Prompt.
+    2. In the Command Prompt window, type the name of the drive where you
+       installed the executables and hit return. For example, if you installed
+       the executables to drive D: you would type
+         D:
+       and then return.
+    3. Change to the directory where you installed the executables by using
+       the cd command. For example, if you installed the executables to
+       D:\Program Files\Rockstar Games\GTA San Andreas you would type
+         cd "D:\Program Files\Rockstar Games\GTA San Andreas"
+       and then return.
+    4. You are now ready to use the program; see the usage or examples for
+       more.
+
+  Source
+
+   To install from source, unzip the full archive and open a command prompt to
+   the src directory. Open Makefile in an editor and change the PLATFORM
+   variable to a value useful for your environment, editing as necessary. Then
+   simply type 'make' in the source directory to compile. After compilation,
+   you would follow the instructions for the binary installation above.
+
+Usage
+
+  Stream tool
+
+saat_stream.exe -e <stream_file(s)> <target_dir>
+  Simple export mode; exports all tracks from <stream_file(s)>, storing the Ogg
+  Vorbis files in an appropriately named subdirectory of <target_dir>.
+
+saat_stream.exe -r <stream_file(s)> <target_dir> <metadata_file>
+  RFSA export mode; like -e but uses contents of <metadata_file> for additional
+  descriptive information to tag and name the exported files.
+  Note: running RFSA mode on modified streams could lead to confusion.
+
+saat_stream.exe -i <target_stream> <import_ini> <lookup_file>
+  Import mode; creates <target_stream> based on the information and filename
+  references in <import_ini>. Also updates <lookup_file> to reflect the changes
+
+  SFX tool
+
+saat_sfx.exe -e <archive_file(s)> <target_dir> <lookup_file>
+  Export mode; exports all sounds from <archive_file(s)>, storing the WAVe
+  files in an appropriately named subdirectory of <target_dir>.
+  Uses <lookup_file> to help locate sounds within the archive.
+
+saat_sfx.exe -i <target_archive> <import_ini> <lookup_file>
+  Import mode; creates <target_archive> based on the information and filename
+  references in <import_ini>. Also updates <lookup_file> to reflect the changes
+
+Examples
+
+  I. Stream Tool
+
+    A. Exporting streams example: BEATS
+       Assumptions:
+          + This example assumes that GTASA is installed to the directory
+            c:\Program Files\Rockstar Games\GTA San Andreas\.
+          + It also assumes that saat_stream.exe is in that directory.
+          + It further assumes that directory c:\temp exists and is usable.
+       Steps:
+         1. Open a command prompt window and change to the GTASA install
+            directory
+         2. At the command prompt type the following:
+              saat_stream -e audio\streams\BEATS c:\temp\saat
+         3. This will create a directory called c:\temp\saat\BEATS which will
+            contain the 10 Ogg Vorbis tracks from that stream (files named
+            simply such as "Track_001.ogg") and a file called
+            stream_import.ini which can be used to import any changes.
+    B. Exporting streams with metadata example: BEATS
+       Assumptions:
+          + This example assumes that GTASA is installed to the directory
+            c:\Program Files\Rockstar Games\GTA San Andreas\.
+          + It also assumes that saat_stream.exe and metadata-full.ini are in
+            that directory.
+          + It further assumes that directory c:\temp exists and is usable.
+       Steps:
+         1. Open a command prompt window and change to the GTASA install
+            directory
+         2. At the command prompt type the following:
+              saat_stream -r audio\streams\BEATS c:\temp\saat metadata-full.ini
+         3. This will create a directory called c:\temp\saat\Beats which will
+            contain the 10 Ogg Vorbis tracks from that stream (files named
+            descriptively such as "Club Dance Track #2 (Hollywood
+            Swingin').ogg" & tagged with appropriate comments) and a file
+            called stream_import.ini which can be used to import any changes.
+    C. Importing streams example: Replacing two dance tracks.
+       Assumptions:
+          + This example assumes you've done the above BEATS export (example
+            A) and it makes all of the same assumptions that example A makes.
+          + It also assumes that you have a file somewhere called "New
+            Dance.ogg"
+          + It further assumes that you have a second file
+            c:\music\dance_mix.ogg
+       Steps:
+         1. Copy "New Dance.ogg" into the c:\temp\saat\BEATS directory.
+         2. Open c:\temp\saat\BEATS\stream_import.ini in notepad and look in
+            the section [Track_003] (this is originally "Funky President")
+         3. Change the line which says "filename = Track_003.ogg" so that it
+            says "filename = New Theme.ogg"
+         4. Now look in the section [Track_004] (this is originally "Nuthin'
+            But a 'G' Thang")
+         5. Change the line which says "filename = Track_004.ogg" so that it
+            says "filename = c:\music\dance_mix.ogg"
+         6. Save the changes and exit notepad.
+         7. Backup your original BEATS audio stream and the TrakLkup.dat file
+            Using the game directory from the example, these files would be:
+            c:\Program Files\Rockstar Games\GTA San
+            Andreas\audio\streams\BEATS
+            c:\Program Files\Rockstar Games\GTA San
+            Andreas\audio\CONFIG\TrakLkup.dat
+         8. Go back to the command prompt from the previous example and type:
+              saat_stream -i audio\streams\BEATS c:\temp\saat\BEATS\stream_import.ini audio\CONFIG\TrakLkup.dat
+         9. Start a new game, head to the dance club, enter the red marker and
+            hear your new music.
+        10. Note, the dance moves remain unchanged from the original songs in
+            this example.
+
+  II. SFX Tool
+
+    A. Exporting sound effects example: GENRL
+       Assumptions:
+          + This example assumes that GTASA is installed to the directory
+            c:\Program Files\Rockstar Games\GTA San Andreas\.
+          + This example assumes that GTASA is installed to the directory
+            c:\Program Files\Rockstar Games\GTA San Andreas\
+          + It also assumes that saat_sfx.exe is in that directory
+          + It further assumes that directory c:\temp exists and is usable
+       Steps:
+         1. Open a command prompt window and cd to the GTASA install directory
+         2. At the command prompt type the following:
+              saat_sfx -e audio\SFX\GENRL c:\temp\saat audio\CONFIG\BankLkup.dat
+         3. This will create a directory called c:\temp\saat\GENRL which will
+            contain a file called sfx_import.ini and 137 Bank_XXX
+            subdirectories; each of these directories will contain WAV format
+            sound files.
+    B. Importing sound effects example: Changing the emergency vehicle siren.
+       Assumptions:
+          + This example assumes you've done the above GENRL export and
+            assumes all of the same things that example assumed.
+          + It also assumes that you have a 16-bit PCM mono WAV file somewhere
+            called "siren.wav"; the sample rate of the sound shouldn't matter.
+       Steps:
+         1. Open c:\temp\saat\GENRL\sfx_import.ini in notepad and look in the
+            section [Bank_068]
+         2. Copy siren.wav to the c:\temp\saat\GENRL directory.
+         3. The main siren is sound 011 and the alternate siren that plays
+            when you use the horn is sound 012. Assuming we want to replace
+            the main siren, change the line "sound_011.filename =
+            Bank_068\sound_011.wav" to instead say "sound_011.filename =
+            siren.wav"
+         4. Save the changes and exit notepad.
+         5. Backup your original GENRL sfx archive and the BankLkup.dat file
+            Using the game directory from the example, these files would be:
+            c:\Program Files\Rockstar Games\GTA San Andreas\audio\SFX\GENRL
+            c:\Program Files\Rockstar Games\GTA San
+            Andreas\audio\CONFIG\BankLkup.dat
+         6. Go back to the command prompt from the previous example and type:
+              saat_sfx -i audio\SFX\GENRL c:\temp\saat\GENRL\sfx_import.ini audio\CONFIG\BankLkup.dat
+         7. Load a game, grab an emergency vehicle and enjoy your new siren.
+
+Notes on import formats
+
+   In order for your sounds to play correctly in the game, they must be in the
+   proper format. Thus, it will be highly useful to have an audio editor or
+   conversion program available. There are many such programs, but one of note
+   is Audacity. I single out Audacity because it is an open source audio
+   editor and it is one of the tools used to test SAAT. Audacity is available
+   at [9]http://audacity.sourceforge.net/
+
+  Streams
+
+   Currently, SAAT will only accept Ogg Vorbis files for stream import. The
+   bitrate shouldn't matter but the unmodified game uses variable bitrate
+   files so that would be the preference. The most important thing is that the
+   Ogg Vorbis files must be in stereo. If you import a mono file, it will play
+   at double speed resulting in a "chipmunk" effect. If you have a mono file,
+   make a stereo file out of it by duplicating the original single track for
+   both the left and right channels before importing.
+
+   Also note that there appear to be some minimum length restrictions on
+   stream tracks. In testing, very short (< 2 seconds) sounds worked fine for
+   AMBIENCE sounds, but caused problems when used as part of radio songs.
+   Within the radio streams, all radio songs/shows are broken up into several
+   pieces. There are one or more small "intro" segments, a large "mid"
+   segment, and one or more small "outro" segments. When the track is played,
+   the game randomly picks an intro and outro and then plays the three
+   selected pieces in order. In the unmodified game, the shortest pieces are
+   in the area of 7-10 seconds. In limited testing, pieces of 5 seconds or
+   less seemed to confuse the game and cause long pauses of "dead air" after
+   the piece was played. More testing should be done in this area, but for now
+   be cautious about using very short song pieces.
+
+  Sound Effects
+
+   SAAT can handle most of the file formats that libsndfile can process. Since
+   all the original sound effects are mono, 16-bit integer (little endian),
+   PCM (uncompressed) WAVe files (without headers,) that is the preferred
+   format. As with the streams, the most important thing is that it is a mono
+   sound. If you have a stereo sound, you must mix it down to a single channel
+   before you import it. Otherwise, in the game it will play at half speed.
+   You should not have to worry about the sample rate as the game uses
+   whatever rate it is told to use; however, the sample rate of the exported
+   sound is listed in the import INI file. This will allow you to ensure the
+   replacement sound uses the same rate if you would like to be extra
+   cautious.
+
+   The following formats have worked in testing and will probably work for
+   you:
+     * mono 16-bit PCM WAV (preferred as no internal conversion is necessary)
+     * mono 8-bit PCM WAV
+     * mono 4-bit MS ADPCM WAV
+     * mono 4-bit IMA ADPCM WAV
+     * mono 16-bit PCM AIFF
+     * mono 8-bit PCM AIFF
+     * mono 16-bit PCM AU
+     * mono 8-bit ULAW AU
+
+   The following formats have not worked in testing and should be avoided:
+     * mono 32-bit float WAV
+     * mono 32-bit float AIFF
+     * mono headerless RAW
+     * stereo anything (see notes above)
+
+   These formats may be supported in future versions of SAAT.
+
+   For other formats, if it is supported for reading by libsndfile, there is a
+   chance it will work. Feel free to experiment with such formats and report
+   back to the author so it can be included in the documentation of future
+   versions. The libsndfile homepage is
+   [10]http://www.mega-nerd.com/libsndfile/
+
+   One final note, imported sfx files must be less than 10MB. Anything over
+   that will definitely cause a problem, and sfx files close to that might
+   cause a problem. Since the largest sound in the unmodified game is
+   approximately .5 MB this really shouldn't be an issue.
+
+Useful INI values
+
+   SAAT uses INI files for a variety of purposes. Currently, there are three
+   main types of INI files: metadata files, stream import files, and sfx
+   import files. What follows are brief format outlines and useful values for
+   these.
+
+I. metadata INI files
+
+   Because SAAT was born of RFSA, it uses an INI file for metadata information
+   when doing stream exports.
+
+   A. [global] section
+
+      The metadata INI should have a [global] section for tagging
+      information relevant to every stream in the game. In this section,
+      two key strings are useful.
+
+      1. albumprefix -- The ALBUM tag for each file will be comosed of this
+         prefix followed by the 'station' name for the stream.
+
+      2. defaultartist -- If ARTIST tag information is not given for an
+         individual track or individual stream, this is used; it is the last
+         resort and if missing, the hardcoded default is "Rockstar North"
+
+   B. stream sections (md5 string or basename)
+
+      RFSA used an MD5 checksum as the stream identifier. In order to
+      maintain RFSA compatibility, these checksums can still be used, but
+      due to the SAAT implementation, they are faked. That means that the
+      checksum [8a388107cdf3934b3f7a3f1e2b33199c] will be interpreted as
+      the AA stream regardless of the actual contents of AA.
+
+      SAAT also allows a more simple basename as the stream identifier.
+      Thus, information for stream AA can be placed in a section [AA]
+      This is the preferred identifier and will be used first if found.
+
+      In stream sections the following key strings are useful. Note that
+      most are of the form "trackX.YYYY"; these are track-specific and
+      only apply to track 'X'. For example, track5.title is the title
+      for track 5.
+
+      1. stream -- unused by the program; mere description in the supplied
+         metadata-full.ini so that the user knows at a glance which stream
+         the section applies to since most people don't know the md5 sums.
+
+      2. station -- used as the subdirectory name for the exported tracks
+         and as part of the ALBUM tag for each track in the stream.
+
+      3. defaultartist -- default ARTIST tag for the stream; generally the
+         voice actor for the station DJ(s).
+
+      4. trackX.title -- TITLE tag for the track and default filename;
+         if it is used for the filename, ".ogg" is appended and it may be
+         sanitized to remove problem characters.
+
+      5. trackX.filename -- specific filename to override use of title. If
+         not present, trackX.title is used; if neither is present the
+         hardcoded default of "Track_xxx.ogg" is used.
+
+      6. trackX.artist -- ARTIST tag for the track. If not present, the
+         stream defaultartist is used; if neither is present, the [global]
+         defaultartist is used.
+
+II. stream import INI files
+
+    Information related to how to build a stream when importing is stored
+    in a stream import INI file. Such a file is automatically generated
+    when exporting, but in theory could be created from scratch.
+
+    A. [Stream] section
+
+       The stream import INI must have a [Stream] section for global
+       stream-related information. Note the capitalization. In this section,
+       the following key strings are useful.
+
+       1. basename -- currently unused by importer; contains the base filename
+          of the stream which was exported
+
+       2. lookup_index -- in order to pick out the proper track in the stream
+          archive, the game uses a lookup table called TrakLkup.dat; this is
+          the index of the imported stream within that file. You should only
+          change this if you really know what you are doing. Note that if
+          you export from a stream with a nonstandard name, SAAT will warn
+          and set the lookup_index to -1; in that case you must change it
+          to a valid value before importing with that INI. In the unmodified
+          game, the following indices are used for the streams:
+
+           0 = AA (Police)
+           1 = ADVERTS
+           2 is unused by the game
+           3 = AMBIENCE
+           4 = BEATS
+           5 = CH (Playback)
+           6 = CO (KROSE)
+           7 = CR (KDST)
+           8 = CUTSCENE
+           9 = DS (Bounce FM)
+          10 = HC (SFUR)
+          11 = MH (Radio Los Santos)
+          12 = MR (Radio X)
+          13 = NJ (CSR)
+          14 = RE (KJAH West)
+          15 = RG (MasterSounds)
+          16 = TK (WCTR)
+
+       3. num_tracks -- the number of actual tracks in the stream; this really
+          should not be changed and there must be an equivalent number of
+          [Track_XXX] sections or bad things will happen.
+
+    B. Track sections
+
+       The stream import INI must have a [Track_XXX] section for each track
+       which will be imported into the stream. The first track will use
+       section [Track_001], the second [Track_002], etc. Useful key strings:
+
+       1. beat_total -- If a given track will be used for the Dance minigame
+          or the LowRider Challenge minigame, it must have the "beat"
+          information defined in the stream. If the beat_total is 0, there
+          will be no such information stored in the stream. However, if the
+          beat_total is nonzero then the track section should contain the
+          beat information which will be imported. In the unmodified game,
+          only 6 tracks in the BEATS stream contain such information.
+
+       2. beat_YYY.timing -- If the track has beats, there should be timings
+          defined for each one. Thus if your beat_total is 170 there should
+          be 170 separate beat_YYY.timing entries numbered consecutively
+          from beat_000.timing through beat_169.timing; they don't necessarily
+          have to be listed in numerical order. Each timing value is the number
+          of elapsed miliseconds from the start of the song when the beat
+          should be entered. As such, beat_001.timing should be a higher
+          value than beat_000.timing and so on. If this is not the case, SAAT
+          will warn you on import and attempt to adjust the timings.
+
+       3. beat_YYY.control -- If the track has beats, there should be controls
+          defined for each one. Thus if your beat_total is 170 there should
+          be 170 separate beat_YYY.control entries numbered consecutively
+          from beat_000.control through beat_169.control; they don't
+          necessarily have to be listed in numerical order. Each control
+          value is an identifier for which key must be pressed to enter that
+          beat. The following control values are useful and dance values
+          probably should not be mixed with bounce values; invalid controls
+          will cause SAAT to warn you on import and prematurely end the beats.
+
+          Dance Controls               LowRider Challenge Bounce Controls
+          1 = Down Arrow                9 = Right (6)   13 = Up (8)
+          2 = Left Arrow               10 = Left (4)    14 = Down (2)
+          3 = Up Arrow                 11 = Up/Rt (8+6) 15 = Up/Lt (8+4)
+          4 = Right Arrow              12 = Dn/Lt (2+4) 16 = Dn/Rt (2+6)
+
+          33 = Beat End token (should be the last defined control)
+
+       4. filename -- The name of the sound file which is being imported for
+          this track. This can be a relative path ("foo.ogg", "..\bar\baz.ogg")
+          or an absolute local path ("\temp\moo.ogg", "C:\music\my song.ogg").
+          The filename should not be quoted in any way and embedded spaces
+          are okay. The INI file will be scanned on import and missing/invalid
+          filenames will cause an error and the import will be aborted.
+
+       5. length_index -- The length of the Ogg Vorbis file is stored in the
+          track header within the stream; however, the position of this length
+          varies somewhat. Tracks which have beat information generally use
+          a length_index of 1 while other tracks use a length_index of 0. This
+          value is stored in the INI on export and shouldn't be changed.
+
+       6. length_extra -- There is an unknown 32-bit integer value stored in
+          the track header after the length. It looks like it may have once
+          been intended as a sample rate but is now probably unused. To be
+          cautious, this value is stored in the INI on export and probably
+          shouldn't be changed. For the curious, most tracks have 48000 here,
+          but all the AMBIENCE tracks use 24000. Additionally, most of the
+          CUTSCENE tracks use 0 aside from a couple 48000s and one 25137.
+
+III. sfx import INI files
+
+    Information related to how to build a sfx archive when importing is stored
+    in a sfx import INI file. Such a file is automatically generated
+    when exporting, but in theory could be created from scratch.
+
+    A. [Archive] section
+
+       The sfx import INI must have an [Archive] section for global
+       archive-related information. Note the capitalization. In this section,
+       the following key strings are useful.
+
+       1. basename -- currently unused by importer; contains the base filename
+          of the archive which was exported.
+
+       2. lookup_index -- in order to pick out the proper sound from the sfx
+          archive, the game uses a lookup table called BankLkup.dat; this is
+          the index of the imported archive within that file. You should only
+          change this if you really know what you are doing. Note that if
+          you export from a archive with a nonstandard name, SAAT will warn
+          and set the lookup_index to -1; in that case you must change it
+          to a valid value before importing with that INI. In the unmodified
+          game, the following indices are used for the archives:
+
+           0 = FEET
+           1 = GENRL
+           2 = PAIN_A
+           3 = SCRIPT
+           4 = SPC_EA
+           5 = SPC_FA
+           6 = SPC_GA
+           7 = SPC_NA
+           8 = SPC_PA
+
+       3. num_banks -- sfx archives are divided up into several sound "banks"
+          which each contain between 1 and 400 actual sound effects. This is
+          the number of sound banks within the archive; this really
+          should not be changed and there must be an equivalent number of
+          [Bank_XXX] sections or bad things will happen.
+
+    B. Bank sections
+
+       In bank sections the following key strings are useful. Note that
+       most are of the form "sound_YYY.ZZZZ" ; these are specific to an
+       individual sound effect. For example sound004.filename is the
+       filename of the fourth sound in the bank.
+
+       1. num_sounds -- This is the number of sound effects within the bank.
+          Once again, it really shouldn't be changed and there should be
+          an equivalent number of sound_YYY.ZZZZ entries in the bank section.
+
+       2. sound_YYY.filename -- The name of the sound file which is being
+          imported. This can be a relative path ("foo.wav", "..\bar\baz.wav")
+          or an absolute local path ("\temp\moo.wav", "C:\sound\cool sfx.wav").
+          The filename should not be quoted in any way and embedded spaces
+          are okay. The INI file will be scanned on import and missing/invalid
+          filenames will cause an error and the import will be aborted.
+
+       3. sound_YYY.sample_rate -- The sample rate of the exported sound
+          effect. This is for informational purposes only in case you wish
+          to save your replacement sound at the same rate as the original.
+
+       4. sound_YYY.unknown_16 -- There is an unknown 16-bit integer value
+          stored in the bank header for each sound after the sample rate.
+          The most common value is 0 but a wide variety of non-zero values
+          are also seen. If a given sound entry has a non-zero value, it is
+          stored on export with this key string. It is probably a bad idea
+          to change this value or to add this key with a different value.
+
+       5. sound_YYY.unknown_32 -- There is an unknown 32-bit integer value
+          stored in the bank header for each sound. The standard value used
+          is -1, but if a given sound entry has a non-standard value, it is
+          stored on export with this key string. It is probably a bad idea
+          to change this value or to add this key with a non-standard value.
+
+End of SAAT User Manual
+
+References
+
+   1. http://www.gnu.org/licenses/licenses.html#GPL
+   2. http://www.lysator.liu.se/~creideiki/radio-free-san-andreas/
+   3. http://www.xiph.org/downloads/
+   4. http://www.mega-nerd.com/libsndfile/
+   5. http://pdescobar.home.comcast.net/gta/saat/SAAT_release_1_10.zip
+   6. http://www.gtagarage.com/mods/show.php?id=1186
+   7. http://pdescobar.home.comcast.net/gta/saat/
+   8. http://www.gtaforums.com/index.php?showtopic=225049
+   9. http://audacity.sourceforge.net/
+  10. http://www.mega-nerd.com/libsndfile/

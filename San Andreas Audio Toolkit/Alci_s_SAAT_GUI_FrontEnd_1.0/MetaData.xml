@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<Content>
+	<!-- Define here the info-data -->
+	<InfoData Id="1" Text="Bravura;Euros;Elegy;Uranus;Merit;Mesa;Primo;Cadrona;Nebula;Previon;Solair;ZR350" />
+	<InfoData Id="2" Text="Glendale;Oceanic;Tornado" />
+	<InfoData Id="3" Text="Cabbie;Fortune;Intruder;Picador;Sunrise;Vincent;Willard" />
+	<InfoData Id="4" Text="Broadway;Hermes;Remington" />
+	<InfoData Id="5" Text="Wayfarer;HPV1000" />
+	<InfoData Id="6" Text="Blade;Buccaneer;Clover;Sabre;Savanna;Stallion;Voodoo" />
+	<InfoData Id="7" Text="Quad;Sanchez" />
+	<InfoData Id="8" Text="Mr. Whoopee" />
+	<InfoData Id="9" Text="Admiral;Police Car;Sentinel;Taxi;Jester;Flash;Stratum;Stafford;Esperanto;Majestic" />
+	<InfoData Id="10" Text="Banshee;Cheetah;Comet;Super GT;Turismo" />
+	<InfoData Id="11" Text="FCR 900;Bandito" />
+	<InfoData Id="12" Text="NRG 500" />
+	<InfoData Id="13" Text="Freeway" />
+	<InfoData Id="14" Text="Camper Van" />
+
+	<!-- Define here the association between the item and the information -->
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_001/sound_001.wav" InfoDataItemId="1" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_001/sound_002.wav" InfoDataItemId="1" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_002/sound_001.wav" InfoDataItemId="1" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_002/sound_002.wav" InfoDataItemId="1" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_002/sound_003.wav" InfoDataItemId="1" />
+
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_010/sound_001.wav" InfoDataItemId="2" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_010/sound_002.wav" InfoDataItemId="2" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_011/sound_001.wav" InfoDataItemId="2" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_011/sound_002.wav" InfoDataItemId="2" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_011/sound_003.wav" InfoDataItemId="2" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_019/sound_001.wav" InfoDataItemId="3" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_019/sound_002.wav" InfoDataItemId="3" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_020/sound_001.wav" InfoDataItemId="3" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_020/sound_002.wav" InfoDataItemId="3" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_020/sound_003.wav" InfoDataItemId="3" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_028/sound_001.wav" InfoDataItemId="4" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_028/sound_002.wav" InfoDataItemId="4" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_029/sound_001.wav" InfoDataItemId="4" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_029/sound_002.wav" InfoDataItemId="4" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_029/sound_003.wav" InfoDataItemId="4" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_034/sound_001.wav" InfoDataItemId="5" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_034/sound_002.wav" InfoDataItemId="5" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_035/sound_001.wav" InfoDataItemId="5" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_035/sound_002.wav" InfoDataItemId="5" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_035/sound_003.wav" InfoDataItemId="5" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_039/sound_001.wav" InfoDataItemId="6" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_039/sound_002.wav" InfoDataItemId="6" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_040/sound_001.wav" InfoDataItemId="6" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_040/sound_002.wav" InfoDataItemId="6" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_040/sound_003.wav" InfoDataItemId="6" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_041/sound_001.wav" InfoDataItemId="7" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_041/sound_002.wav" InfoDataItemId="7" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_042/sound_001.wav" InfoDataItemId="7" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_042/sound_002.wav" InfoDataItemId="7" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_042/sound_003.wav" InfoDataItemId="7" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_072/sound_001.wav" InfoDataItemId="8" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_072/sound_002.wav" InfoDataItemId="8" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_073/sound_001.wav" InfoDataItemId="8" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_073/sound_002.wav" InfoDataItemId="8" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_073/sound_003.wav" InfoDataItemId="8" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_080/sound_001.wav" InfoDataItemId="9" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_080/sound_002.wav" InfoDataItemId="9" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_081/sound_001.wav" InfoDataItemId="9" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_081/sound_002.wav" InfoDataItemId="9" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_081/sound_003.wav" InfoDataItemId="9" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_096/sound_001.wav" InfoDataItemId="10" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_096/sound_002.wav" InfoDataItemId="10" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_097/sound_001.wav" InfoDataItemId="10" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_097/sound_002.wav" InfoDataItemId="10" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_097/sound_003.wav" InfoDataItemId="10" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0108/sound_001.wav" InfoDataItemId="11" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0108/sound_002.wav" InfoDataItemId="11" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0109/sound_001.wav" InfoDataItemId="11" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0109/sound_002.wav" InfoDataItemId="11" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0109/sound_003.wav" InfoDataItemId="11" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0118/sound_001.wav" InfoDataItemId="12" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0118/sound_002.wav" InfoDataItemId="12" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0119/sound_001.wav" InfoDataItemId="12" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0119/sound_002.wav" InfoDataItemId="12" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0119/sound_003.wav" InfoDataItemId="12" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0133/sound_001.wav" InfoDataItemId="13" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0133/sound_002.wav" InfoDataItemId="13" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0134/sound_001.wav" InfoDataItemId="13" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0134/sound_002.wav" InfoDataItemId="13" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0134/sound_003.wav" InfoDataItemId="13" />
+	
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0135/sound_001.wav" InfoDataItemId="14" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0135/sound_002.wav" InfoDataItemId="14" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0136/sound_001.wav" InfoDataItemId="14" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0136/sound_002.wav" InfoDataItemId="14" />
+	<MetaData VirtualPath="Archiv/SFX/GENRL/Bank_0136/sound_003.wav" InfoDataItemId="14" />
+</Content>

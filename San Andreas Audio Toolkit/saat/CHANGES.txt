@@ -1,0 +1,15 @@
+The San Andreas Audio Toolkit (SAAT) ChangeLog
+
+Current Version 1.10
+
+Release Notes for previous versions:
+------------------------------------
+
+12 Jan 2006 - Version 1.10
+   - Fixed problem with SFX tool not closing files properly when importing
+   - Fixed integer size issue when creating import INIs
+   - Fixed bad copy&paste error in sfx export example in MANUAL.txt
+   - Updated docs; still need to do more.
+
+07 Jan 2006 - Version 1.00
+   Initial SAAT release.  
