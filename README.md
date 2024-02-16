@@ -9,7 +9,11 @@ I used San Andreas Audio Toolkit GUI version to extract the audio files from the
 
 Additional Resources
 [Icecast Documentation](https://icecast.org/docs/icecast-2.4.1/)
+
 [MPD Documentation (Arch Wiki)](https://wiki.archlinux.org/title/Music_Player_Daemon)
+
 [MPD Configuration (Fandom) - Adblock Recommended](https://mpd.fandom.com/wiki/Configuration)
+
 [MPD Website](https://www.musicpd.org/)
+
 [MPC](https://www.musicpd.org/clients/mpc/)
