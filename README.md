@@ -8,6 +8,7 @@ Please review the scripts yourself and ensure
 I used San Andreas Audio Toolkit GUI version to extract the audio files from the game. GUI is closed source, but the source code for CLI tool is included. Use at your disgression.
 
 Additional Resources
+
 [Icecast Documentation](https://icecast.org/docs/icecast-2.4.1/)
 
 [MPD Documentation (Arch Wiki)](https://wiki.archlinux.org/title/Music_Player_Daemon)
