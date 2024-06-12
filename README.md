@@ -1,4 +1,4 @@
-# gtasa-radio
+# Project gRadio
 This set of scripts allow you to play GTA San Andreas Radio stations over web
 
 The project is WIP, it is very far from plug and play. Although I have made it work on my setup, the environment needs to be manually configured and it assumes many variables.
