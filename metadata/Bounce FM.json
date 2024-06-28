@@ -1,0 +1,443 @@
+{
+    "Songs": [
+        {
+            "title": "Running Away",
+            "intros": [
+                {
+                    "dj2": "Bounce FM/Running Away (Intro DJ #2).ogg",
+                    "dj0": "Bounce FM/Running Away (Intro).ogg",
+                    "dj1": "Bounce FM/Running Away (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj0": "Bounce FM/Running Away (Outro).ogg",
+                    "dj2": "Bounce FM/Running Away (Outro DJ #2).ogg",
+                    "dj1": "Bounce FM/Running Away (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Running Away (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "You Dropped a Bomb on Me",
+            "intros": [
+                {
+                    "dj2": "Bounce FM/You Dropped a Bomb on Me (Intro DJ #2).ogg",
+                    "dj1": "Bounce FM/You Dropped a Bomb on Me (Intro DJ #1).ogg",
+                    "dj0": "Bounce FM/You Dropped a Bomb on Me (Intro).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Bounce FM/You Dropped a Bomb on Me (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/You Dropped a Bomb on Me (Outro).ogg",
+                    "dj1": "Bounce FM/You Dropped a Bomb on Me (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/You Dropped a Bomb on Me (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Between the Sheets",
+            "outros": [
+                {
+                    "dj1": "Bounce FM/Between the Sheets (Outro DJ #1).ogg",
+                    "dj0": "Bounce FM/Between the Sheets (Outro).ogg",
+                    "dj2": "Bounce FM/Between the Sheets (Outro DJ #2).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj0": "Bounce FM/Between the Sheets (Intro).ogg",
+                    "dj2": "Bounce FM/Between the Sheets (Intro DJ #2).ogg",
+                    "dj1": "Bounce FM/Between the Sheets (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Between the Sheets (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "West Coast Poplock",
+            "intros": [
+                {
+                    "dj1": "Bounce FM/West Coast Poplock (Intro DJ #1).ogg",
+                    "dj2": "Bounce FM/West Coast Poplock (Intro DJ #2).ogg",
+                    "dj0": "Bounce FM/West Coast Poplock (Intro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/West Coast Poplock (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj0": "Bounce FM/West Coast Poplock (Outro).ogg",
+                    "dj1": "Bounce FM/West Coast Poplock (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/West Coast Poplock (Outro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Candy",
+            "intros": [
+                {
+                    "dj0": "Bounce FM/Candy (Intro).ogg",
+                    "dj1": "Bounce FM/Candy (Intro DJ #1).ogg",
+                    "dj2": "Bounce FM/Candy (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Bounce FM/Candy (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/Candy (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Candy (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Candy (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Let it Whip",
+            "intros": [
+                {
+                    "dj0": "Bounce FM/Let it Whip (Intro).ogg",
+                    "dj2": "Bounce FM/Let it Whip (Intro DJ #2).ogg",
+                    "dj1": "Bounce FM/Let it Whip (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj0": "Bounce FM/Let it Whip (Outro).ogg",
+                    "dj1": "Bounce FM/Let it Whip (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/Let it Whip (Outro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Let it Whip (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Yum Yum",
+            "mid": [
+                {
+                    "mid": "Bounce FM/Yum Yum (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Bounce FM/Yum Yum (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Yum Yum (Outro).ogg",
+                    "dj1": "Bounce FM/Yum Yum (Outro DJ #1).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj0": "Bounce FM/Yum Yum (Intro).ogg",
+                    "dj2": "Bounce FM/Yum Yum (Intro DJ #2).ogg",
+                    "dj1": "Bounce FM/Yum Yum (Intro DJ #1).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Hollywood Swingin'",
+            "outros": [
+                {
+                    "dj1": "Bounce FM/Hollywood Swingin' (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/Hollywood Swingin' (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Hollywood Swingin' (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Hollywood Swingin' (Mid).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "Bounce FM/Hollywood Swingin' (Intro DJ #1).ogg",
+                    "dj0": "Bounce FM/Hollywood Swingin' (Intro).ogg",
+                    "dj2": "Bounce FM/Hollywood Swingin' (Intro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Love is the Message",
+            "outros": [
+                {
+                    "dj1": "Bounce FM/Love is the Message (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/Love is the Message (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Love is the Message (Outro).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj0": "Bounce FM/Love is the Message (Intro).ogg",
+                    "dj2": "Bounce FM/Love is the Message (Intro DJ #2).ogg",
+                    "dj1": "Bounce FM/Love is the Message (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Love is the Message (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "I Can Make You Dance",
+            "outros": [
+                {
+                    "dj0": "Bounce FM/I Can Make You Dance (Outro).ogg",
+                    "dj1": "Bounce FM/I Can Make You Dance (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/I Can Make You Dance (Outro DJ #2).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj2": "Bounce FM/I Can Make You Dance (Intro DJ #2).ogg",
+                    "dj1": "Bounce FM/I Can Make You Dance (Intro DJ #1).ogg",
+                    "dj0": "Bounce FM/I Can Make You Dance (Intro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/I Can Make You Dance (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Odyssey",
+            "intros": [
+                {
+                    "dj0": "Bounce FM/Odyssey (Intro).ogg",
+                    "dj1": "Bounce FM/Odyssey (Intro DJ #1).ogg",
+                    "dj2": "Bounce FM/Odyssey (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Bounce FM/Odyssey (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/Odyssey (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Odyssey (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Odyssey (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Loopzilla",
+            "mid": [
+                {
+                    "mid": "Bounce FM/Loopzilla (Mid).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "Bounce FM/Loopzilla (Intro DJ #1).ogg",
+                    "dj2": "Bounce FM/Loopzilla (Intro DJ #2).ogg",
+                    "dj0": "Bounce FM/Loopzilla (Intro).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj0": "Bounce FM/Loopzilla (Outro).ogg",
+                    "dj1": "Bounce FM/Loopzilla (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/Loopzilla (Outro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Twilight",
+            "mid": [
+                {
+                    "mid": "Bounce FM/Twilight (Mid).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "Bounce FM/Twilight (Intro DJ #1).ogg",
+                    "dj0": "Bounce FM/Twilight (Intro).ogg",
+                    "dj2": "Bounce FM/Twilight (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Bounce FM/Twilight (Outro DJ #1).ogg",
+                    "dj0": "Bounce FM/Twilight (Outro).ogg",
+                    "dj2": "Bounce FM/Twilight (Outro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Funky Worm",
+            "intros": [
+                {
+                    "dj2": "Bounce FM/Funky Worm (Intro DJ #2).ogg",
+                    "dj0": "Bounce FM/Funky Worm (Intro).ogg",
+                    "dj1": "Bounce FM/Funky Worm (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Bounce FM/Funky Worm (Outro DJ #2).ogg",
+                    "dj1": "Bounce FM/Funky Worm (Outro DJ #1).ogg",
+                    "dj0": "Bounce FM/Funky Worm (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Funky Worm (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Cold Blooded",
+            "intros": [
+                {
+                    "dj0": "Bounce FM/Cold Blooded (Intro).ogg",
+                    "dj1": "Bounce FM/Cold Blooded (Intro DJ #1).ogg",
+                    "dj2": "Bounce FM/Cold Blooded (Intro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Cold Blooded (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Bounce FM/Cold Blooded (Outro DJ #1).ogg",
+                    "dj2": "Bounce FM/Cold Blooded (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Cold Blooded (Outro).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Fantastic Voyage",
+            "mid": [
+                {
+                    "mid": "Bounce FM/Fantastic Voyage (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Bounce FM/Fantastic Voyage (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Fantastic Voyage (Outro).ogg",
+                    "dj1": "Bounce FM/Fantastic Voyage (Outro DJ #1).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj2": "Bounce FM/Fantastic Voyage (Intro DJ #2).ogg",
+                    "dj1": "Bounce FM/Fantastic Voyage (Intro DJ #1).ogg",
+                    "dj0": "Bounce FM/Fantastic Voyage (Intro).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Love Rollercoaster",
+            "outros": [
+                {
+                    "dj2": "Bounce FM/Love Rollercoaster (Outro DJ #2).ogg",
+                    "dj0": "Bounce FM/Love Rollercoaster (Outro).ogg",
+                    "dj1": "Bounce FM/Love Rollercoaster (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Bounce FM/Love Rollercoaster (Mid).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "Bounce FM/Love Rollercoaster (Intro DJ #1).ogg",
+                    "dj0": "Bounce FM/Love Rollercoaster (Intro).ogg",
+                    "dj2": "Bounce FM/Love Rollercoaster (Intro DJ #2).ogg"
+                }
+            ]
+        }
+    ],
+    "Caller": [
+        "Bounce FM/(Caller) 'How do I get on the party ship'.ogg",
+        "Bounce FM/(Caller) 'Everyone here is so fake'.ogg",
+        "Bounce FM/(Caller) 'Sounds like you have a bipolar disorder'.ogg"
+    ],
+    "DJ": [
+        "Bounce FM/(DJ) 'Those casinos is getting crazy'.ogg",
+        "Bounce FM/(DJ) 'What have you been smoking'.ogg",
+        "Bounce FM/(DJ) 'The Funktapus is like sushi'.ogg",
+        "Bounce FM/(DJ) 'Take it off baby'.ogg",
+        "Bounce FM/(DJ) 'I'm not saying please'.ogg",
+        "Bounce FM/(DJ) 'You lost the funk'.ogg",
+        "Bounce FM/(DJ) 'Do fries go with that shake'.ogg",
+        "Bounce FM/(DJ) 'You know you want it'.ogg",
+        "Bounce FM/(DJ) 'Stop funking around'.ogg",
+        "Bounce FM/(DJ) 'I know all about that prune'.ogg",
+        "Bounce FM/(DJ) 'Party 'til you poop'.ogg",
+        "Bounce FM/(DJ) 'Smelling like the funk'.ogg",
+        "Bounce FM/(DJ) 'A B C D Me'.ogg",
+        "Bounce FM/(DJ) 'Stop towing the Funktipus mobile'.ogg",
+        "Bounce FM/(DJ) 'Proper preparation prevent piss poor performance'.ogg",
+        "Bounce FM/(DJ) 'If I look back I'll see me coming'.ogg",
+        "Bounce FM/(DJ) Blunted.ogg",
+        "Bounce FM/(DJ) 'Funk is the DNA in rap'.ogg",
+        "Bounce FM/(DJ) 'I can't believe my lyin' eyes'.ogg",
+        "Bounce FM/(DJ) 'A shitty outlook on life'.ogg",
+        "Bounce FM/(DJ) 'There's a lot of stress out there'.ogg",
+        "Bounce FM/(DJ) 'Can you imagine me in handcuffs'.ogg",
+        "Bounce FM/(DJ) 'Would you believe they're paying me for this'.ogg",
+        "Bounce FM/(DJ) 'Shake your ass'.ogg",
+        "Bounce FM/(DJ) 'Like a choo-choo'.ogg",
+        "Bounce FM/(DJ) 'So you wanna be me'.ogg",
+        "Bounce FM/(DJ) 'No mental hospital can hold me'.ogg",
+        "Bounce FM/(DJ) 'Primordial funk'.ogg",
+        "Bounce FM/(DJ) 'Back up into something wet'.ogg",
+        "Bounce FM/(DJ) 'Doing it to you in your earhole'.ogg"
+    ],
+    "ID": [
+        "Bounce FM/(ID) 'The party never stops'.ogg",
+        "Bounce FM/(ID) 'Share your stash with everyone, baby'.ogg",
+        "Bounce FM/(ID) 'Who's next on my wife'.ogg",
+        "Bounce FM/(ID) 'Until everyone's pregnant'.ogg",
+        "Bounce FM/(ID) 'Party ship's crash landed'.ogg",
+        "Bounce FM/(ID) 'Nobody's sober at the party'.ogg",
+        "Bounce FM/(ID) 'Ready to fly into space'.ogg",
+        "Bounce FM/(ID) 'What did I do last night'.ogg"
+    ],
+    "Weather": [
+        "Bounce FM/(Atmosphere) Rain #1.ogg",
+        "Bounce FM/(Atmosphere) Smog.ogg",
+        "Bounce FM/(Atmosphere) Rain #2.ogg",
+        "Bounce FM/(Atmosphere) Fog #1.ogg",
+        "Bounce FM/(Atmosphere) Sunny #1.ogg",
+        "Bounce FM/(Atmosphere) Sunny #2.ogg",
+        "Bounce FM/(Atmosphere) Fog #2.ogg"
+    ],
+    "Time of Day": [
+        "Bounce FM/(Atmosphere) Evening #2.ogg",
+        "Bounce FM/(Atmosphere) Morning #1.ogg",
+        "Bounce FM/(Atmosphere) Night #1.ogg",
+        "Bounce FM/(Atmosphere) Morning #3.ogg",
+        "Bounce FM/(Atmosphere) Night #2.ogg",
+        "Bounce FM/(Atmosphere) Morning #2.ogg",
+        "Bounce FM/(Atmosphere) Evening #1.ogg"
+    ]
+}

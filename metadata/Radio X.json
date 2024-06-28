@@ -1,0 +1,379 @@
+{
+    "Songs": [
+        {
+            "title": "Welcome to the Jungle",
+            "intros": [
+                {
+                    "dj1": "Radio X/Welcome to the Jungle (Intro DJ #1).ogg",
+                    "dj0": "Radio X/Welcome to the Jungle (Intro).ogg",
+                    "dj2": "Radio X/Welcome to the Jungle (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Radio X/Welcome to the Jungle (Outro DJ #2).ogg",
+                    "dj1": "Radio X/Welcome to the Jungle (Outro DJ #1).ogg",
+                    "dj0": "Radio X/Welcome to the Jungle (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Welcome to the Jungle (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Killing in the Name",
+            "outros": [
+                {
+                    "dj2": "Radio X/Killing in the Name (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Killing in the Name (Outro).ogg",
+                    "dj1": "Radio X/Killing in the Name (Outro DJ #1).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "Radio X/Killing in the Name (Intro DJ #1).ogg",
+                    "dj0": "Radio X/Killing in the Name (Intro).ogg",
+                    "dj2": "Radio X/Killing in the Name (Intro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Killing in the Name (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Movin' on Up",
+            "outros": [
+                {
+                    "dj0": "Radio X/Movin' on Up (Outro).ogg",
+                    "dj1": "Radio X/Movin' on Up (Outro DJ #1).ogg",
+                    "dj2": "Radio X/Movin' on Up (Outro DJ #2).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj2": "Radio X/Movin' on Up (Intro DJ #2).ogg",
+                    "dj0": "Radio X/Movin' on Up (Intro).ogg",
+                    "dj1": "Radio X/Movin' on Up (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Movin' on Up (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Plush",
+            "mid": [
+                {
+                    "mid": "Radio X/Plush (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj0": "Radio X/Plush (Outro).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj0": "Radio X/Plush (Intro).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Unsung",
+            "intros": [
+                {
+                    "dj1": "Radio X/Unsung (Intro DJ #1).ogg",
+                    "dj0": "Radio X/Unsung (Intro).ogg",
+                    "dj2": "Radio X/Unsung (Intro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Unsung (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Radio X/Unsung (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Unsung (Outro).ogg",
+                    "dj1": "Radio X/Unsung (Outro DJ #1).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Them Bones",
+            "intros": [
+                {
+                    "dj0": "Radio X/Them Bones (Intro).ogg",
+                    "dj2": "Radio X/Them Bones (Intro DJ #2).ogg",
+                    "dj1": "Radio X/Them Bones (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Radio X/Them Bones (Outro DJ #1).ogg",
+                    "dj2": "Radio X/Them Bones (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Them Bones (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Them Bones (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Rusty Cage",
+            "intros": [
+                {
+                    "dj0": "Radio X/Rusty Cage (Intro).ogg",
+                    "dj1": "Radio X/Rusty Cage (Intro DJ #1).ogg",
+                    "dj2": "Radio X/Rusty Cage (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Radio X/Rusty Cage (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Rusty Cage (Outro).ogg",
+                    "dj1": "Radio X/Rusty Cage (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Rusty Cage (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Personal Jesus",
+            "intros": [
+                {
+                    "dj2": "Radio X/Personal Jesus (Intro DJ #2).ogg",
+                    "dj0": "Radio X/Personal Jesus (Intro).ogg",
+                    "dj1": "Radio X/Personal Jesus (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Radio X/Personal Jesus (Outro DJ #1).ogg",
+                    "dj2": "Radio X/Personal Jesus (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Personal Jesus (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Personal Jesus (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Been Caught Stealing",
+            "intros": [
+                {
+                    "dj2": "Radio X/Been Caught Stealing (Intro DJ #2).ogg",
+                    "dj0": "Radio X/Been Caught Stealing (Intro).ogg",
+                    "dj1": "Radio X/Been Caught Stealing (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Radio X/Been Caught Stealing (Outro DJ #1).ogg",
+                    "dj2": "Radio X/Been Caught Stealing (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Been Caught Stealing (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Been Caught Stealing (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Fools Gold",
+            "outros": [
+                {
+                    "dj1": "Radio X/Fools Gold (Outro DJ #1).ogg",
+                    "dj2": "Radio X/Fools Gold (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Fools Gold (Outro).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj0": "Radio X/Fools Gold (Intro).ogg",
+                    "dj2": "Radio X/Fools Gold (Intro DJ #2).ogg",
+                    "dj1": "Radio X/Fools Gold (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Fools Gold (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Mother",
+            "intros": [
+                {
+                    "dj0": "Radio X/Mother (Intro).ogg",
+                    "dj2": "Radio X/Mother (Intro DJ #2).ogg",
+                    "dj1": "Radio X/Mother (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "Radio X/Mother (Outro DJ #1).ogg",
+                    "dj2": "Radio X/Mother (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Mother (Outro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Mother (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Midlife Crisis",
+            "outros": [
+                {
+                    "dj0": "Radio X/Midlife Crisis (Outro).ogg",
+                    "dj1": "Radio X/Midlife Crisis (Outro DJ #1).ogg",
+                    "dj2": "Radio X/Midlife Crisis (Outro DJ #2).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj2": "Radio X/Midlife Crisis (Intro DJ #2).ogg",
+                    "dj0": "Radio X/Midlife Crisis (Intro).ogg",
+                    "dj1": "Radio X/Midlife Crisis (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Midlife Crisis (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Pretend We're Dead",
+            "outros": [
+                {
+                    "dj2": "Radio X/Pretend We're Dead (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Pretend We're Dead (Outro).ogg",
+                    "dj1": "Radio X/Pretend We're Dead (Outro DJ #1).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "Radio X/Pretend We're Dead (Intro DJ #1).ogg",
+                    "dj2": "Radio X/Pretend We're Dead (Intro DJ #2).ogg",
+                    "dj0": "Radio X/Pretend We're Dead (Intro).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Pretend We're Dead (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Hellraiser",
+            "outros": [
+                {
+                    "dj1": "Radio X/Hellraiser (Outro DJ #1).ogg",
+                    "dj0": "Radio X/Hellraiser (Outro).ogg",
+                    "dj2": "Radio X/Hellraiser (Outro DJ #2).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj2": "Radio X/Hellraiser (Intro DJ #2).ogg",
+                    "dj0": "Radio X/Hellraiser (Intro).ogg",
+                    "dj1": "Radio X/Hellraiser (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "Radio X/Hellraiser (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Cult of Personality",
+            "mid": [
+                {
+                    "mid": "Radio X/Cult of Personality (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "Radio X/Cult of Personality (Outro DJ #2).ogg",
+                    "dj0": "Radio X/Cult of Personality (Outro).ogg",
+                    "dj1": "Radio X/Cult of Personality (Outro DJ #1).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj0": "Radio X/Cult of Personality (Intro).ogg",
+                    "dj1": "Radio X/Cult of Personality (Intro DJ #1).ogg",
+                    "dj2": "Radio X/Cult of Personality (Intro DJ #2).ogg"
+                }
+            ]
+        }
+    ],
+    "Caller": [
+        "Radio X/(Caller) 'You really are full of yourself'.ogg",
+        "Radio X/(Caller) 'What a stupid name'.ogg"
+    ],
+    "DJ": [
+        "Radio X/(DJ) 'I don't want a real job'.ogg",
+        "Radio X/(DJ) 'God I love crying'.ogg",
+        "Radio X/(DJ) 'Being a DJ is so hard'.ogg",
+        "Radio X/(DJ) 'Guys in skirts'.ogg",
+        "Radio X/(DJ) 'People over thirty'.ogg",
+        "Radio X/(DJ) 'No tracers yet'.ogg",
+        "Radio X/(DJ) 'Like a big mix tape'.ogg",
+        "Radio X/(DJ) 'One must always go forward'.ogg",
+        "Radio X/(DJ) 'Sage'.ogg",
+        "Radio X/(DJ) 'Bombarded with commercials'.ogg",
+        "Radio X/(DJ) 'That bitch at the record store'.ogg",
+        "Radio X/(DJ) 'I have to work so hard'.ogg",
+        "Radio X/(DJ) 'Yes, that is my real name'.ogg"
+    ],
+    "ID": [
+        "Radio X/(ID) 'Trust fund babies'.ogg",
+        "Radio X/(ID) 'The id, the ego, ...'.ogg",
+        "Radio X/(ID) 'Self-important nihilists'.ogg",
+        "Radio X/(ID) 'Much better than real friends'.ogg",
+        "Radio X/(ID) 'They don't care about money'.ogg",
+        "Radio X/(ID) 'We're the only identity you've got'.ogg",
+        "Radio X/(ID) 'This is our time'.ogg",
+        "Radio X/(ID) 'Jump off a bridge and die'.ogg",
+        "Radio X/(ID) 'At the end of the alphabet'.ogg",
+        "Radio X/(ID) 'Who cares about hunger'.ogg",
+        "Radio X/(ID) 'The birthplace of modern rock'.ogg"
+    ],
+    "Weather": [
+        "Radio X/(Atmosphere) Fog #1.ogg",
+        "Radio X/(Atmosphere) Sunny #2.ogg",
+        "Radio X/(Atmosphere) Rain #1.ogg",
+        "Radio X/(Atmosphere) Rain #2.ogg",
+        "Radio X/(Atmosphere) Sunny #1.ogg",
+        "Radio X/(Atmosphere) Fog #2.ogg",
+        "Radio X/(Atmosphere) Storm.ogg"
+    ],
+    "Time of Day": [
+        "Radio X/(Atmosphere) Night #2.ogg",
+        "Radio X/(Atmosphere) Morning #2.ogg",
+        "Radio X/(Atmosphere) Evening #2.ogg",
+        "Radio X/(Atmosphere) Morning #1.ogg",
+        "Radio X/(Atmosphere) Evening #1.ogg",
+        "Radio X/(Atmosphere) Night #1.ogg"
+    ]
+}

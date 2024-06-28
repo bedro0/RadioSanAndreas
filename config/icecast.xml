@@ -1,12 +1,12 @@
 <icecast>
     <location>San Andreas</location>
-    <hostname>localhost</hostname>
-    <admin>admin</admin>
+    <hostname>%HOSTNAME%</hostname>
+    <admin>%DISPLAY_ADMIN%</admin>
     <fileserve>1</fileserve>
 
     <limits>
         <clients>128</clients>
-        <sources>16</sources>
+        <sources>32</sources>
         <queue-size>65536</queue-size>
         <client-timeout>30</client-timeout>
         <header-timeout>15</header-timeout>
@@ -16,14 +16,14 @@
     </limits>
 
     <authentication>
-        <source-password>hackme</source-password>
-        <relay-password>hackme</relay-password>
-        <admin-user>admin</admin-user>
-        <admin-password>hackme</admin-password>
+        <source-password>%ICECAST_SOURCE_PASS%</source-password>
+        <relay-password>%ICECAST_RELAY_PASS%</relay-password>
+        <admin-user>%ADMIN_ACC%</admin-user>
+        <admin-password>%ICECAST_ADMIN_PASS%</admin-password>
     </authentication>
 
     <listen-socket>
-        <port>8000</port>
+        <port>%ICECAST_PORT%</port>
     </listen-socket>
 
     <logging>
@@ -44,11 +44,6 @@
 
     <http-headers>
         <header name="Access-Control-Allow-Origin" value="*" />
-<!--    
-        <header name="X-Robots-Tag" value="index, noarchive" />
-        <header name="foo" value="bar" status="200" />
-        <header name="Nelson" value="Ha-Ha!" status="404" />
--->
     </http-headers>
 
     <paths>

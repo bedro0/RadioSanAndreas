@@ -1,0 +1,364 @@
+{
+    "Songs": [
+        {
+            "title": "I'll be Your Friend",
+            "mid": [
+                {
+                    "mid": "SFUR/I'll be Your Friend (Mid).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "SFUR/I'll be Your Friend (Intro DJ #1).ogg",
+                    "dj2": "SFUR/I'll be Your Friend (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "SFUR/I'll be Your Friend (Outro DJ #1).ogg",
+                    "dj2": "SFUR/I'll be Your Friend (Outro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Voodoo Ray",
+            "intros": [
+                {
+                    "dj1": "SFUR/Voodoo Ray (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Voodoo Ray (Intro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Voodoo Ray (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "SFUR/Voodoo Ray (Outro DJ #1).ogg",
+                    "dj2": "SFUR/Voodoo Ray (Outro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Promised Land",
+            "intros": [
+                {
+                    "dj1": "SFUR/Promised Land (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Promised Land (Intro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Promised Land (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/Promised Land (Outro DJ #2).ogg",
+                    "dj1": "SFUR/Promised Land (Outro DJ #1).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Can You Feel It?",
+            "intros": [
+                {
+                    "dj1": "SFUR/Can You Feel It (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Can You Feel It (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "SFUR/Can You Feel It (Outro DJ #1).ogg",
+                    "dj2": "SFUR/Can You Feel It (Outro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Can You Feel It (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Pacific",
+            "mid": [
+                {
+                    "mid": "SFUR/Pacific (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/Pacific (Outro DJ #2).ogg",
+                    "dj1": "SFUR/Pacific (Outro DJ #1).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "SFUR/Pacific (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Pacific (Intro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Someday",
+            "intros": [
+                {
+                    "dj2": "SFUR/Someday (Intro DJ #2).ogg",
+                    "dj1": "SFUR/Someday (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Someday (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/Someday (Outro DJ #2).ogg",
+                    "dj1": "SFUR/Someday (Outro DJ #1).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Your Love",
+            "intros": [
+                {
+                    "dj1": "SFUR/Your Love (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Your Love (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "SFUR/Your Love (Outro DJ #1).ogg",
+                    "dj2": "SFUR/Your Love (Outro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Your Love (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Move Your Body",
+            "intros": [
+                {
+                    "dj1": "SFUR/Move Your Body (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Move Your Body (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/Move Your Body (Outro DJ #2).ogg",
+                    "dj1": "SFUR/Move Your Body (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Move Your Body (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Weekend",
+            "mid": [
+                {
+                    "mid": "SFUR/Weekend (Mid).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj2": "SFUR/Weekend (Intro DJ #2).ogg",
+                    "dj1": "SFUR/Weekend (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "SFUR/Weekend (Outro DJ #1).ogg",
+                    "dj2": "SFUR/Weekend (Outro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Let the Music Use You",
+            "intros": [
+                {
+                    "dj2": "SFUR/Let the Music Use You (Intro DJ #2).ogg",
+                    "dj1": "SFUR/Let the Music Use You (Intro DJ #1).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/Let the Music Use You (Outro DJ #2).ogg",
+                    "dj1": "SFUR/Let the Music Use You (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Let the Music Use You (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "This is Acid",
+            "intros": [
+                {
+                    "dj1": "SFUR/This is Acid (Intro DJ #1).ogg",
+                    "dj2": "SFUR/This is Acid (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj1": "SFUR/This is Acid (Outro DJ #1).ogg",
+                    "dj2": "SFUR/This is Acid (Outro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/This is Acid (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "I Need a Rhythm",
+            "outros": [
+                {
+                    "dj2": "SFUR/I Need a Rhythm (Outro DJ #2).ogg",
+                    "dj1": "SFUR/I Need a Rhythm (Outro DJ #1).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "SFUR/I Need a Rhythm (Intro DJ #1).ogg",
+                    "dj2": "SFUR/I Need a Rhythm (Intro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/I Need a Rhythm (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Break 4 Love",
+            "intros": [
+                {
+                    "dj2": "SFUR/Break 4 Love (Intro DJ #2).ogg",
+                    "dj1": "SFUR/Break 4 Love (Intro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Break 4 Love (Mid).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/Break 4 Love (Outro DJ #2).ogg",
+                    "dj1": "SFUR/Break 4 Love (Outro DJ #1).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Ma Foom Bey",
+            "intros": [
+                {
+                    "dj1": "SFUR/Ma Foom Bey (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Ma Foom Bey (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/Ma Foom Bey (Outro DJ #2).ogg",
+                    "dj1": "SFUR/Ma Foom Bey (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Ma Foom Bey (Mid).ogg"
+                }
+            ]
+        },
+        {
+            "title": "Make My Body Rock",
+            "outros": [
+                {
+                    "dj1": "SFUR/Make My Body Rock (Outro DJ #1).ogg",
+                    "dj2": "SFUR/Make My Body Rock (Outro DJ #2).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/Make My Body Rock (Mid).ogg"
+                }
+            ],
+            "intros": [
+                {
+                    "dj1": "SFUR/Make My Body Rock (Intro DJ #1).ogg",
+                    "dj2": "SFUR/Make My Body Rock (Intro DJ #2).ogg"
+                }
+            ]
+        },
+        {
+            "title": "The Morning After",
+            "intros": [
+                {
+                    "dj1": "SFUR/The Morning After (Intro DJ #1).ogg",
+                    "dj2": "SFUR/The Morning After (Intro DJ #2).ogg"
+                }
+            ],
+            "outros": [
+                {
+                    "dj2": "SFUR/The Morning After (Outro DJ #2).ogg",
+                    "dj1": "SFUR/The Morning After (Outro DJ #1).ogg"
+                }
+            ],
+            "mid": [
+                {
+                    "mid": "SFUR/The Morning After (Mid).ogg"
+                }
+            ]
+        }
+    ],
+    "Caller": [
+        "SFUR/(Caller) 'Play some Wagner'.ogg",
+        "SFUR/(Caller) 'I'd like to request a song'.ogg"
+    ],
+    "DJ": [
+        "SFUR/(DJ) 'Has that dealer turned up yet'.ogg",
+        "SFUR/(DJ) 'Keep the party moving in here'.ogg",
+        "SFUR/(DJ) 'Living in a digital future'.ogg",
+        "SFUR/(DJ) 'I want to cry'.ogg",
+        "SFUR/(DJ) 'The computers have taken over'.ogg",
+        "SFUR/(DJ) 'Has anyone got any cigarette papers'.ogg",
+        "SFUR/(DJ) 'I am a rebel'.ogg",
+        "SFUR/(DJ) 'Don't make me go to rehab'.ogg",
+        "SFUR/(DJ) 'I went to Liberty City once'.ogg",
+        "SFUR/(DJ) 'Let's party'.ogg",
+        "SFUR/(DJ) 'I love complete strangers'.ogg",
+        "SFUR/(DJ) 'Would you like a pillow'.ogg",
+        "SFUR/(DJ) 'Keeping it on a housey tip now'.ogg",
+        "SFUR/(DJ) 'Harder, faster, deeper!'.ogg",
+        "SFUR/(DJ) 'I love you, San Fierro'.ogg",
+        "SFUR/(DJ) 'People cry when they see my record collection'.ogg",
+        "SFUR/(DJ) 'I come to America'.ogg",
+        "SFUR/(DJ) 'We are like dolphins clicking'.ogg",
+        "SFUR/(DJ) 'Shut up and dance, you fools!'.ogg",
+        "SFUR/(DJ) 'I am communing with you'.ogg",
+        "SFUR/(DJ) 'European style... shaved'.ogg"
+    ],
+    "ID": [],
+    "Weather": [],
+    "Time of Day": [
+        "SFUR/(Atmosphere) Evening #2.ogg",
+        "SFUR/(Atmosphere) Morning #1.ogg",
+        "SFUR/(Atmosphere) Night #1.ogg",
+        "SFUR/(Atmosphere) Morning #3.ogg",
+        "SFUR/(Atmosphere) Night #3.ogg",
+        "SFUR/(Atmosphere) Night #2.ogg",
+        "SFUR/(Atmosphere) Evening #3.ogg",
+        "SFUR/(Atmosphere) Morning #2.ogg",
+        "SFUR/(Atmosphere) Evening #1.ogg"
+    ]
+}

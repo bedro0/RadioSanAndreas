@@ -1,10 +1,17 @@
 FROM debian
-RUN apt update && apt install icecast2 mpd mpc python3 python3-mutagen -y
 
-# mpd and icecast2 complain if these directories are not present at startup, this is where they store logs and such
-RUN ["mkdir", "/.mpd", "/.mpd/radiox", "/.mpd/kdst", "/.icecast", "/.icecast/logs"]
-# adjust permissions
-RUN chmod -R a+xrw /.mpd /.icecast
-COPY ["mpdconfig/", "/mpdconfig"]
-COPY ["iceconfig/", "/iceconfig"]
-ENTRYPOINT ["/mpdconfig/start.sh"]
+RUN apt update 
+RUN apt install vim tmux icecast2 mpd python3 python3-mutagen pip openssl -y
+RUN pip install python-mpd2 --break-system-packages
+
+# Default Environmental Variables
+ENV HOSTNAME localhost
+ENV DISPLAY_ADMIN admin
+ENV ADMIN_ACC admin
+ENV ICECAST_PORT 8000
+ENV ENABLED_STATIONS="bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur"
+
+COPY ["config/", "/config"]
+COPY ["scripts/", "/scripts"]
+COPY ["metadata/", "/metadata"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
