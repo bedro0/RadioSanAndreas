@@ -7,7 +7,7 @@ RUN pip install python-mpd2 --break-system-packages
 # Default Environmental Variables
 ENV HOSTNAME localhost
 ENV DISPLAY_ADMIN admin
-ENV ADMIN_ACC admin
+ENV ADMIN_USER admin
 ENV ICECAST_PORT 8000
 ENV ENABLED_STATIONS="bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur"
 

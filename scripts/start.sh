@@ -77,3 +77,4 @@ set_icecast_config(){
 }
 
 main
+tail -f /dev/null
