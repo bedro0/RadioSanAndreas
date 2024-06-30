@@ -44,7 +44,7 @@ def main():
     
     while True:
         # Get song queue to be played.
-        output=queuev2()
+        output=queue()
         for elem in output:
             #Add songs to queue one by one
             full_path=("/music/"+elem)
@@ -69,7 +69,7 @@ def remaining_time():
         total_playtime+=float(track["duration"])
     return total_playtime
 
-def queuev2():
+def queue():
     global song_has_not_been_played_for
     global last_category
     while True:
@@ -111,63 +111,6 @@ def queuev2():
             song_has_not_been_played_for+=1
             return ([current_track])
         
-"""
-def queuev1():
-
-    # create empty lists too keep track of audio tracks and categories
-    output=[]
-    cats_used=[]
-
-    # iterate through the keys inside the dictionary and shuffle the lists for each category
-    for cat in categories:
-        random.shuffle(data[cat])
-    while True:
-
-        # this line ensures that when there are no remaining songs in the dictionary, fetch is ended
-        # makes sure bunch of transitional voice lines are not queued back to back
-        # please refer to get_random_track() to see why this line is used
-
-        if ("Songs" not in categories):
-            break
-        # select a random category, (the list indicates the prob. weights for each category) (random.choices returns a list)
-        selected_category = random.choices(categories, [1, 0.0625, 1, 1])
-
-        # convert the list to string
-        selected_category = selected_category[0]
-        # selected_category=random.choice(categories)
-
-        # ensure current category and the previous one are not both not-songs
-        # ensures that two transitions don't play back to back
-
-        if (cats_used):
-            if (selected_category != "Songs")and(cats_used[-1] != "Songs"):
-                continue
-        current_track=get_random_track(selected_category)
-        # song objects have a different structure
-        # each song in radio contains at most 3 intros and 3 outros (2 with dj voice lines, 1 without)
-        # each song object is a dict containing the following keys
-        # title, intros (list), mid (middle part of the song, 1 element), outros (list)
-        # intros (and outros) is a list containing a single dict of the following keys
-        # dj0:path, dj1:path, dj2:path
-        if (selected_category=="Songs"):
-
-            # get (dict==>intros==>0th==>values) conv. to list of all possible intro lines
-            # randomly choose a path from the list, assign it to song_intro
-            song_intro=random.choice(list(current_track["intros"][0].values()))
-            song_mid=current_track["mid"][0]["mid"]
-
-            # same as intros but for outro
-            song_outro=random.choice(list(current_track["outros"][0].values()))
-            # add paths to output list
-            output.extend([song_intro, song_mid, song_outro])
-        else:
-            output.append(current_track)
-        cats_used.append(selected_category)
-
-    # print each element at a time to output in bash mapfile command
-    return output
-"""
-
 def get_next_track(category):
     #get the list of tracks with inside the specified category
     tracks_in_category=data[category]
