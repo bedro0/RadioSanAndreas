@@ -18,7 +18,24 @@ client.connect("@"+mpd_socket, mpd_control_port)
 # import json file as python dictionary
 data=json.load(radio)
 all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"]
-categories = ["Songs", "Caller", "DJ", "ID"]
+
+match mpd_socket:
+    case "kjah":
+        categories = ["Songs", "DJ", "ID"]
+        chances = [1, 1, 1]
+    case "radiols":
+        categories = ["Songs", "DJ", "ID"]
+        chances = [1, 1, 1]
+    case "sfur":
+        categories = ["Songs", "Caller", "DJ"]
+        chances = [1, 0.0625, 1]
+    case _:
+        categories = ["Songs", "Caller", "DJ", "ID"]
+        chances = [1, 0.0625, 1, 1]
+# Define tracker variables
+song_has_not_been_played_for=0
+last_category=""
+
 
 def main():
     # Enable consume. This allows songs to be removed from the queue after they are played. Prevents from accumulating backlog of songs
@@ -27,14 +44,14 @@ def main():
     
     while True:
         # Get song queue to be played.
-        output=queuev1()
+        output=queuev2()
         for elem in output:
             #Add songs to queue one by one
             full_path=("/music/"+elem)
             print("Adding "+full_path+" to the queue.")
             client.add(full_path)
         
-        sleep_for=int(remaining_time()-30)
+        sleep_for=(remaining_time())
         print("Pressing play.")
         client.play()
         
@@ -48,10 +65,53 @@ def remaining_time():
     
     full_queue=client.playlistinfo()
     total_playtime=0
-    for track in full_queue:
+    for track in full_queue[1:]:
         total_playtime+=float(track["duration"])
     return total_playtime
 
+def queuev2():
+    global song_has_not_been_played_for
+    global last_category
+    while True:
+
+        # Make sure a song is played at least every 3rd time
+        if (song_has_not_been_played_for>1):
+            selected_category="Songs"
+        else:                
+            # select a random category, (the list indicates the prob. weights for each category) (random.choices returns a list)
+            selected_category = random.choices(categories, chances)
+            # convert the list to string
+            selected_category = selected_category[0]
+        if (last_category):
+            if(selected_category==last_category):
+                continue
+        
+        current_track=get_next_track(selected_category)
+        
+        last_category=(selected_category)
+        # song objects have a different structure
+        # each song in radio contains at most 3 intros and 3 outros (2 with dj voice lines, 1 without)
+        # each song object is a dict containing the following keys
+        # title, intros (list), mid (middle part of the song, 1 element), outros (list)
+        # intros (and outros) is a list containing a single dict of the following keys
+        # dj0:path, dj1:path, dj2:path
+        if (selected_category=="Songs"):
+
+            # get (dict==>intros==>0th==>values) conv. to list of all possible intro lines
+            # randomly choose a path from the list, assign it to song_intro
+            song_intro=random.choice(list(current_track["intros"][0].values()))
+            song_mid=current_track["mid"][0]["mid"]
+
+            # same as intros but for outro
+            song_outro=random.choice(list(current_track["outros"][0].values()))
+            # add paths to output list
+            song_has_not_been_played_for=0
+            return ([song_intro, song_mid, song_outro])
+        else:
+            song_has_not_been_played_for+=1
+            return ([current_track])
+        
+"""
 def queuev1():
 
     # create empty lists too keep track of audio tracks and categories
@@ -83,11 +143,6 @@ def queuev1():
             if (selected_category != "Songs")and(cats_used[-1] != "Songs"):
                 continue
         current_track=get_random_track(selected_category)
-
-        # please refer to get_random_track() to see why this is used
-        if current_track==None:
-            break
-        
         # song objects have a different structure
         # each song in radio contains at most 3 intros and 3 outros (2 with dj voice lines, 1 without)
         # each song object is a dict containing the following keys
@@ -111,21 +166,18 @@ def queuev1():
 
     # print each element at a time to output in bash mapfile command
     return output
+"""
 
-def get_random_track(category):
-    # set a variable to a list inside the dictionary (note that the data is shuffled inside them)
-    random_category=data[category]
+def get_next_track(category):
+    #get the list of tracks with inside the specified category
+    tracks_in_category=data[category]
 
-    # if the list is exhausted remove the category from the list, so it's never picked again (within current iteration)
-    if len(random_category)<1:
-        categories.remove(category)
-
-        # return none to indicate nothing was chosen
-        # this will start the while loop over in main with no consequences
-        return None
-    
-    # pop an element out of the list (ensures that duplicate audio tracks are not played)
-    # this is the reason for checks ensuring lists are not emptys
-    return (random_category.pop())
+    # the following lines choose 1st or 2nd track in the list randomly.
+    # The chosen track is appended to the back of the list
+    # This is to prevent tracks from repeating too soon, while preventing the order of the tracks from repeating as well.
+    random_bit=random.randint(0,1)
+    chosen_track=(tracks_in_category.pop(random_bit))
+    tracks_in_category.append(chosen_track)
+    return chosen_track
 
 main()

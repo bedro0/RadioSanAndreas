@@ -14,4 +14,5 @@ ENV ENABLED_STATIONS="bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm
 COPY ["config/", "/config"]
 COPY ["scripts/", "/scripts"]
 COPY ["metadata/", "/metadata"]
-ENTRYPOINT ["/scripts/start.sh"]
+# ENTRYPOINT ["/scripts/start.sh"]
+ENTRYPOINT [ "tail", "-f", "/dev/null" ]
