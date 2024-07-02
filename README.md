@@ -1,13 +1,35 @@
 # Project gRadio
-This set of scripts allow you to play GTA San Andreas Radio stations over web
 
-The project is WIP, it is very far from plug and play. Although I have made it work on my setup, the environment needs to be manually configured and it assumes many variables.
+This repo contains a set of scripts that allow you to play radio stations from Grand Theft Auto: San Andreas over web, in real life.
 
-Please review the scripts yourself and ensure that it works with your particular configuration.
+Prerequisite:
 
-Further development and documentation to be expected
+1. Download [San Andreas Audio Toolkit](https://github.com/bedro0/Project-gRadio/raw/main/San%20Andreas%20Audio%20Toolkit.7z). 
+2. Extract the archive and open SaatGuiFrontend.exe inside the folder named Alci_s_SAAT_GUI_FrontEnd_1.0.
+3. Click File ==> Set Working Directory, to choose the folder where all the Audio files will be exported.
+4. Click File ==> Set GTA Directory, and choose the folder with original GTA San Andreas installed.
+5. To export radio tracks, simply double click the labels under the tab labeled "Archiv". (Currently supported radio stations are: Bounce FM, CSR, K-DST, K-JAH, KROSE, Master Sounds, Playback FM, Radio Los Santos, Radio X, SFUR.)
 
-I used San Andreas Audio Toolkit GUI version to extract the audio files from the game. GUI is closed source, but the source code for CLI tool is included. Use at your disgression.
+Steps to install:
+1. Clone/Download the repo
+2. `docker build -t gradio .`
+3. `docker run -d --volume [path-to-music-files-exported-from-game]:/music -p 8000:8000 gradio`
+4. Go to localhost:8000
+5. Enjoy!
+
+**Environmental Variables (Only For Advanced Users):**
+
+| Variable            | Purpose                                                          | Default Value                                                                       |
+| ------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| HOSTNAME            | Hostname for Icecast. (As far as I know, it's only for display.) | localhost                                                                           |
+| DISPLAY_ADMIN       | Display name for an administrator on Icecast version page        | admin                                                                               |
+| ADMIN_USER          | Username for administrator login                                 | admin                                                                               |
+| ICECAST_PORT        | HTTP port for Icecast                                            | 8000                                                                                |
+| ENABLED_STATIONS    | Enabled Radio Stations                                           | "bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur" |
+| ICECAST_SOURCE_PASS | Source Password for Icecast (ShoutCast) stream                   | (Random string of 12 ASCII characters)                                              |
+| ICECAST_RELAY_PASS  | Relay Password for Icecast                                       | (Random string of 12 ASCII characters)                                              |
+| ICECAST_ADMIN_PASS  | Administrator password for Icecast web login                     | (Random string of 12 ASCII characters)                                              |
+
 
 Additional Resources
 
@@ -15,8 +37,7 @@ Additional Resources
 
 [MPD Documentation (Arch Wiki)](https://wiki.archlinux.org/title/Music_Player_Daemon)
 
-[MPD Configuration (Fandom) - Adblock Recommended](https://mpd.fandom.com/wiki/Configuration)
+[MPD Configuration (Fandom) - Adblock Recommended while browsing Fandom Website](https://mpd.fandom.com/wiki/Configuration)
 
 [MPD Website](https://www.musicpd.org/)
 
-[MPC](https://www.musicpd.org/clients/mpc/)
