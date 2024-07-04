@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt update 
-RUN apt install vim tmux icecast2 mpd python3 python3-mutagen pip openssl -y
+RUN apt install icecast2 mpd python3 pip openssl -y
 RUN pip install python-mpd2 --break-system-packages
 
 # Default Environmental Variables
