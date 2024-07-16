@@ -1,6 +1,6 @@
 # Project gRadio
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/bedro0/Project-gRadio/blob/a54e19bb25655b66a627652e64f79bbb0929f349/Grove%20Street%20Radio.png)
 
 This repo contains a set of scripts that allow you to play radio stations from Grand Theft Auto: San Andreas over web, in real life.
 
