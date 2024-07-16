@@ -1,5 +1,7 @@
 # Project gRadio
 
+![alt text](http://url/to/img.png)
+
 This repo contains a set of scripts that allow you to play radio stations from Grand Theft Auto: San Andreas over web, in real life.
 
 Prerequisite:
