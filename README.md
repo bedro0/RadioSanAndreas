@@ -1,4 +1,4 @@
-# Project gRadio
+# Grove Street Radio
 
 ![alt text](https://github.com/bedro0/Project-gRadio/blob/a54e19bb25655b66a627652e64f79bbb0929f349/Grove%20Street%20Radio.png)
 
