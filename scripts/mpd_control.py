@@ -55,13 +55,13 @@ def main():
         print("Pressing play.")
         client.play()
         
-        #Sleep for the duration of the queue minus 30 seconds
+        #Sleep for the duration of the queue (not including the first track in the queue)
         print("Sleeping for "+str(sleep_for)+" seconds.")
         time.sleep(sleep_for)
 
 def remaining_time():
 
-    #Returns remaining time for the entire queue by adding up durations of each track
+    #Returns remaining duration of the queue (not including the first track in the queue)
     
     full_queue=client.playlistinfo()
     total_playtime=0

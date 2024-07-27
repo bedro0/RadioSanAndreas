@@ -1,0 +1,13 @@
+:global(body){
+    background-color: #000000;
+}
+h1 {
+    color:white;
+}
+.radio-buttons {
+    color:white;
+    display: flex; /* establish flex container */
+    justify-content: center; /* center flex items horizontally, in this case */
+    align-items: center; /* center flex items vertically, in this case */
+    height: 100%;
+}
