@@ -2,28 +2,33 @@ $bg-color: #01011a;
 :global(body){
     background-color: $bg-color;
 }
+
 #stations {
     display: grid;
     grid-template-columns: repeat(5, auto);
     justify-content: center;
     align-items: center;
-    gap: 10px; // Adjust gap as needed
+    gap: 32px; // Adjust gap as needed
 
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    .hover{
+        background-color: #ffffff0d
+    }
     
     button{
-        background: rgba(0,0,0,0);
+        background: #00000000;
         $button-diameter: 256px;
-        $image-diameter: calc($button-diameter / 1.25);
+        $image-diameter: calc($button-diameter / 1.5);
         border: none;
         color: white;
         width: $button-diameter;
         height: $button-diameter;
         border-radius: 50%;
-        
+
         img {
             width: $image-diameter;
             height: $image-diameter;
@@ -40,3 +45,4 @@ audio {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
