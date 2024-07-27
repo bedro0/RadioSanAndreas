@@ -2,33 +2,25 @@ $bg-color: #01011a;
 :global(body){
     background-color: $bg-color;
 }
-
 #stations {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    justify-content: center;
-    align-items: center;
-    gap: 32px; // Adjust gap as needed
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
     position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-
-    .hover{
-        background-color: #ffffff0d
-    }
+    transform: translate(0, -50%);
     
     button{
-        background: #00000000;
+        flex-basis:20%;
+        background: rgba(0,0,0,0);
         $button-diameter: 256px;
-        $image-diameter: calc($button-diameter / 1.5);
+        $image-diameter: calc($button-diameter / 1.25);
         border: none;
-        color: white;
         width: $button-diameter;
         height: $button-diameter;
         border-radius: 50%;
-
+        
         img {
             width: $image-diameter;
             height: $image-diameter;
@@ -45,4 +37,3 @@ audio {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
