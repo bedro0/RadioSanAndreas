@@ -4,18 +4,17 @@
 
 <script lang="ts">
     import {tick} from 'svelte';
-    let showAudio = false;
-    let audio: any;
+    let audio_playing = false;
     let title="Grove Street Radio";
     let favicon="gsr.png";
     let all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"];
     let main_src, alt_src;
     async function playAudio(station){
-        showAudio = false;
+        audio_playing = false;
         await tick();
         main_src = `https://icecast.loonartech.net/${station}.ogg?nocache=${new Date().getTime()}`;
         alt_src = `https://icecast.loonartech.net/${station}.mp3?nocache=${new Date().getTime()}`
-        showAudio = true;
+        audio_playing = true;
     }
 </script>
 
@@ -23,7 +22,7 @@
     @import "../main.scss";
 </style>
 
-<div class="radio-buttons">
+<div id="stations">
     {#each all_stations as station}
     <script lang="ts">
 
@@ -35,8 +34,10 @@
     {/each}
 </div>
 
-{#if showAudio}
-    <audio autoplay bind:this={audio}>
+<button on:click={() => audio_playing=false}>Pause</button>
+
+{#if audio_playing}
+    <audio autoplay>
         <source bind:this="{main_src}" type="audio/ogg"/>
         <source src="{alt_src}" type="audio/mpeg"/>
         "Audio not supported on this browser"

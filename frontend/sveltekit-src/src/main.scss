@@ -2,7 +2,13 @@ $bg-color: #01011a;
 :global(body){
     background-color: $bg-color;
 }
-.radio-buttons {
+#stations {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 10px; // Adjust gap as needed
+
     position: absolute;
     left: 50%;
     top: 50%;
@@ -10,7 +16,7 @@ $bg-color: #01011a;
     
     button{
         background: rgba(0,0,0,0);
-        $button-diameter: 128px;
+        $button-diameter: 256px;
         $image-diameter: calc($button-diameter / 1.25);
         border: none;
         color: white;
