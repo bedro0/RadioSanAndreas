@@ -16,13 +16,17 @@
     let station_playing;
 
 
-    async function playAudio(station){
+    async function startPlaying(station){
         audio_playing = false;
         await tick();
         main_src = `https://icecast.loonartech.net/${station}.ogg?nocache=${new Date().getTime()}`;
         alt_src = `https://icecast.loonartech.net/${station}.mp3?nocache=${new Date().getTime()}`
         audio_playing = true;
         station_playing = station;
+    }
+    function stopPlaying(){
+        audio_playing=false;
+        main_src = alt_src = station_playing = null;
     }
     function setHover(index, state) {
 		activeStates = activeStates.map((active, i) => i === index ? state : hover);
@@ -42,20 +46,14 @@
         class:hover={activeStates[index]}
         on:mouseenter={() => setHover(index, true)} 
         on:mouseleave={() => setHover(index, false)} 
-        on:click={() => playAudio(station)}
+        on:click={() => startPlaying(station)}
         >
             <img src="/src/visual-assets/logos/{station}.png" alt={station}>
 
         </button>
         {/each}
     </div>
-{/if}
-<!--
-<button id="stop" on:click={() => playerObj.play()}>Play</button>
-<button id="stop" on:click={() => playerObj.pause()}>Pause</button>
--->
-
-{#if audio_playing}
+{:else}
     <img id=background-image src="src/visual-assets/backgrounds/{station_playing}.jpg" alt={station_playing}>
     <audio autoplay bind:this={playerObj} bind:volume="{playerVolume}">
         <source src="{main_src}" type="audio/ogg"/>
@@ -64,5 +62,6 @@
     </audio>
     <div id=controls>
         <input type="range" id=volume min="0" max="1" step="0.01" bind:value={playerVolume}>
+        <button on:click={stopPlaying}>Go Back</button>
     </div>
 {/if}

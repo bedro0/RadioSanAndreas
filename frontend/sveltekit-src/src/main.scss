@@ -38,13 +38,6 @@ $xpadding: calc(((100%) - (5.1*$button-diameter))/2);
     }
 }
 
-#stop{
-
-    border-radius: 50%;
-    width: $button-diameter;
-    height: $button-diameter;
-}
-
 audio {
     position: absolute;
     left: 50%;
