@@ -2,24 +2,32 @@ $bg-color: #01011a;
 :global(body){
     background-color: $bg-color;
 }
+
+$button-diameter: 256px;
+$image-diameter: calc($button-diameter / 1.5);
+$xpadding: calc(((100%) - (5.1*$button-diameter))/2);
+
 #stations {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    max-height: none;
+    padding-right: $xpadding;
+    padding-left: $xpadding;
 
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    
+
+    .hover{
+        background-color: #ffffff1e;
+    }
     button{
-        flex-basis:20%;
+        flex-basis: 20%;
         background: rgba(0,0,0,0);
-        $button-diameter: 256px;
-        $image-diameter: calc($button-diameter / 1.25);
         border: none;
+        border-radius: 50%;
+        max-width: $button-diameter;
+        min-width: $button-diameter;
         width: $button-diameter;
         height: $button-diameter;
-        border-radius: 50%;
         
         img {
             width: $image-diameter;
@@ -30,10 +38,4 @@ $bg-color: #01011a;
     }
 }
 
-audio {
-    position: absolute;
-    left: 50%;
-    top: 75%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
+
