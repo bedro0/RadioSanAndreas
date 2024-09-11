@@ -1,7 +1,7 @@
 FROM debian
 
 RUN apt update 
-RUN apt install icecast2 mpd python3 pip openssl -y
+RUN apt install icecast2 mpd python3 pip openssl nodejs -y
 RUN pip install python-mpd2 --break-system-packages
 
 # Default Environmental Variables
@@ -11,6 +11,7 @@ ENV ADMIN_USER admin
 ENV ICECAST_PORT 8000
 ENV ENABLED_STATIONS="bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur"
 
+COPY ["frontend/", "/frontend"]
 COPY ["config/", "/config"]
 COPY ["scripts/", "/scripts"]
 COPY ["metadata/", "/metadata"]
