@@ -1,11 +1,12 @@
 <svelte:head>
     <title>{title}</title>
+    <link rel="icon" href={favicon}/>
 </svelte:head>
 
 <script>
     import { goto } from '$app/navigation'
-    import {tick} from 'svelte';
     let title="Radio San Andreas";
+    let favicon="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Grand_Theft_Auto_San_Andreas_logo.svg/270px-Grand_Theft_Auto_San_Andreas_logo.svg.png"
     let all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"];
     let activeStates = Array(all_stations.length).fill(false);
     let hover=false;
