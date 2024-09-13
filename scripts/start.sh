@@ -54,7 +54,8 @@ set_icecast_config(){
     sed -i 's|%ADMIN_ACC%|'"$ADMIN_ACC"'|g' /config/icecast.xml
     sed -i 's|%ICECAST_PORT%|'"$ICECAST_PORT"'|g' /config/icecast.xml
 
-    # I don't feel like writing a sketchy for loop for the following. 
+    # I don't feel like writing a sketchy for loop for the following.
+    # Maybe if bash was a proper programming language
     if [ "$ICECAST_SOURCE_PASS" == "" ]
     then
         ICECAST_SOURCE_PASS=$(openssl rand -base64 12)
@@ -77,4 +78,5 @@ set_icecast_config(){
 }
 
 main
+bash ./svelte.sh
 tail -f /dev/null

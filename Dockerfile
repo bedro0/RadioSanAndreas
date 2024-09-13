@@ -9,7 +9,12 @@ pip \
 openssl \
 nodejs \
 npm 
-RUN pip install python-mpd2 --break-system-packages
+RUN pip install \
+python-mpd2 \
+--break-system-packages
+
+RUN npm install \
+vite
 
 # Default Environmental Variables
 ENV HOSTNAME localhost
