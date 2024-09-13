@@ -1,7 +1,14 @@
 FROM debian
 
 RUN apt update 
-RUN apt install icecast2 mpd python3 pip openssl nodejs -y
+RUN apt install -y \
+icecast2 \
+mpd \
+python3 \
+pip \
+openssl \
+nodejs \
+npm 
 RUN pip install python-mpd2 --break-system-packages
 
 # Default Environmental Variables
