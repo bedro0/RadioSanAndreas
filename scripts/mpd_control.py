@@ -4,21 +4,22 @@ import json, random, sys, time
 # This script directly controls the playback of the MPD.
 # It accepts CLI arguments /path/to/json, mpd-socket, and mpd-control-port
 
-if len(sys.argv) != 4:
+if len(sys.argv) != 3:
     print("Usage: python mpd_control.py /path/of/json [mpd socket] [mpd control port]")
     sys.exit(1)
 
 radio = open(sys.argv[1])
 mpd_socket = (sys.argv[2])
-mpd_control_port = int(sys.argv[3])
+# mpd_control_port = int(sys.argv[3])
 
 client=MPDClient()
-client.connect("@"+mpd_socket, mpd_control_port)
+client.connect("@"+mpd_socket)
 
 # import json file as python dictionary
 data=json.load(radio)
 all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"]
 
+# some stations do not have certain types of audio tracks
 match mpd_socket:
     case "kjah":
         categories = ["Songs", "DJ", "ID"]
@@ -32,6 +33,10 @@ match mpd_socket:
     case _:
         categories = ["Songs", "Caller", "DJ", "ID"]
         chances = [1, 0.0625, 1, 1]
+
+for cat in categories:
+    random.shuffle(data[cat])
+
 # Define tracker variables
 song_has_not_been_played_for=0
 last_category=""

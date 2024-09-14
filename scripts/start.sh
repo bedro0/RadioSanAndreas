@@ -10,6 +10,8 @@ main(){
     chmod -R a+xrw /.mpd
     chmod -R a+r /metadata
 
+    enabled_stations_to_json
+
     IFS=', ' read -r -a ENABLED_STATIONS_ARRAY <<< "$ENABLED_STATIONS"
     MPD_CONTROL_PORT=6600
 
@@ -40,9 +42,9 @@ main(){
         echo "$STATION_NAME launched successfully"
         
         sleep 4
-        echo "python3 /scripts/mpd_control.py "/metadata/$STATION_FOLDER.json" @$RADIO_STATION $MPD_CONTROL_PORT &"
+        echo "python3 /scripts/mpd_control.py "/metadata/$STATION_FOLDER.json" @$RADIO_STATION &"
 
-        python3 /scripts/mpd_control.py "/metadata/$STATION_FOLDER.json" $RADIO_STATION $MPD_CONTROL_PORT &
+        python3 /scripts/mpd_control.py "/metadata/$STATION_FOLDER.json" $RADIO_STATION &
 
     done
 }
@@ -77,6 +79,30 @@ set_icecast_config(){
     sed -i 's|%ICECAST_ADMIN_PASS%|'"$ICECAST_ADMIN_PASS"'|g' /config/icecast.xml
 }
 
+start_svelte(){
+    cd /frontend/sveltekit-src/src
+    npm run dev -- --host
+}
+
+enabled_stations_to_json(){
+    # Read the ENABLED_STATIONS environment variable
+    stations=$ENABLED_STATIONS
+
+    # Remove any whitespace around commas
+    stations=$(echo $stations | sed 's/\s*,\s*/,/g')
+
+    # Split the string into an array
+    IFS=',' read -ra station_array <<< "$stations"
+
+    # Create a JSON array
+    json_array=$(printf '"%s",' "${station_array[@]}" | sed 's/,$//')
+    json_array="[$json_array]"
+
+    # Save the JSON array to a file
+    echo $json_array > enabled_stations.json
+
+    echo "JSON array saved to enabled_stations.json"
+}
+
 main
-bash ./svelte.sh
-tail -f /dev/null
+start_svelte

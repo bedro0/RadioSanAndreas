@@ -29,7 +29,7 @@
     <logging>
         <accesslog>access.log</accesslog>
         <errorlog>error.log</errorlog>
-        <!--<playlistlog>playlist.log</playlistlog>-->
+        <playlistlog>playlist.log</playlistlog>
         <loglevel>4</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
         <logsize>32768</logsize>
     </logging>

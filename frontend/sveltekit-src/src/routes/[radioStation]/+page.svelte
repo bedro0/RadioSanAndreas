@@ -3,11 +3,12 @@
     import { goto } from '$app/navigation';
     import { page } from '$app/stores';
     import station_metadata_json from "/src/station_metadata.json";
+    import enabledStations from "../../../../enabled_stations.json"
 
-    const station = $page.params.radioStation;
-    const stationMetadata = station_metadata_json[station];
+    const currentStation = $page.params.radioStation;
+    const stationMetadata = station_metadata_json[currentStation];
 
-    $: if (browser && !stationMetadata) {
+    $: if (browser && !enabledStations.includes(currentStation)) {
         goto("/");
     }
 
@@ -15,9 +16,9 @@
     let playerVolume = 1;
     let isPlaying = false;
 
-    $: main_src = `/api/radio?format=ogg&station=${station}&nocache=${Date.now()}`;
-    $: alt_src = `/api/radio?format=mp3&station=${station}&nocache=${Date.now()}`;
-    $: favicon = `/src/visual-assets/logos/${station}.webp`;
+    $: main_src = `/api/radio?format=ogg&station=${currentStation}&nocache=${Date.now()}`;
+    $: alt_src = `/api/radio?format=mp3&station=${currentStation}&nocache=${Date.now()}`;
+    $: favicon = `/src/visual-assets/logos/${currentStation}.webp`;
 
     function togglePlayPause() {
         isPlaying = !isPlaying;
@@ -30,7 +31,7 @@
 </script>
 
 <svelte:head>
-    {#if stationMetadata}
+    {#if enabledStations.includes(currentStation)}
         <title>{stationMetadata.station_name}</title>
         <link rel="icon" href={favicon} />
     {/if}
@@ -41,7 +42,7 @@
         @import "../../player.scss";
     </style>
 
-    <img id="background-image" src="src/visual-assets/backgrounds/{station}.jpg" alt={station}>
+    <img id="background-image" src="src/visual-assets/backgrounds/{currentStation}.jpg" alt={currentStation}>
 
     <audio autoplay bind:this={playerObj} bind:volume={playerVolume} on:play={() => isPlaying = true} on:pause={() => isPlaying = false}>
         <source src={main_src} type="audio/ogg">

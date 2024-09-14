@@ -4,11 +4,12 @@
 </svelte:head>
 
 <script>
+    import enabledStations from "../../../enabled_stations.json"
     import { goto } from '$app/navigation'
     let title="Radio San Andreas";
     let favicon="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Grand_Theft_Auto_San_Andreas_logo.svg/270px-Grand_Theft_Auto_San_Andreas_logo.svg.png"
     let all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"];
-    let activeStates = Array(all_stations.length).fill(false);
+    let activeStates = Array(enabledStations.length).fill(false);
     let hover=false;
     
     function setHover(index, state) {
@@ -21,7 +22,7 @@
 </style>
 
 <div id="stations">
-    {#each all_stations as station, index}
+    {#each enabledStations as station, index}
     <button 
     class:hover={activeStates[index]}
     on:mouseenter={() => setHover(index, true)} 
