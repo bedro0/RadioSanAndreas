@@ -1,9 +1,10 @@
 FROM debian
 
-COPY ["frontend/", "/frontend"]
-COPY ["config/", "/config"]
-COPY ["scripts/", "/scripts"]
-COPY ["metadata/", "/metadata"]
+COPY ["frontend/", "/radiosa/frontend"]
+COPY ["config/", "/radiosa/config"]
+COPY ["scripts/", "/radiosa/scripts"]
+COPY ["metadata/", "/radiosa/metadata"]
+WORKDIR radiosa
 
 RUN apt update 
 RUN apt install -y \
@@ -18,9 +19,11 @@ RUN pip install \
 python-mpd2 \
 --break-system-packages
 
-WORKDIR frontend
 RUN npm install \
-vite
+vite \
+chance \
+mpd-api
+
 
 # Default Environmental Variables
 ENV HOSTNAME localhost
@@ -29,5 +32,5 @@ ENV ADMIN_USER admin
 ENV ICECAST_PORT 8000
 ENV ENABLED_STATIONS="bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur"
 
-ENTRYPOINT ["/scripts/start.sh"]
+ENTRYPOINT ["/radiosa/scripts/start.sh"]
 # ENTRYPOINT [ "tail", "-f", "/dev/null" ]

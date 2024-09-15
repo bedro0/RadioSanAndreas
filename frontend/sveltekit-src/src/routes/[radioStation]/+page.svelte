@@ -3,7 +3,7 @@
     import { goto } from '$app/navigation';
     import { page } from '$app/stores';
     import station_metadata_json from "/src/station_metadata.json";
-    import enabledStations from "../../../../enabled_stations.json"
+    import enabledStations from "/radiosa/enabled_stations.json"
 
     const currentStation = $page.params.radioStation;
     const stationMetadata = station_metadata_json[currentStation];

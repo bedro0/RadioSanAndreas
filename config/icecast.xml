@@ -29,7 +29,7 @@
     <logging>
         <accesslog>access.log</accesslog>
         <errorlog>error.log</errorlog>
-        <playlistlog>playlist.log</playlistlog>
+        <!-- <playlistlog>playlist.log</playlistlog> -->
         <loglevel>4</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
         <logsize>32768</logsize>
     </logging>
@@ -53,8 +53,8 @@
         <deny-ip>/path_to_ip_denylist</deny-ip>
     -->
         <alias source="/" destination="/status.xsl"/>
-        <logdir>/.icecast/logs</logdir>
-        <pidfile>/.icecast/pid</pidfile>
+        <logdir>/radiosa/.icecast/logs</logdir>
+        <pidfile>/radiosa/.icecast/pid</pidfile>
         <webroot>/usr/share/icecast2/web</webroot>
         <adminroot>/usr/share/icecast2/admin</adminroot>
     </paths>

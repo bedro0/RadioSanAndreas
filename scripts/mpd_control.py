@@ -13,7 +13,7 @@ mpd_socket = (sys.argv[2])
 # mpd_control_port = int(sys.argv[3])
 
 client=MPDClient()
-client.connect("@"+mpd_socket)
+client.connect("/run/mpd/"+mpd_socket)
 
 # import json file as python dictionary
 data=json.load(radio)

@@ -4,7 +4,7 @@
 </svelte:head>
 
 <script>
-    import enabledStations from "../../../enabled_stations.json"
+    import enabledStations from "/radiosa/enabled_stations.json"
     import { goto } from '$app/navigation'
     let title="Radio San Andreas";
     let favicon="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Grand_Theft_Auto_San_Andreas_logo.svg/270px-Grand_Theft_Auto_San_Andreas_logo.svg.png"
