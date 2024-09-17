@@ -1,60 +1,106 @@
 <script>
+    import { onMount, onDestroy } from 'svelte';
+    import { page } from '$app/stores';
     import { browser } from '$app/environment';
     import { goto } from '$app/navigation';
-    import { page } from '$app/stores';
-    import station_metadata_json from "/src/station_metadata.json";
-    import enabledStations from "/radiosa/enabled_stations.json"
+    import enabledStations from "/radiosa/enabled_stations.json";
 
     const currentStation = $page.params.radioStation;
-    const stationMetadata = station_metadata_json[currentStation];
+    let currentStationMetadata = updateMetadata();
+    let nowPlaying = { artist: '', title: '' };
+    let remainingTime = 0;
+    let timeoutId;
 
-    $: if (browser && !enabledStations.includes(currentStation)) {
-        goto("/");
-    }
+    if (browser && !enabledStations.includes(currentStation)) goto("/");
 
     let playerObj;
-    let playerVolume = 1;
+    let mainAudioSourceObj;
+    let altAudioSourceObj;
+    let playerVolume = 0.75;
     let isPlaying = false;
 
-    $: main_src = `/api/radio?format=ogg&station=${currentStation}&nocache=${Date.now()}`;
-    $: alt_src = `/api/radio?format=mp3&station=${currentStation}&nocache=${Date.now()}`;
-    $: favicon = `/src/visual-assets/logos/${currentStation}.webp`;
+    const getAudioSrc = (format) => `/api/radio?format=${format}&station=${currentStation}&nocache=${Date.now()}`;
 
     function togglePlayPause() {
         isPlaying = !isPlaying;
         if (isPlaying) {
+            mainAudioSourceObj.src = getAudioSrc('ogg');
+            altAudioSourceObj.src = getAudioSrc('mp3');
             playerObj.play();
         } else {
             playerObj.pause();
         }
     }
+
+    async function updateMetadata() {
+        const response = await fetch(`/api/station-metadata?station=${currentStation}`);
+        return (await response.json()).currentStationMetadata;
+    }
+
+    async function updateNowPlaying() {
+        try {
+            const response = await fetch(`/api/now-playing?station=${currentStation}`);
+            const data = await response.json();
+            nowPlaying = data.nowPlaying;
+            remainingTime = data.remainingTime;
+        } catch (error) {
+            console.error('Failed to fetch now playing data:', error);
+        } finally {
+            scheduleNextUpdate();
+        }
+    }
+
+    function scheduleNextUpdate() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(updateNowPlaying, Math.max(1000, (remainingTime || 5) * 1000));
+    }
+
+    onMount(() => {
+        updateNowPlaying();
+    });
+
+    onDestroy(() => clearTimeout(timeoutId));
 </script>
 
 <svelte:head>
-    {#if enabledStations.includes(currentStation)}
-        <title>{stationMetadata.station_name}</title>
-        <link rel="icon" href={favicon} />
-    {/if}
+    {#await currentStationMetadata}
+        <title>Radio San Andreas</title>
+    {:then metadata}
+        <title>{metadata.station_name}</title>
+        <link rel="icon" href="/src/visual-assets/logos/{currentStation}.webp" />
+    {/await}
 </svelte:head>
 
-{#if stationMetadata}
-    <style lang="scss">
-        @import "../../player.scss";
-    </style>
+{#await currentStationMetadata then metadata}
+    <div class="radio-info">
+        <div style="padding-bottom: 1em;">You are listening to: <br> {metadata.station_name} ({metadata.genre}) <br> Host: {metadata.host}</div>
+        <br>
+        {#if nowPlaying.title.includes("(ID)") || nowPlaying.title.includes("(DJ)") || nowPlaying.title.includes("(Caller)")}
+            <div id="track">BREAK</div>
+        {:else}
+            <div style="color:greenyellow;">NOW PLAYING</div>
+            <div id="artist" style="display: flex; justify-content: space-between;">ARTIST <artist>{nowPlaying.artist}</artist></div><br>
+            <div id="track" style="display: flex; justify-content: space-between;">TRACK <song>{nowPlaying.title}</song></div>
+        {/if}
+    </div>
+{/await}
 
-    <img id="background-image" src="src/visual-assets/backgrounds/{currentStation}.jpg" alt={currentStation}>
+<style lang="scss">
+    @import "../../player.scss";
+</style>
 
-    <audio autoplay bind:this={playerObj} bind:volume={playerVolume} on:play={() => isPlaying = true} on:pause={() => isPlaying = false}>
-        <source src={main_src} type="audio/ogg">
-        <source src={alt_src} type="audio/mpeg">
-        Audio not supported on this browser
-    </audio>
+<img id="background-image" src="src/visual-assets/backgrounds/{currentStation}.jpg" alt={currentStation}>
 
-    <button id="playback-control" on:click={togglePlayPause}>
+<audio autoplay bind:this={playerObj} bind:volume={playerVolume} on:play={() => isPlaying = true} on:pause={() => isPlaying = false}>
+    <source bind:this={mainAudioSourceObj} src={getAudioSrc('ogg')} type="audio/ogg">
+    <source bind:this={altAudioSourceObj} src={getAudioSrc('mp3')} type="audio/mpeg">
+    Audio not supported on this browser
+</audio>
+
+<div class="audio-controls">
+    <button id="play-button" on:click={togglePlayPause}>
         <img src="/src/visual-assets/buttons/{!isPlaying}.webp" alt={isPlaying ? 'Pause' : 'Play'}>
     </button>
-
-    <div id="audio-slider">
-        <input type="range" id="volume" min="0" max="1" step="0.01" bind:value={playerVolume}>
-    </div>
-{/if}
+    <br>
+    <input id="volume" type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>
+</div>

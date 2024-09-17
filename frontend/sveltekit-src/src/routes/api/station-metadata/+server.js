@@ -1,23 +1,15 @@
-if (process.argv.length !== 4){
-    console.log("Usage: node get_station_metadata.js [Station Alias] [Requested Metadata]");
-    process.exit(1);
-}
-
-stationAlias = process.argv[2];
-requestedMetadata = process.argv[3];
-
-metadataFile={
+const metadata = {
     
     "bouncefm":{
-        "station":"Bounce FM", 
+        "station_name":"Bounce FM", 
         "folder":"Bounce FM", 
-        "genre":"Funk, Disco, Soul, R\&B", 
+        "genre":"Funk, Disco, Soul, R&B", 
         "location":"East Los Santos", 
         "location_real":"East Los Angeles, California",
         "host":"The Funktipus"
     },
     "csr":{
-        "station":"CSR 103.9",
+        "station_name":"CSR 103.9",
         "folder":"CSR",
         "genre":"New Jack Swing, '90s Soul, '90s Pop",
         "location":"San Fierro",
@@ -25,7 +17,7 @@ metadataFile={
         "host":"Philip 'PM' Michaels"
     },
     "kdst":{
-        "station":"K-DST",
+        "station_name":"K-DST",
         "folder":"K-DST",
         "genre":"Classic Rock",
         "location":"Los Santos",
@@ -33,7 +25,7 @@ metadataFile={
         "host":"Tommy \"The Nightmare\" Smith"
     },
     "kjah":{
-        "station":"K-JAH West",
+        "station_name":"K-JAH West",
         "folder":"K-JAH",
         "genre":"Reggae, Dub, Dancehall",
         "location":"Las Venturas",
@@ -41,7 +33,7 @@ metadataFile={
         "host":"Marshall Peters, Johnny Lawton"
     },
     "krose":{
-        "station":"K-Rose",
+        "station_name":"K-Rose",
         "folder":"KROSE",
         "genre":"Country",
         "location":"Bone County",
@@ -49,7 +41,7 @@ metadataFile={
         "host":"Mary-Beth Maybell"
     },
     "mastersounds":{
-        "station":"Master Sounds 98.3",
+        "station_name":"Master Sounds 98.3",
         "folder":"Master Sounds",
         "genre":"Groove, Classic Funk, Classic Soul",
         "location":"Blackfield, Las Venturas",
@@ -57,7 +49,7 @@ metadataFile={
         "host":"Johnny \"The Love Giant\" Parkinson"
     },
     "playbackfm":{
-        "station":"Playback FM",
+        "station_name":"Playback FM",
         "folder":"Playback FM",
         "genre":"Classic East Coast Hip-Hop",
         "location":"San Fierro",
@@ -65,7 +57,7 @@ metadataFile={
         "host":"Forth Right MC"
     },
     "radiols":{
-        "station":"Radio Los Santos",
+        "station_name":"Radio Los Santos",
         "folder":"Radio Los Santos",
         "genre":"'90s Hip-Hop",
         "location":"Downtown Lost Santos",
@@ -73,7 +65,7 @@ metadataFile={
         "host":"Julio G"
     },
     "radiox":{
-        "station":"Radio:X",
+        "station_name":"Radio:X",
         "folder":"Radio X",
         "genre":"Alternative Rock, Grunge",
         "location":"Las Venturas",
@@ -81,7 +73,7 @@ metadataFile={
         "host":"Sage"
     },
     "sfur":{
-        "station":"San Fierro Underground Radio",
+        "station_name":"San Fierro Underground Radio",
         "folder":"SFUR",
         "genre":"House",
         "location":"San Fierro",
@@ -89,7 +81,7 @@ metadataFile={
         "host":"Hans Oberlander"
     },
     "wctr":{
-        "station":"West Coast Talk Radio",
+        "station_name":"West Coast Talk Radio",
         "folder":"WCTR",
         "genre":"Talk Radio Station",
         "location":"Missionary Hill, San Fierro",
@@ -97,9 +89,11 @@ metadataFile={
         "host":"Ammu-Nation"
     }
 }
-
-function main(){
-    console.log(metadataFile[stationAlias][requestedMetadata])
+export async function GET({ url }) {
+    const station = url.searchParams.get('station');
+    console.log(station);
+    const currentStationMetadata=metadata[station];
+    return new Response(JSON.stringify({ currentStationMetadata }), {
+        headers: { 'Content-Type': 'application/json' }
+    });
 }
-
-main()

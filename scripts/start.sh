@@ -9,8 +9,8 @@ main(){
     chmod -R a+xrw /radiosa/.icecast
     chmod -R a+xrw /radiosa/.mpd
     chmod -R a+r /radiosa/metadata
-    mkdir -p /radiosa/socks
-    chown mpd:mpd /radiosa/socks  # Assuming MPD runs as the 'mpd' user
+    mkdir -p /radiosa/socks/nowPlaying
+    chown -R mpd /radiosa/socks  # Assuming MPD runs as the 'mpd' user
 
 
     enabled_stations_to_json
@@ -29,9 +29,9 @@ main(){
         touch /radiosa/config/$RADIO_STATION.conf
         cat /radiosa/config/sample.conf >> /radiosa/config/$RADIO_STATION.conf
 
-        STATION_NAME="$(python3 /radiosa/scripts/get_station_metadata.py $RADIO_STATION station)"
-        STATION_GENRE="$(python3 /radiosa/scripts/get_station_metadata.py $RADIO_STATION genre)"
-        STATION_FOLDER="$(python3 /radiosa/scripts/get_station_metadata.py $RADIO_STATION folder)"
+        STATION_NAME="$(node /radiosa/scripts/get_station_metadata.js $RADIO_STATION station)"
+        STATION_GENRE="$(node /radiosa/scripts/get_station_metadata.js $RADIO_STATION genre)"
+        STATION_FOLDER="$(node /radiosa/scripts/get_station_metadata.js $RADIO_STATION folder)"
         sed -i 's|%RADIO_STATION%|'"$RADIO_STATION"'|g' /radiosa/config/$RADIO_STATION.conf
         sed -i 's|%STATION_NAME%|'"$STATION_NAME"'|g' /radiosa/config/$RADIO_STATION.conf
         sed -i 's|%STATION_GENRE%|'"$STATION_GENRE"'|g' /radiosa/config/$RADIO_STATION.conf

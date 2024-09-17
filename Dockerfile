@@ -10,14 +10,9 @@ RUN apt update
 RUN apt install -y \
 icecast2 \
 mpd \
-python3 \
-pip \
 openssl \
 nodejs \
-npm 
-RUN pip install \
-python-mpd2 \
---break-system-packages
+npm
 
 RUN npm install \
 vite \

@@ -77,10 +77,10 @@ async function main(){
 async function remainingTime(client){
     // Returns remaining duration of the queue (not including the first track in the queue)
 
-    let fullQueue=await client.api.queue.info();
-    let totalPlaytime=0;
+    let fullQueue = await client.api.queue.info();
+    let totalPlaytime = 0;
     for (let track of fullQueue.slice(1)){
-        totalPlaytime+=track.duration;
+        totalPlaytime += track.duration;
     }
     return totalPlaytime;
 }
@@ -88,7 +88,7 @@ async function remainingTime(client){
 async function queue(){
     while (true) {
         let selectedCategory;
-        if (songHasNotBeenPlayedFor > 1){
+        if (songHasNotBeenPlayedFor > 1 || lastCategory === "Caller"){
             selectedCategory = "Songs";
         }
         else {

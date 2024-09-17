@@ -14,10 +14,64 @@ audio {
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.audio-controls{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+    #play-button{
+        border-radius: 50%;
+        border: 0px;
+        background-color: transparent;
+
+        img{
+            width: 192px;
+        }
+    }
+    #volume {
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.399);
+    }
 }
 
+.radio-info{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 10px;
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.303);
+    text-align: center;
+    font-family: monospace;
+    font-size: x-large;
+    font-weight: 500;
+    padding: 1ch;
+    text-shadow: 3px 3px 3px #000000;   
+    div{
+        color:rgb(0, 255, 255);
+    }
+    #track{
+        color:rgb(255, 255, 0);
+    }
+
+}
+
+/*
 #audio-slider {
-    background: rgba(0, 0, 0, 0.721);
+    background: rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 90%;
     left: 50%;
@@ -27,21 +81,21 @@ audio {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.399);
 }
 
-$button-diameter: 256px;
-$image-diameter: calc($button-diameter / 1.5);
+$button-diameter: 192px;
 
 #playback-control {
     width: $button-diameter;
     height: $button-diameter;
     border: 0px;
-    background: rgba(0,0,0,0);
+    background: rgb(0, 0, 0);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0);
 
     img{
-        width: $image-diameter;
-        height: $image-diameter;
+        width: $button-diameter;
+        height: $button-diameter;
     }
 }
+*/
