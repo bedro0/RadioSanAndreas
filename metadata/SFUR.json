@@ -350,15 +350,10 @@
     ],
     "ID": [],
     "Weather": [],
-    "Time of Day": [
-        "SFUR/(Atmosphere) Evening #2.ogg",
-        "SFUR/(Atmosphere) Morning #1.ogg",
-        "SFUR/(Atmosphere) Night #1.ogg",
-        "SFUR/(Atmosphere) Morning #3.ogg",
-        "SFUR/(Atmosphere) Night #3.ogg",
-        "SFUR/(Atmosphere) Night #2.ogg",
-        "SFUR/(Atmosphere) Evening #3.ogg",
-        "SFUR/(Atmosphere) Morning #2.ogg",
-        "SFUR/(Atmosphere) Evening #1.ogg"
-    ]
+    "Time of Day": {
+        "Morning": ["SFUR/(Atmosphere) Morning #1.ogg", "SFUR/(Atmosphere) Morning #2.ogg", "SFUR/(Atmosphere) Morning #3.ogg"],
+        "Evening": ["SFUR/(Atmosphere) Evening #1.ogg", "SFUR/(Atmosphere) Evening #2.ogg", "SFUR/(Atmosphere) Evening #3.ogg"],
+        "Night": ["SFUR/(Atmosphere) Night #1.ogg", "SFUR/(Atmosphere) Night #2.ogg", "SFUR/(Atmosphere) Night #3.ogg"]
+    },
+    "Bridge Announcement": ["SFUR/(Bridge Announce #1) Can access LS only.ogg", "SFUR/(Bridge Announce #2) Can access LS and SF.ogg", "SFUR/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
 }

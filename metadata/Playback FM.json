@@ -300,22 +300,16 @@
         "Playback FM/(ID) 'Doper than anyone else'.ogg",
         "Playback FM/(ID) 'Word up!'.ogg"
     ],
-    "Weather": [
-        "Playback FM/(Atmosphere) Rain #1.ogg",
-        "Playback FM/(Atmosphere) Smog.ogg",
-        "Playback FM/(Atmosphere) Rain #3.ogg",
-        "Playback FM/(Atmosphere) Rain #2.ogg",
-        "Playback FM/(Atmosphere) Fog #1.ogg",
-        "Playback FM/(Atmosphere) Sunny #1.ogg",
-        "Playback FM/(Atmosphere) Sunny #2.ogg",
-        "Playback FM/(Atmosphere) Fog #2.ogg"
-    ],
-    "Time of Day": [
-        "Playback FM/(Atmosphere) Evening #2.ogg",
-        "Playback FM/(Atmosphere) Morning #1.ogg",
-        "Playback FM/(Atmosphere) Night #1.ogg",
-        "Playback FM/(Atmosphere) Night #2.ogg",
-        "Playback FM/(Atmosphere) Morning #2.ogg",
-        "Playback FM/(Atmosphere) Evening #1.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["Playback FM/(Atmosphere) Sunny #1.ogg", "Playback FM/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["Playback FM/(Atmosphere) Rain #1.ogg", "Playback FM/(Atmosphere) Rain #2.ogg", "Playback FM/(Atmosphere) Rain #3.ogg"],
+        "Fog": ["Playback FM/(Atmosphere) Fog #1.ogg", "Playback FM/(Atmosphere) Fog #2.ogg"],
+        "Smog": ["Playback FM/(Atmosphere) Smog.ogg"]
+    },
+    "Time of Day": {
+        "Morning": ["Playback FM/(Atmosphere) Morning #1.ogg", "Playback FM/(Atmosphere) Morning #2.ogg"],
+        "Evening": ["Playback FM/(Atmosphere) Evening #1.ogg", "Playback FM/(Atmosphere) Evening #2.ogg"],
+        "Night": ["Playback FM/(Atmosphere) Night #1.ogg", "Playback FM/(Atmosphere) Night #2.ogg"]
+    },
+    "Bridge Announcement": ["Playback FM/(Bridge Announce #1) Can access LS only.ogg", "Playback FM/(Bridge Announce #2) Can access LS and SF.ogg", "Playback FM/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
 }

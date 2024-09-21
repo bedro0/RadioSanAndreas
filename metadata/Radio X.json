@@ -344,7 +344,11 @@
         "Radio X/(DJ) 'Bombarded with commercials'.ogg",
         "Radio X/(DJ) 'That bitch at the record store'.ogg",
         "Radio X/(DJ) 'I have to work so hard'.ogg",
-        "Radio X/(DJ) 'Yes, that is my real name'.ogg"
+        "Radio X/(DJ) 'Yes, that is my real name'.ogg",
+        "Radio X/(Story) Casino Opening.ogg",
+        "Radio X/(Story) 'Rap Crisis'.ogg",
+        "Radio X/(Story) Riot.ogg",
+        "Radio X/(Story) Weed Farm Burned Down.ogg"
     ],
     "ID": [
         "Radio X/(ID) 'Trust fund babies'.ogg",
@@ -359,21 +363,17 @@
         "Radio X/(ID) 'Who cares about hunger'.ogg",
         "Radio X/(ID) 'The birthplace of modern rock'.ogg"
     ],
-    "Weather": [
-        "Radio X/(Atmosphere) Fog #1.ogg",
-        "Radio X/(Atmosphere) Sunny #2.ogg",
-        "Radio X/(Atmosphere) Rain #1.ogg",
-        "Radio X/(Atmosphere) Rain #2.ogg",
-        "Radio X/(Atmosphere) Sunny #1.ogg",
-        "Radio X/(Atmosphere) Fog #2.ogg",
-        "Radio X/(Atmosphere) Storm.ogg"
-    ],
-    "Time of Day": [
-        "Radio X/(Atmosphere) Night #2.ogg",
-        "Radio X/(Atmosphere) Morning #2.ogg",
-        "Radio X/(Atmosphere) Evening #2.ogg",
-        "Radio X/(Atmosphere) Morning #1.ogg",
-        "Radio X/(Atmosphere) Evening #1.ogg",
-        "Radio X/(Atmosphere) Night #1.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["Radio X/(Atmosphere) Sunny #1.ogg", "Radio X/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["Radio X/(Atmosphere) Rain #1.ogg", "Radio X/(Atmosphere) Rain #2.ogg"],
+        "Fog": ["Radio X/(Atmosphere) Fog #1.ogg", "Radio X/(Atmosphere) Fog #2.ogg"],
+        "Smog": ["Radio X/(Atmosphere) Storm.ogg"]
+    },
+    "Time of Day": {
+        "Morning": ["Radio X/(Atmosphere) Morning #1.ogg", "Radio X/(Atmosphere) Morning #2.ogg"],
+        "Evening": ["Radio X/(Atmosphere) Evening #1.ogg", "Radio X/(Atmosphere) Evening #2.ogg"],
+        "Night": ["Radio X/(Atmosphere) Night #1.ogg", "Radio X/(Atmosphere) Night #2.ogg"]
+    },
+    "Bridge Announcement": ["Radio X/(Bridge Announce #1) Can access LS only.ogg", "Radio X/(Bridge Announce #2) Can access LS and SF.ogg", "Radio X/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
+
 }

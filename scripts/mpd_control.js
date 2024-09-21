@@ -12,52 +12,51 @@ if (process.argv.length !== 4) {
 }
 
 // import the JSON path specified as a CLI argument
-const radioMetadata = require(`${process.argv[2]}`);
-
+const musicMetadata = require(`${process.argv[2]}`);
 // Sockets are defined by the name of their respective stations
-const stationName = process.argv[3];
+const stationAlias = process.argv[3];
+const stationMetadata = (require("./station_metadata.json"))[stationAlias]
 
-const allStations = ["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"];
 
-// declare initial variables
 let categories, weights;
 let songHasNotBeenPlayedFor = 0;
 let lastCategory = "";
 
 const chance = new Chance();
 
-console.log(`Connected to MPD socket: ${stationName}`);
+console.log(`Connected to MPD socket: ${stationAlias}`);
 
-switch (stationName) {
+// Some stations contain certain kinds of audio snippets, but not others. This ensures the elements are chosen properly depending on the station
+switch (stationAlias) {
     case "kjah":
-        categories = ["Songs", "DJ", "ID"];
-        weights = [1, 1, 1];
+        categories = ["Songs", "DJ", "ID", "Weather", "Time of Day"];
+        weights = [1, 1, 1, 0.01, 0.01];
         break;
     case "radiols":
-        categories = ["Songs", "DJ", "ID"];
-        weights = [1, 1, 1];
+        categories = ["Songs", "DJ", "ID", "Weather", "Time of Day"];
+        weights = [1, 1, 1, 0.01, 0.01];
         break
     case "sfur":
-        categories = ["Songs", "Caller", "DJ"];
-        weights = [1, 0.0625, 1];
+        categories = ["Songs", "Caller", "DJ", "Time of Day"];
+        weights = [1, 0.0625, 1, 0.01];
         break
     default:
-        categories = ["Songs", "Caller", "DJ", "ID"];
-        weights = [1, 0.0625, 1, 1];
+        categories = ["Songs", "Caller", "DJ", "ID", "Weather", "Time of Day"];
+        weights = [1, 0.0625, 1, 1, 0.01, 0.01];
 }
 
 for (let cat of categories) {
-    chance.shuffle(radioMetadata[cat]);
+    chance.shuffle(musicMetadata[cat]);
 }
 
 async function main(){
-    const client = await mpd.connect({ path: `/radiosa/socks/${stationName}` });
+    const client = await mpd.connect({ path: `/radiosa/socks/${stationAlias}` });
     // Enable consume. This allows songs to be removed from the queue after they are played. Prevents from accumulating backlog of songs
     await client.api.playback.consume(1);
-    console.log(`MPD Consume enabled for ${stationName}`);
+    console.log(`MPD Consume enabled for ${stationAlias}`);
 
     while (true){
-        output= await queue();
+        output= await getNextCategory();
         for (let elem of output){
             // add tracks to queue one by one
             const fullPath=(`/radiosa/music/${elem}`)
@@ -85,7 +84,7 @@ async function remainingTime(client){
     return totalPlaytime;
 }
 
-async function queue(){
+async function getNextCategory(){
     while (true) {
         let selectedCategory;
         if (songHasNotBeenPlayedFor > 1 || lastCategory === "Caller"){
@@ -122,6 +121,13 @@ async function queue(){
             songHasNotBeenPlayedFor = 0;
             return [songIntro, songMid, songOutro];
         }
+        else if(selectedCategory === "Weather") {
+            // get current weather conditions about real life counterpart location of the in game radiostation
+            // this is completely bonkers
+
+            
+
+        }
         else {
             songHasNotBeenPlayedFor++;
             return [currentTrack];
@@ -130,7 +136,7 @@ async function queue(){
 }
 
 function getNextTrack(selectedCategory){
-    const tracksInCategory = radioMetadata[selectedCategory];
+    const tracksInCategory = musicMetadata[selectedCategory];
     const randomBit = chance.integer({min: 0, max: 1});
     const chosenTrack = tracksInCategory.splice(randomBit, 1)[0];
     tracksInCategory.push(chosenTrack);

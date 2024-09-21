@@ -281,7 +281,10 @@
         "CSR/(DJ) 'One is music, the other belongs in therapy'.ogg",
         "CSR/(DJ) 'The home of modern soul'.ogg",
         "CSR/(DJ) Momentum.ogg",
-        "CSR/(DJ) 'People that can really sing'.ogg"
+        "CSR/(DJ) 'People that can really sing'.ogg",
+        "CSR/(Story) Casino Opening.ogg",
+        "CSR/(Story) Lights in Desert.ogg",
+        "CSR/(Story) Weed Farm Burned Down.ogg"
     ],
     "ID": [
         "CSR/(ID) 'Soul has to have integrity'.ogg",
@@ -293,19 +296,16 @@
         "CSR/(ID) 'Why are you dressed like a preppie'.ogg",
         "CSR/(ID) 'What happens when you mix...'.ogg"
     ],
-    "Weather": [
-        "CSR/(Atmosphere) Rain #1.ogg",
-        "CSR/(Atmosphere) Rain #2.ogg",
-        "CSR/(Atmosphere) Fog #1.ogg",
-        "CSR/(Atmosphere) Sunny #1.ogg",
-        "CSR/(Atmosphere) Sunny #2.ogg",
-        "CSR/(Atmosphere) Fog #2.ogg"
-    ],
-    "Time of Day": [
-        "CSR/(Atmosphere) Evening.ogg",
-        "CSR/(Atmosphere) Morning #1.ogg",
-        "CSR/(Atmosphere) Night #1.ogg",
-        "CSR/(Atmosphere) Night #2.ogg",
-        "CSR/(Atmosphere) Morning #2.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["CSR/(Atmosphere) Sunny #1.ogg", "CSR/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["CSR/(Atmosphere) Rain #1.ogg", "CSR/(Atmosphere) Rain #2.ogg"],
+        "Fog": ["CSR/(Atmosphere) Fog #1.ogg", "CSR/(Atmosphere) Fog #2.ogg"]
+    },
+    "Time of Day": {
+        "Morning": ["CSR/(Atmosphere) Morning #1.ogg", "CSR/(Atmosphere) Morning #2.ogg"],
+        "Evening": ["CSR/(Atmosphere) Evening.ogg"],
+        "Night": ["CSR/(Atmosphere) Night #1.ogg", "CSR/(Atmosphere) Night #2.ogg"]    
+    },
+    "Bridge Announcement": ["CSR/(Bridge Announce #1) Can access LS only.ogg", "CSR/(Bridge Announce #2) Can access LS and SF.ogg", "CSR/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
+
 }

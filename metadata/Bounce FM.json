@@ -410,7 +410,9 @@
         "Bounce FM/(DJ) 'No mental hospital can hold me'.ogg",
         "Bounce FM/(DJ) 'Primordial funk'.ogg",
         "Bounce FM/(DJ) 'Back up into something wet'.ogg",
-        "Bounce FM/(DJ) 'Doing it to you in your earhole'.ogg"
+        "Bounce FM/(DJ) 'Doing it to you in your earhole'.ogg",
+        "Bounce FM/(Story) Lights in Desert.ogg",
+        "Bounce FM/(Story) Lost Jumpjet.ogg"
     ],
     "ID": [
         "Bounce FM/(ID) 'The party never stops'.ogg",
@@ -422,22 +424,16 @@
         "Bounce FM/(ID) 'Ready to fly into space'.ogg",
         "Bounce FM/(ID) 'What did I do last night'.ogg"
     ],
-    "Weather": [
-        "Bounce FM/(Atmosphere) Rain #1.ogg",
-        "Bounce FM/(Atmosphere) Smog.ogg",
-        "Bounce FM/(Atmosphere) Rain #2.ogg",
-        "Bounce FM/(Atmosphere) Fog #1.ogg",
-        "Bounce FM/(Atmosphere) Sunny #1.ogg",
-        "Bounce FM/(Atmosphere) Sunny #2.ogg",
-        "Bounce FM/(Atmosphere) Fog #2.ogg"
-    ],
-    "Time of Day": [
-        "Bounce FM/(Atmosphere) Evening #2.ogg",
-        "Bounce FM/(Atmosphere) Morning #1.ogg",
-        "Bounce FM/(Atmosphere) Night #1.ogg",
-        "Bounce FM/(Atmosphere) Morning #3.ogg",
-        "Bounce FM/(Atmosphere) Night #2.ogg",
-        "Bounce FM/(Atmosphere) Morning #2.ogg",
-        "Bounce FM/(Atmosphere) Evening #1.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["Bounce FM/(Atmosphere) Sunny #1.ogg", "Bounce FM/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["Bounce FM/(Atmosphere) Rain #1.ogg", "Bounce FM/(Atmosphere) Rain #2.ogg"],
+        "Fog": ["Bounce FM/(Atmosphere) Fog #1.ogg", "Bounce FM/(Atmosphere) Fog #2.ogg"],
+        "Smog": ["Bounce FM/(Atmosphere) Smog.ogg"]
+    },
+    "Time of Day": {
+        "Morning": ["Bounce FM/(Atmosphere) Morning #1.ogg", "Bounce FM/(Atmosphere) Morning #2.ogg", "Bounce FM/(Atmosphere) Morning #3.ogg"],
+        "Evening": ["Bounce FM/(Atmosphere) Evening #1.ogg", "Bounce FM/(Atmosphere) Evening #2.ogg"],
+        "Night": ["Bounce FM/(Atmosphere) Night #1.ogg", "Bounce FM/(Atmosphere) Night #2.ogg"]   
+    },
+    "Bridge Announcement": ["Bounce FM/(Bridge Announce #1) Can access LS only.ogg", "Bounce FM/(Bridge Announce #2) Can access LS and SF.ogg", "Bounce FM/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
 }

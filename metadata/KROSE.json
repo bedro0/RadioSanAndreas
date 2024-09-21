@@ -355,7 +355,12 @@
         "KROSE/(DJ) 'Like the plug, but a musical version'.ogg",
         "KROSE/(DJ) 'Downstairs harmonica talents'.ogg",
         "KROSE/(DJ) 'Hurts a little when I try to put it in'.ogg",
-        "KROSE/(DJ) 'You know what war I'm talking about'.ogg"
+        "KROSE/(DJ) 'You know what war I'm talking about'.ogg",
+        "KROSE/(Story) Badlands Robberies.ogg",
+        "KROSE/(Story) Gang Warfare.ogg",
+        "KROSE/(Story) Lights in Desert.ogg",
+        "KROSE/(Story) Police Trial.ogg",
+        "KROSE/(Story) Weed Farm Burned Down.ogg"
     ],
     "ID": [
         "KROSE/(ID) Farm Animals.ogg",
@@ -368,19 +373,15 @@
         "KROSE/(ID) 'All America loves a cowboy'.ogg",
         "KROSE/(ID) 'Invented the electric guitar'.ogg"
     ],
-    "Weather": [
-        "KROSE/(Atmosphere) Rain.ogg",
-        "KROSE/(Atmosphere) Fog #1.ogg",
-        "KROSE/(Atmosphere) Sunny #1.ogg",
-        "KROSE/(Atmosphere) Storm #1.ogg",
-        "KROSE/(Atmosphere) Sunny #2.ogg",
-        "KROSE/(Atmosphere) Storm #2.ogg",
-        "KROSE/(Atmosphere) Fog #2.ogg"
-    ],
-    "Time of Day": [
-        "KROSE/(Atmosphere) Morning #1.ogg",
-        "KROSE/(Atmosphere) Night #1.ogg",
-        "KROSE/(Atmosphere) Night #2.ogg",
-        "KROSE/(Atmosphere) Morning #2.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["KROSE/(Atmosphere) Sunny #1.ogg", "KROSE/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["KROSE/(Atmosphere) Rain.ogg"],
+        "Fog": ["KROSE/(Atmosphere) Fog #1.ogg", "KROSE/(Atmosphere) Fog #2.ogg"],
+        "Storm": ["KROSE/(Atmosphere) Storm #1.ogg", "KROSE/(Atmosphere) Storm #2.ogg"]  
+    },
+    "Time of Day": {
+        "Morning": ["KROSE/(Atmosphere) Morning #1.ogg", "KROSE/(Atmosphere) Morning #2.ogg"],
+        "Night": ["KROSE/(Atmosphere) Night #1.ogg", "KROSE/(Atmosphere) Night #2.ogg"]
+    },
+    "Bridge Announcement": ["KROSE/(Bridge Announce #1) Can access LS only.ogg", "KROSE/(Bridge Announce #2) Can access LS and SF.ogg", "KROSE/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
 }

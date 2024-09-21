@@ -14,9 +14,7 @@
     if (browser && !enabledStations.includes(currentStation)) goto("/");
 
     let playerObj;
-    let mainAudioSourceObj;
-    let altAudioSourceObj;
-    let playerVolume = 0.75;
+    let playerVolume = 1;
     let isPlaying = false;
 
     const getAudioSrc = (format) => `/api/radio?format=${format}&station=${currentStation}&nocache=${Date.now()}`;
@@ -24,8 +22,7 @@
     function togglePlayPause() {
         isPlaying = !isPlaying;
         if (isPlaying) {
-            mainAudioSourceObj.src = getAudioSrc('ogg');
-            altAudioSourceObj.src = getAudioSrc('mp3');
+            playerObj.src = getAudioSrc('ogg');
             playerObj.play();
         } else {
             playerObj.pause();
@@ -91,9 +88,9 @@
 
 <img id="background-image" src="src/visual-assets/backgrounds/{currentStation}.jpg" alt={currentStation}>
 
-<audio autoplay bind:this={playerObj} bind:volume={playerVolume} on:play={() => isPlaying = true} on:pause={() => isPlaying = false}>
-    <source bind:this={mainAudioSourceObj} src={getAudioSrc('ogg')} type="audio/ogg">
-    <source bind:this={altAudioSourceObj} src={getAudioSrc('mp3')} type="audio/mpeg">
+<audio bind:this={playerObj} bind:volume={playerVolume} on:play={() => isPlaying = true} on:pause={() => isPlaying = false}>
+    <source src={getAudioSrc('ogg')} type="audio/ogg">
+    <source src={getAudioSrc('mp3')} type="audio/mpeg">
     Audio not supported on this browser
 </audio>
 

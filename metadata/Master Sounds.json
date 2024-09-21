@@ -372,7 +372,12 @@
         "Master Sounds/(DJ) 'To Heaven like nineteen times'.ogg",
         "Master Sounds/(DJ) 'I know you thinkin' girl'.ogg",
         "Master Sounds/(DJ) 'Lovin' you, coz you my bitch'.ogg",
-        "Master Sounds/(DJ) 'Check out your headlights'.ogg"
+        "Master Sounds/(DJ) 'Check out your headlights'.ogg",
+        "Master Sounds/(Story) Burglaries.ogg",
+        "Master Sounds/(Story) Countryside Racing.ogg",
+        "Master Sounds/(Story) Lights in Desert.ogg",
+        "Master Sounds/(Story) Mafia Family Killed.ogg",
+        "Master Sounds/(Story) Police Trial.ogg"
     ],
     "ID": [
         "Master Sounds/(ID) 'Big Daddy's back in town'.ogg",
@@ -384,20 +389,15 @@
         "Master Sounds/(ID) 'Before it got sampled'.ogg",
         "Master Sounds/(ID) 'It's the Love Giant'.ogg"
     ],
-    "Weather": [
-        "Master Sounds/(Atmosphere) Rain #1.ogg",
-        "Master Sounds/(Atmosphere) Sunny.ogg",
-        "Master Sounds/(Atmosphere) Rain #2.ogg",
-        "Master Sounds/(Atmosphere) Fog #3.ogg",
-        "Master Sounds/(Atmosphere) Fog #1.ogg",
-        "Master Sounds/(Atmosphere) Fog #2.ogg"
-    ],
-    "Time of Day": [
-        "Master Sounds/(Atmosphere) Evening #2.ogg",
-        "Master Sounds/(Atmosphere) Morning #1.ogg",
-        "Master Sounds/(Atmosphere) Night #1.ogg",
-        "Master Sounds/(Atmosphere) Night #2.ogg",
-        "Master Sounds/(Atmosphere) Morning #2.ogg",
-        "Master Sounds/(Atmosphere) Evening #1.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["Master Sounds/(Atmosphere) Sunny.ogg"],
+        "Rain": ["Master Sounds/(Atmosphere) Rain #1.ogg", "Master Sounds/(Atmosphere) Rain #2.ogg"],
+        "Fog": ["Master Sounds/(Atmosphere) Fog #1.ogg", "Master Sounds/(Atmosphere) Fog #2.ogg", "Master Sounds/(Atmosphere) Fog #3.ogg"]
+    },
+    "Time of Day": {
+        "Morning": ["Master Sounds/(Atmosphere) Morning #1.ogg", "Master Sounds/(Atmosphere) Morning #2.ogg"],
+        "Evening": ["Master Sounds/(Atmosphere) Evening #1.ogg", "Master Sounds/(Atmosphere) Evening #2.ogg"],
+        "Night": ["Master Sounds/(Atmosphere) Night #1.ogg", "Master Sounds/(Atmosphere) Night #2.ogg"]
+    },
+    "Bridge Announcement": ["Master Sounds/(Bridge Announce #1) Can access LS only.ogg", "Master Sounds/(Bridge Announce #2) Can access LS and SF.ogg", "Master Sounds/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
 }

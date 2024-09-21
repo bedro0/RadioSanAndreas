@@ -383,7 +383,10 @@
         "K-DST/(DJ) 'Get to the clinic'.ogg",
         "K-DST/(DJ) 'Music may not be the food of love'.ogg",
         "K-DST/(DJ) 'Whatever happened to Love Fist'.ogg",
-        "K-DST/(DJ) Two kinds of people.ogg"
+        "K-DST/(DJ) Two kinds of people.ogg",
+        "K-DST/(Story) Lights in Desert.ogg",
+        "K-DST/(Story) Prosecutor Busted for Weed.ogg",
+        "K-DST/(Story) Weed Farm Burned Down.ogg"
     ],
     "ID": [
         "K-DST/(ID) 'Music never gets old'.ogg",
@@ -398,22 +401,15 @@
         "K-DST/(ID) 'Gone to rehab'.ogg",
         "K-DST/(ID) 'Ashes to ashes, Dust to Dust'.ogg"
     ],
-    "Weather": [
-        "K-DST/(Atmosphere) Rain #1.ogg",
-        "K-DST/(Atmosphere) Fog #1.ogg",
-        "K-DST/(Atmosphere) Sunny #2.ogg",
-        "K-DST/(Atmosphere) Sunny #1.ogg",
-        "K-DST/(Atmosphere) Fog #2.ogg",
-        "K-DST/(Atmosphere) Rain #2.ogg"
-    ],
-    "Time of Day": [
-        "K-DST/(Atmosphere) Night #3.ogg",
-        "K-DST/(Atmosphere) Night #2.ogg",
-        "K-DST/(Atmosphere) Morning #1.ogg",
-        "K-DST/(Atmosphere) Evening #1.ogg",
-        "K-DST/(Atmosphere) Night #1.ogg",
-        "K-DST/(Atmosphere) Morning #2.ogg",
-        "K-DST/(Atmosphere) Evening #2.ogg",
-        "K-DST/(Atmosphere) Morning #3.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["K-DST/(Atmosphere) Sunny #1.ogg", "K-DST/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["K-DST/(Atmosphere) Rain #1.ogg", "K-DST/(Atmosphere) Rain #2.ogg"],
+        "Fog": ["K-DST/(Atmosphere) Fog #1.ogg", "K-DST/(Atmosphere) Fog #2.ogg"]
+    },
+    "Time of Day": {
+        "Morning": ["K-DST/(Atmosphere) Morning #1.ogg", "K-DST/(Atmosphere) Morning #2.ogg", "K-DST/(Atmosphere) Morning #3.ogg"],
+        "Evening": ["K-DST/(Atmosphere) Evening #1.ogg", "K-DST/(Atmosphere) Evening #2.ogg"],
+        "Night": ["K-DST/(Atmosphere) Night #1.ogg", "K-DST/(Atmosphere) Night #2.ogg", "K-DST/(Atmosphere) Night #3.ogg"]  
+    },
+    "Bridge Announcement": ["K-DST/(Bridge Announce #1) Can access LS only.ogg", "K-DST/(Bridge Announce #2) Can access LS and SF.ogg", "K-DST/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
 }

@@ -338,7 +338,11 @@
         "Radio Los Santos/(DJ) 'Burglary and carjacking is both up'.ogg",
         "Radio Los Santos/(DJ) 'Difference between a rapper and a gangster'.ogg",
         "Radio Los Santos/(DJ) 'Sam and the boys from Liberty City'.ogg",
-        "Radio Los Santos/(DJ) 'Self-styled Audio Boys'.ogg"
+        "Radio Los Santos/(DJ) 'Self-styled Audio Boys'.ogg",
+        "Radio Los Santos/(Story) Gang Warfare -- Ballas and Vagos taking over.ogg",
+        "Radio Los Santos/(Story) Gang Warfare -- Grove Street getting stronger.ogg",
+        "Radio Los Santos/(Story) Gang Warfare.ogg",
+        "Radio Los Santos/(Story) Riot.ogg"
     ],
     "ID": [
         "Radio Los Santos/(ID) Shout-outs.ogg",
@@ -353,24 +357,17 @@
         "Radio Los Santos/(ID) Madd Dogg.ogg",
         "Radio Los Santos/(ID) 'I sent you my demo nine times'.ogg"
     ],
-    "Weather": [
-        "Radio Los Santos/(Atmosphere) Rain #1.ogg",
-        "Radio Los Santos/(Atmosphere) Smog #2.ogg",
-        "Radio Los Santos/(Atmosphere) Rain #2.ogg",
-        "Radio Los Santos/(Atmosphere) Smog #1.ogg",
-        "Radio Los Santos/(Atmosphere) Fog #1.ogg",
-        "Radio Los Santos/(Atmosphere) Sunny #1.ogg",
-        "Radio Los Santos/(Atmosphere) Storm #1.ogg",
-        "Radio Los Santos/(Atmosphere) Sunny #2.ogg",
-        "Radio Los Santos/(Atmosphere) Storm #2.ogg",
-        "Radio Los Santos/(Atmosphere) Fog #2.ogg"
-    ],
-    "Time of Day": [
-        "Radio Los Santos/(Atmosphere) Evening #2.ogg",
-        "Radio Los Santos/(Atmosphere) Morning #1.ogg",
-        "Radio Los Santos/(Atmosphere) Night #1.ogg",
-        "Radio Los Santos/(Atmosphere) Night #2.ogg",
-        "Radio Los Santos/(Atmosphere) Morning #2.ogg",
-        "Radio Los Santos/(Atmosphere) Evening #1.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["Radio Los Santos/(Atmosphere) Sunny #1.ogg", "Radio Los Santos/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["Radio Los Santos/(Atmosphere) Rain #1.ogg", "Radio Los Santos/(Atmosphere) Rain #2.ogg"],
+        "Smog": ["Radio Los Santos/(Atmosphere) Smog #1.ogg", "Radio Los Santos/(Atmosphere) Smog #2.ogg"],
+        "Fog": ["Radio Los Santos/(Atmosphere) Fog #1.ogg", "Radio Los Santos/(Atmosphere) Fog #2.ogg"],
+        "Storm": ["Radio Los Santos/(Atmosphere) Storm #1.ogg", "Radio Los Santos/(Atmosphere) Storm #2.ogg"]
+    },
+    "Time of Day": {
+        "Morning": ["Radio Los Santos/(Atmosphere) Morning #1.ogg", "Radio Los Santos/(Atmosphere) Morning #2.ogg"],
+        "Evening": ["Radio Los Santos/(Atmosphere) Evening #1.ogg", "Radio Los Santos/(Atmosphere) Evening #2.ogg"],
+        "Night": ["Radio Los Santos/(Atmosphere) Night #1.ogg", "Radio Los Santos/(Atmosphere) Night #2.ogg"]
+    },
+    "Bridge Announcement": ["Radio Los Santos/(Bridge Announce #1) Can access LS only.ogg", "Radio Los Santos/(Bridge Announce #2) Can access LS and SF.ogg", "Radio Los Santos/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
 }

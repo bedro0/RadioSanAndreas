@@ -373,7 +373,11 @@
         "K-JAH/(DJ) 'Caught the acting bug'.ogg",
         "K-JAH/(DJ) 'Snow in Jamaica'.ogg",
         "K-JAH/(DJ) 'Where is the love gone'.ogg",
-        "K-JAH/(DJ) 'Mash it up'.ogg"
+        "K-JAH/(DJ) 'Mash it up'.ogg",
+        "K-JAH/(Story) 'Foolishness of Babylon'.ogg",
+        "K-JAH/(Story) Gang Warfare.ogg",
+        "K-JAH/(Story) Lights in Desert.ogg",
+        "K-JAH/(Story) Riot.ogg"
     ],
     "ID": [
         "K-JAH/(ID) 'Winners don't use hard drugs'.ogg",
@@ -387,21 +391,17 @@
         "K-JAH/(ID) 'That ain't bass'.ogg",
         "K-JAH/(ID) 'Put your guns down'.ogg"
     ],
-    "Weather": [
-        "K-JAH/(Atmosphere) Rain #1.ogg",
-        "K-JAH/(Atmosphere) Rain #2.ogg",
-        "K-JAH/(Atmosphere) Storm.ogg",
-        "K-JAH/(Atmosphere) Fog #1.ogg",
-        "K-JAH/(Atmosphere) Sunny #1.ogg",
-        "K-JAH/(Atmosphere) Sunny #2.ogg",
-        "K-JAH/(Atmosphere) Fog #2.ogg"
-    ],
-    "Time of Day": [
-        "K-JAH/(Atmosphere) Evening #2.ogg",
-        "K-JAH/(Atmosphere) Morning #1.ogg",
-        "K-JAH/(Atmosphere) Night #1.ogg",
-        "K-JAH/(Atmosphere) Night #2.ogg",
-        "K-JAH/(Atmosphere) Morning #2.ogg",
-        "K-JAH/(Atmosphere) Evening #1.ogg"
-    ]
+    "Weather": {
+        "Sunny": ["K-JAH/(Atmosphere) Sunny #1.ogg", "K-JAH/(Atmosphere) Sunny #2.ogg"],
+        "Rain": ["K-JAH/(Atmosphere) Rain #1.ogg", "K-JAH/(Atmosphere) Rain #2.ogg"],
+        "Storm": ["K-JAH/(Atmosphere) Storm.ogg"],
+        "Fog": ["K-JAH/(Atmosphere) Fog #1.ogg", "K-JAH/(Atmosphere) Fog #2.ogg"]    
+    },
+    "Time of Day": {
+        "Morning": ["K-JAH/(Atmosphere) Morning #1.ogg", "K-JAH/(Atmosphere) Morning #2.ogg"],
+        "Evening": ["K-JAH/(Atmosphere) Evening #1.ogg", "K-JAH/(Atmosphere) Evening #2.ogg"],
+        "Night": ["K-JAH/(Atmosphere) Night #1.ogg", "K-JAH/(Atmosphere) Night #2.ogg"]   
+    },
+    "Bridge Announcement": ["K-JAH/(Bridge Announce #1) Can access LS only.ogg", "K-JAH/(Bridge Announce #2) Can access LS and SF.ogg", "K-JAH/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
+
 }
