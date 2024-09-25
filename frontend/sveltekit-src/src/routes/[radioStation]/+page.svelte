@@ -1,31 +1,36 @@
 <script>
-    import { onMount, onDestroy } from 'svelte';
-    import { page } from '$app/stores';
-    import { browser } from '$app/environment';
-    import { goto } from '$app/navigation';
+    import { onMount, onDestroy } from "svelte";
+    import { page } from "$app/stores";
+    import { browser } from "$app/environment";
+    import { goto } from "$app/navigation";
     import enabledStations from "/radiosa/enabled_stations.json";
 
     const currentStation = $page.params.radioStation;
     let currentStationMetadata = updateMetadata();
-    let nowPlaying = { artist: '', title: '' };
+    let nowPlaying = { artist: "", title: "" };
     let remainingTime = 0;
     let timeoutId;
-
+    const notSongs = ["(ID)", "(DJ)", "(Caller)", "(Story)", "(Atmosphere)"];
     if (browser && !enabledStations.includes(currentStation)) goto("/");
 
     let playerObj;
     let playerVolume = 1;
-    let isPlaying = false;
+    let isAudio = true;
+    let isPaused = true;
 
     const getAudioSrc = (format) => `/api/radio?format=${format}&station=${currentStation}&nocache=${Date.now()}`;
 
-    function togglePlayPause() {
-        isPlaying = !isPlaying;
-        if (isPlaying) {
-            playerObj.src = getAudioSrc('ogg');
-            playerObj.play();
-        } else {
-            playerObj.pause();
+    async function togglePlayPause(){
+        if(isAudio){
+            if(playerObj.paused){
+                playerObj.play();
+            }
+            else{
+                isAudio=false;
+            }
+        }
+        else{
+            isAudio=true;
         }
     }
 
@@ -41,7 +46,7 @@
             nowPlaying = data.nowPlaying;
             remainingTime = data.remainingTime;
         } catch (error) {
-            console.error('Failed to fetch now playing data:', error);
+            console.error("Failed to fetch now playing data:", error);
         } finally {
             scheduleNextUpdate();
         }
@@ -68,36 +73,52 @@
     {/await}
 </svelte:head>
 
-{#await currentStationMetadata then metadata}
-    <div class="radio-info">
-        <div style="padding-bottom: 1em;">You are listening to: <br> {metadata.station_name} ({metadata.genre}) <br> Host: {metadata.host}</div>
+<div id="allfather">
+    {#await currentStationMetadata then metadata}
+        <div id="channel-id">
+            <div class="channel-id-member">You are listening to:</div>
+            <div class="channel-id-member" id="station-name">{metadata.station_name}</div>
+            <div>
+                <img id="station-logo" src="src/visual-assets/logos/{currentStation}.webp" alt={currentStation}/>
+            </div>
+            <div class="channel-id-member" id="station-genre"> <br> Genre: {metadata.genre} </div> 
+            <div class="channel-id-member" id="host">Host: {metadata.host}</div>
+        </div>
+
+        <div class="currently-playing">
+            {#if notSongs.some(currentTrack => nowPlaying.title.includes(currentTrack))}
+            <div id="break">BREAK</div>
+            {:else}
+            <div id="now-playing">NOW PLAYING</div>
+            <div class="display-artist">
+                <div id="artist">ARTIST:</div>
+                <div id="artist-id">{nowPlaying.artist}</div>
+            </div>
+            <div class="display-track-title">
+                <div id=track-title>TRACK:</div>
+                <div id="track-title-id" style="display: flex; justify-items: left;">{nowPlaying.title}</div>
+            </div>
+            {/if}
+        </div>
+    {/await}
+
+    <div id="audio-controls">
+        <button id="play-button" on:click={togglePlayPause}>
+            <img src="/src/visual-assets/buttons/{!isAudio || isPaused}.webp">
+        </button>
         <br>
-        {#if nowPlaying.title.includes("(ID)") || nowPlaying.title.includes("(DJ)") || nowPlaying.title.includes("(Caller)")}
-            <div id="track">BREAK</div>
-        {:else}
-            <div style="color:greenyellow;">NOW PLAYING</div>
-            <div id="artist" style="display: flex; justify-content: space-between;">ARTIST <artist>{nowPlaying.artist}</artist></div><br>
-            <div id="track" style="display: flex; justify-content: space-between;">TRACK <song>{nowPlaying.title}</song></div>
-        {/if}
+        <input id="volume" type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>
     </div>
-{/await}
+</div>
+
+{#if isAudio}
+<audio autoplay bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused}>
+    <source src={getAudioSrc("ogg")}/>
+    <source src={getAudioSrc("mp3")}/>
+    Audio is not supported on this browser!
+</audio>
+{/if}
 
 <style lang="scss">
     @import "../../player.scss";
 </style>
-
-<img id="background-image" src="src/visual-assets/backgrounds/{currentStation}.jpg" alt={currentStation}>
-
-<audio bind:this={playerObj} bind:volume={playerVolume} on:play={() => isPlaying = true} on:pause={() => isPlaying = false}>
-    <source src={getAudioSrc('ogg')} type="audio/ogg">
-    <source src={getAudioSrc('mp3')} type="audio/mpeg">
-    Audio not supported on this browser
-</audio>
-
-<div class="audio-controls">
-    <button id="play-button" on:click={togglePlayPause}>
-        <img src="/src/visual-assets/buttons/{!isPlaying}.webp" alt={isPlaying ? 'Pause' : 'Play'}>
-    </button>
-    <br>
-    <input id="volume" type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>
-</div>

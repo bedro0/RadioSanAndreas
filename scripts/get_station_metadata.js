@@ -6,7 +6,7 @@ if (process.argv.length !== 4){
 stationAlias = process.argv[2];
 requestedMetadata = process.argv[3];
 
-metadataFile=(require("./station_metadata"))[stationAlias]
+metadataFile=require("./station_metadata")[stationAlias]
 
 function main(){
     console.log(metadataFile[requestedMetadata])
