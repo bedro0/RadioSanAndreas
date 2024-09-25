@@ -14,7 +14,7 @@ const metadata = {
         "genre":"New Jack Swing, '90s Soul, '90s Pop",
         "location":"San Fierro",
         "location_real":"San Francisco, California",
-        "host":"Philip 'PM' Michaels"
+        "host":"Philip \"PM\" Michaels"
     },
     "kdst":{
         "station_name":"K-DST",
@@ -90,10 +90,10 @@ const metadata = {
     }
 }
 export async function GET({ url }) {
-    const station = url.searchParams.get('station');
+    const station = url.searchParams.get("station");
     console.log(station);
     const currentStationMetadata=metadata[station];
     return new Response(JSON.stringify({ currentStationMetadata }), {
-        headers: { 'Content-Type': 'application/json' }
+        headers: { "Content-Type": "application/json" }
     });
 }
