@@ -104,7 +104,7 @@
 
     <div id="audio-controls">
         <button id="play-button" on:click={togglePlayPause}>
-            <img src="/src/visual-assets/buttons/{!isAudio || isPaused}.webp">
+            <img src="/src/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? "Play" : "Pause"}">
         </button>
         <br>
         <input id="volume" type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>

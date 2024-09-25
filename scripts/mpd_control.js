@@ -2,7 +2,7 @@
 const mpd = require("mpd-api");
 const Chance = require("chance");
 
-// This script directly controls the playback of the MPD.
+// This script directly controls the playback of MPD.
 // It accepts CLI arguments /path/to/json, mpd-socket, and mpd-control-port
 
 // check if the incoming command was executed properly
@@ -14,7 +14,7 @@ if (process.argv.length !== 4) {
 
 // import the JSON path specified as a CLI argument
 const tracksMetadata = require(`${process.argv[2]}`);
-// Sockets are defined by the name of their respective stations
+// Local sockets are defined by the name of their respective stations
 const stationAlias = process.argv[3];
 const stationMetadata = (require("./station_metadata.json"))[stationAlias]
 
@@ -27,7 +27,8 @@ const chance = new Chance();
 
 console.log(`Connected to MPD socket: ${stationAlias}`);
 
-// Some stations contain certain kinds of audio snippets, but not others. This ensures the elements are chosen properly depending on the station
+// Some stations contain certain kinds of audio tracks, but not others. 
+// This switch ensures the elements are chosen properly depending on the station
 switch (stationAlias) {
     case "kjah":
         categories = ["Songs", "DJ", "ID", "Weather", "Time of Day"];
@@ -52,9 +53,14 @@ for (let cat of categories) {
     }
 }
 
+
+/* 
+main function calls all other functions, gets theri array output and adds them to the player queue.
+then it waits for a variable amount of time before adding another track.
+*/
 async function main(){
     const client = await mpd.connect({ path: `/radiosa/socks/${stationAlias}` });
-    // Enable consume. This allows songs to be removed from the queue after they are played. Prevents from accumulating backlog of songs
+    // Enable consume. This allows tracks to be removed from the player queue after they are played. Prevents from accumulating backlog of tracks
     await client.api.playback.consume(1);
     console.log(`MPD Consume enabled for ${stationAlias}`);
 
@@ -68,7 +74,6 @@ async function main(){
         }
 
         const sleepFor = await remainingTime(client);
-        console.log("Pressing play.")
         await client.api.playback.play();
 
         console.log(`Sleeping for ${sleepFor} seconds.`);
@@ -87,9 +92,15 @@ async function remainingTime(client){
     return totalPlaytime;
 }
 
+
+/*
+* getNextCategory() decides which category of tracks is played next
+* Typically, these are "Songs", "Caller", "DJ", "ID", "Weather", "Time of Day".
+*/
 async function getNextCategory(){
     while (true) {
         let selectedCategory;
+        // if 2 non-song tracks have been played, it ensures that next one is a song
         if (songHasNotBeenPlayedFor > 1 || lastCategory === "Caller"){
             selectedCategory = "Songs";
         }
@@ -102,6 +113,7 @@ async function getNextCategory(){
             return (voicedbytheDJ.includes(lastCategory) && voicedbytheDJ.includes(selectedCategory));
         }
 
+        // ensure that 2 of the same kind of tracks are not played back to back
         if(((lastCategory) && (selectedCategory === lastCategory)) || bothAreVoicedbytheDJ()){
             continue;
         }
@@ -113,7 +125,7 @@ async function getNextCategory(){
         lastCategory=(selectedCategory);
 
         /*
-        song objects have a different structure
+        song objects have a different structure than all other tracks
         each song in radio contains at most 3 intros and 3 outros (2 with dj voice lines, 1 without)
         each song object is a json object containing the following keys
         title, intros (list), mid (middle part of the song, 1 element), outros (list)
@@ -139,7 +151,10 @@ async function getNextCategory(){
     }
 }
 
+// Provides the next track to play depending on the category that was passed
 async function getNextTrack(selectedCategory){
+
+    // weather and time of day announcements require real world data, so they are split into different functions.
     if (selectedCategory === "Weather"){
         return await getNextWeather();
     }
@@ -147,6 +162,8 @@ async function getNextTrack(selectedCategory){
         return await getTimeTrack(getPacificTime);
     }
     else {
+        // After receiving an array of tracks, randomly choose between indexes 0 and 1, then append that track at the back of the array
+        // This FiFo like approach ensures that songs are spread apart from each other, but still random to simulate radio-like quality
         const tracksInCategory = tracksMetadata[selectedCategory];
         const randomBit = chance.integer({min: 0, max: 1});
         const chosenTrack = tracksInCategory.splice(randomBit, 1)[0];
@@ -162,6 +179,7 @@ async function getNextWeather(){
     const apiResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationMetadata.latitude}&longitude=${stationMetadata.longitude}&current=weather_code`);
     const responseBody = await apiResponse.json()
     timeOfDay = await getPacificTime();
+    // only return track if the time is morning or afternoon, so radio hosts don't say "sunny" at night or something
     isMorningorAfternoon = (timeOfDay === "Morning" || timeOfDay === "Afternoon");
     if ((weatherConvert[responseBody.current.weather_code] === undefined) || !isMorningorAfternoon){
         return null;
@@ -197,6 +215,7 @@ async function getPacificTime(){
     }
 }
 
+// returns a track based on the time provided by getPacificTime function
 async function getTimeTrack(getPacificTime){
     timeOfDay = await getPacificTime();
 
