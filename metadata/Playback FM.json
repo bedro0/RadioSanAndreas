@@ -1,315 +1,232 @@
 {
-    "Songs": [
-        {
-            "title": "Rebel Without a Pause",
-            "mid": [
-                {
-                    "mid": "Playback FM/Rebel Without a Pause (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "Playback FM/Rebel Without a Pause (Outro).ogg",
-                    "dj1": "Playback FM/Rebel Without a Pause (Outro DJ #1).ogg",
-                    "dj2": "Playback FM/Rebel Without a Pause (Outro DJ #2).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj2": "Playback FM/Rebel Without a Pause (Intro DJ #2).ogg",
-                    "dj1": "Playback FM/Rebel Without a Pause (Intro DJ #1).ogg",
-                    "dj0": "Playback FM/Rebel Without a Pause (Intro).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Warm It Up Kane",
-            "intros": [
-                {
-                    "dj2": "Playback FM/Warm It Up Kane (Intro DJ #2).ogg",
-                    "dj0": "Playback FM/Warm It Up Kane (Intro).ogg",
-                    "dj1": "Playback FM/Warm It Up Kane (Intro DJ #1).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "Playback FM/Warm It Up Kane (Outro).ogg",
-                    "dj2": "Playback FM/Warm It Up Kane (Outro DJ #2).ogg",
-                    "dj1": "Playback FM/Warm It Up Kane (Outro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/Warm It Up Kane (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "I Know You Got Soul",
-            "intros": [
-                {
-                    "dj2": "Playback FM/I Know You Got Soul (Intro DJ #2).ogg",
-                    "dj1": "Playback FM/I Know You Got Soul (Intro DJ #1).ogg",
-                    "dj0": "Playback FM/I Know You Got Soul (Intro).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "Playback FM/I Know You Got Soul (Outro DJ #2).ogg",
-                    "dj1": "Playback FM/I Know You Got Soul (Outro DJ #1).ogg",
-                    "dj0": "Playback FM/I Know You Got Soul (Outro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/I Know You Got Soul (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Brand Nubian",
-            "outros": [
-                {
-                    "dj0": "Playback FM/Brand Nubian (Outro).ogg",
-                    "dj2": "Playback FM/Brand Nubian (Outro DJ #2).ogg",
-                    "dj1": "Playback FM/Brand Nubian (Outro DJ #1).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj0": "Playback FM/Brand Nubian (Intro).ogg",
-                    "dj2": "Playback FM/Brand Nubian (Intro DJ #2).ogg",
-                    "dj1": "Playback FM/Brand Nubian (Intro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/Brand Nubian (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Road to the Riches",
-            "outros": [
-                {
-                    "dj2": "Playback FM/Road to the Riches (Outro DJ #2).ogg",
-                    "dj1": "Playback FM/Road to the Riches (Outro DJ #1).ogg",
-                    "dj0": "Playback FM/Road to the Riches (Outro).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj2": "Playback FM/Road to the Riches (Intro DJ #2).ogg",
-                    "dj0": "Playback FM/Road to the Riches (Intro).ogg",
-                    "dj1": "Playback FM/Road to the Riches (Intro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/Road to the Riches (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "The Vapors",
-            "outros": [
-                {
-                    "dj1": "Playback FM/The Vapors (Outro DJ #1).ogg",
-                    "dj2": "Playback FM/The Vapors (Outro DJ #2).ogg",
-                    "dj0": "Playback FM/The Vapors (Outro).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj2": "Playback FM/The Vapors (Intro DJ #2).ogg",
-                    "dj1": "Playback FM/The Vapors (Intro DJ #1).ogg",
-                    "dj0": "Playback FM/The Vapors (Intro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/The Vapors (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "B.Y.S.",
-            "outros": [
-                {
-                    "dj1": "Playback FM/B.Y.S. (Outro DJ #1).ogg",
-                    "dj0": "Playback FM/B.Y.S. (Outro).ogg",
-                    "dj2": "Playback FM/B.Y.S. (Outro DJ #2).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj1": "Playback FM/B.Y.S. (Intro DJ #1).ogg",
-                    "dj2": "Playback FM/B.Y.S. (Intro DJ #2).ogg",
-                    "dj0": "Playback FM/B.Y.S. (Intro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/B.Y.S. (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Critical Beatdown",
-            "mid": [
-                {
-                    "mid": "Playback FM/Critical Beatdown (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "Playback FM/Critical Beatdown (Outro DJ #1).ogg",
-                    "dj0": "Playback FM/Critical Beatdown (Outro).ogg",
-                    "dj2": "Playback FM/Critical Beatdown (Outro DJ #2).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj2": "Playback FM/Critical Beatdown (Intro DJ #2).ogg",
-                    "dj0": "Playback FM/Critical Beatdown (Intro).ogg",
-                    "dj1": "Playback FM/Critical Beatdown (Intro DJ #1).ogg"
-                }
-            ]
-        },
-        {
-            "title": "It Takes Two",
-            "mid": [
-                {
-                    "mid": "Playback FM/It Takes Two (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "Playback FM/It Takes Two (Outro DJ #2).ogg",
-                    "dj0": "Playback FM/It Takes Two (Outro).ogg",
-                    "dj1": "Playback FM/It Takes Two (Outro DJ #1).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj0": "Playback FM/It Takes Two (Intro).ogg",
-                    "dj2": "Playback FM/It Takes Two (Intro DJ #2).ogg",
-                    "dj1": "Playback FM/It Takes Two (Intro DJ #1).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Children's Story",
-            "intros": [
-                {
-                    "dj1": "Playback FM/Children's Story (Intro DJ #1).ogg",
-                    "dj2": "Playback FM/Children's Story (Intro DJ #2).ogg",
-                    "dj0": "Playback FM/Children's Story (Intro).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "Playback FM/Children's Story (Outro DJ #1).ogg",
-                    "dj0": "Playback FM/Children's Story (Outro).ogg",
-                    "dj2": "Playback FM/Children's Story (Outro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/Children's Story (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Me & The Biz",
-            "intros": [
-                {
-                    "dj2": "Playback FM/Me & The Biz (Intro DJ #2).ogg",
-                    "dj0": "Playback FM/Me & The Biz (Intro).ogg",
-                    "dj1": "Playback FM/Me & The Biz (Intro DJ #1).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "Playback FM/Me & The Biz (Outro).ogg",
-                    "dj2": "Playback FM/Me & The Biz (Outro DJ #2).ogg",
-                    "dj1": "Playback FM/Me & The Biz (Outro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/Me & The Biz (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "The Godfather",
-            "intros": [
-                {
-                    "dj2": "Playback FM/The Godfather (Intro DJ #2).ogg",
-                    "dj0": "Playback FM/The Godfather (Intro).ogg",
-                    "dj1": "Playback FM/The Godfather (Intro DJ #1).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "Playback FM/The Godfather (Outro).ogg",
-                    "dj1": "Playback FM/The Godfather (Outro DJ #1).ogg",
-                    "dj2": "Playback FM/The Godfather (Outro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "Playback FM/The Godfather (Mid).ogg"
-                }
-            ]
-        }
-    ],
-    "Caller": [
-        "Playback FM/(Caller) 'Well, actually, it's CSR'.ogg",
-        "Playback FM/(Caller) 'You're really annoying'.ogg"
-    ],
-    "DJ": [
-        "Playback FM/(DJ) 'You don't last a minute'.ogg",
-        "Playback FM/(DJ) 'I'll go speed of light on y'all'.ogg",
-        "Playback FM/(DJ) 'Shoulda paid more attention in school'.ogg",
-        "Playback FM/(DJ) 'Cavern of Sorrow marathon'.ogg",
-        "Playback FM/(DJ) 'There's a party over here'.ogg",
-        "Playback FM/(DJ) 'This goes out to my man the Iceman'.ogg",
-        "Playback FM/(DJ) 'I got seven digits as it is'.ogg",
-        "Playback FM/(DJ) 'Get back to the 'burbs you fools!'.ogg",
-        "Playback FM/(DJ) 'Help ain't no charity'.ogg",
-        "Playback FM/(DJ) 'Ugly like yo momma'.ogg",
-        "Playback FM/(DJ) 'Propaganda'.ogg",
-        "Playback FM/(DJ) 'Small-minded robots'.ogg",
-        "Playback FM/(DJ) 'West Coast radio suckers'.ogg",
-        "Playback FM/(DJ) 'Los Santos police'.ogg",
-        "Playback FM/(DJ) 'Be educated on the sounds that brung ya'.ogg",
-        "Playback FM/(DJ) 'Ready for your training wheels'.ogg"
-    ],
-    "ID": [
-        "Playback FM/(ID) 'The reason you put that subwoofer in your car'.ogg",
-        "Playback FM/(ID) 'Givin' it to ya' straight up, homeboy!'.ogg",
-        "Playback FM/(ID) 'The home of classic hiphop'.ogg",
-        "Playback FM/(ID) 'The man with an opinion on everything'.ogg",
-        "Playback FM/(ID) 'Layin' it down old skool'.ogg",
-        "Playback FM/(ID) 'Word to your mamma'.ogg",
-        "Playback FM/(ID) 'While you suckers were wearing diapers'.ogg",
-        "Playback FM/(ID) 'Drop out of that whack-ass school'.ogg",
-        "Playback FM/(ID) 'Skills on the mic'.ogg",
-        "Playback FM/(ID) 'Doper than anyone else'.ogg",
-        "Playback FM/(ID) 'Word up!'.ogg"
-    ],
-    "Weather": {
-        "Sunny": ["Playback FM/(Atmosphere) Sunny #1.ogg", "Playback FM/(Atmosphere) Sunny #2.ogg"],
-        "Rain": ["Playback FM/(Atmosphere) Rain #1.ogg", "Playback FM/(Atmosphere) Rain #2.ogg", "Playback FM/(Atmosphere) Rain #3.ogg"],
-        "Fog": ["Playback FM/(Atmosphere) Fog #1.ogg", "Playback FM/(Atmosphere) Fog #2.ogg"],
-        "Smog": ["Playback FM/(Atmosphere) Smog.ogg"]
+  "Songs": [
+    {
+      "intros": [
+        "Playback FM/Rebel Without a Pause (Intro DJ #2).ogg",
+        "Playback FM/Rebel Without a Pause (Intro DJ #1).ogg",
+        "Playback FM/Rebel Without a Pause (Intro).ogg"
+      ],
+      "mid": "Playback FM/Rebel Without a Pause (Mid).ogg",
+      "outros": [
+        "Playback FM/Rebel Without a Pause (Outro).ogg",
+        "Playback FM/Rebel Without a Pause (Outro DJ #1).ogg",
+        "Playback FM/Rebel Without a Pause (Outro DJ #2).ogg"
+      ]
     },
-    "Time of Day": {
-        "Morning": ["Playback FM/(Atmosphere) Morning #1.ogg", "Playback FM/(Atmosphere) Morning #2.ogg"],
-        "Evening": ["Playback FM/(Atmosphere) Evening #1.ogg", "Playback FM/(Atmosphere) Evening #2.ogg"],
-        "Night": ["Playback FM/(Atmosphere) Night #1.ogg", "Playback FM/(Atmosphere) Night #2.ogg"]
+    {
+      "intros": [
+        "Playback FM/Warm It Up Kane (Intro DJ #2).ogg",
+        "Playback FM/Warm It Up Kane (Intro).ogg",
+        "Playback FM/Warm It Up Kane (Intro DJ #1).ogg"
+      ],
+      "mid": "Playback FM/Warm It Up Kane (Mid).ogg",
+      "outros": [
+        "Playback FM/Warm It Up Kane (Outro).ogg",
+        "Playback FM/Warm It Up Kane (Outro DJ #2).ogg",
+        "Playback FM/Warm It Up Kane (Outro DJ #1).ogg"
+      ]
     },
-    "Bridge Announcement": ["Playback FM/(Bridge Announce #1) Can access LS only.ogg", "Playback FM/(Bridge Announce #2) Can access LS and SF.ogg", "Playback FM/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
+    {
+      "intros": [
+        "Playback FM/I Know You Got Soul (Intro DJ #2).ogg",
+        "Playback FM/I Know You Got Soul (Intro DJ #1).ogg",
+        "Playback FM/I Know You Got Soul (Intro).ogg"
+      ],
+      "mid": "Playback FM/I Know You Got Soul (Mid).ogg",
+      "outros": [
+        "Playback FM/I Know You Got Soul (Outro DJ #2).ogg",
+        "Playback FM/I Know You Got Soul (Outro DJ #1).ogg",
+        "Playback FM/I Know You Got Soul (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/Brand Nubian (Intro).ogg",
+        "Playback FM/Brand Nubian (Intro DJ #2).ogg",
+        "Playback FM/Brand Nubian (Intro DJ #1).ogg"
+      ],
+      "mid": "Playback FM/Brand Nubian (Mid).ogg",
+      "outros": [
+        "Playback FM/Brand Nubian (Outro).ogg",
+        "Playback FM/Brand Nubian (Outro DJ #2).ogg",
+        "Playback FM/Brand Nubian (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/Road to the Riches (Intro DJ #2).ogg",
+        "Playback FM/Road to the Riches (Intro).ogg",
+        "Playback FM/Road to the Riches (Intro DJ #1).ogg"
+      ],
+      "mid": "Playback FM/Road to the Riches (Mid).ogg",
+      "outros": [
+        "Playback FM/Road to the Riches (Outro DJ #2).ogg",
+        "Playback FM/Road to the Riches (Outro DJ #1).ogg",
+        "Playback FM/Road to the Riches (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/The Vapors (Intro DJ #2).ogg",
+        "Playback FM/The Vapors (Intro DJ #1).ogg",
+        "Playback FM/The Vapors (Intro).ogg"
+      ],
+      "mid": "Playback FM/The Vapors (Mid).ogg",
+      "outros": [
+        "Playback FM/The Vapors (Outro DJ #1).ogg",
+        "Playback FM/The Vapors (Outro DJ #2).ogg",
+        "Playback FM/The Vapors (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/B.Y.S. (Intro DJ #1).ogg",
+        "Playback FM/B.Y.S. (Intro DJ #2).ogg",
+        "Playback FM/B.Y.S. (Intro).ogg"
+      ],
+      "mid": "Playback FM/B.Y.S. (Mid).ogg",
+      "outros": [
+        "Playback FM/B.Y.S. (Outro DJ #1).ogg",
+        "Playback FM/B.Y.S. (Outro).ogg",
+        "Playback FM/B.Y.S. (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/Critical Beatdown (Intro DJ #2).ogg",
+        "Playback FM/Critical Beatdown (Intro).ogg",
+        "Playback FM/Critical Beatdown (Intro DJ #1).ogg"
+      ],
+      "mid": "Playback FM/Critical Beatdown (Mid).ogg",
+      "outros": [
+        "Playback FM/Critical Beatdown (Outro DJ #1).ogg",
+        "Playback FM/Critical Beatdown (Outro).ogg",
+        "Playback FM/Critical Beatdown (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/It Takes Two (Intro).ogg",
+        "Playback FM/It Takes Two (Intro DJ #2).ogg",
+        "Playback FM/It Takes Two (Intro DJ #1).ogg"
+      ],
+      "mid": "Playback FM/It Takes Two (Mid).ogg",
+      "outros": [
+        "Playback FM/It Takes Two (Outro DJ #2).ogg",
+        "Playback FM/It Takes Two (Outro).ogg",
+        "Playback FM/It Takes Two (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/Children's Story (Intro DJ #1).ogg",
+        "Playback FM/Children's Story (Intro DJ #2).ogg",
+        "Playback FM/Children's Story (Intro).ogg"
+      ],
+      "mid": "Playback FM/Children's Story (Mid).ogg",
+      "outros": [
+        "Playback FM/Children's Story (Outro DJ #1).ogg",
+        "Playback FM/Children's Story (Outro).ogg",
+        "Playback FM/Children's Story (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/Me & The Biz (Intro DJ #2).ogg",
+        "Playback FM/Me & The Biz (Intro).ogg",
+        "Playback FM/Me & The Biz (Intro DJ #1).ogg"
+      ],
+      "mid": "Playback FM/Me & The Biz (Mid).ogg",
+      "outros": [
+        "Playback FM/Me & The Biz (Outro).ogg",
+        "Playback FM/Me & The Biz (Outro DJ #2).ogg",
+        "Playback FM/Me & The Biz (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Playback FM/The Godfather (Intro DJ #2).ogg",
+        "Playback FM/The Godfather (Intro).ogg",
+        "Playback FM/The Godfather (Intro DJ #1).ogg"
+      ],
+      "mid": "Playback FM/The Godfather (Mid).ogg",
+      "outros": [
+        "Playback FM/The Godfather (Outro).ogg",
+        "Playback FM/The Godfather (Outro DJ #1).ogg",
+        "Playback FM/The Godfather (Outro DJ #2).ogg"
+      ]
+    }
+  ],
+  "Caller": [
+    "Playback FM/(Caller) 'Well, actually, it's CSR'.ogg",
+    "Playback FM/(Caller) 'You're really annoying'.ogg"
+  ],
+  "DJ": [
+    "Playback FM/(DJ) 'You don't last a minute'.ogg",
+    "Playback FM/(DJ) 'I'll go speed of light on y'all'.ogg",
+    "Playback FM/(DJ) 'Shoulda paid more attention in school'.ogg",
+    "Playback FM/(DJ) 'Cavern of Sorrow marathon'.ogg",
+    "Playback FM/(DJ) 'There's a party over here'.ogg",
+    "Playback FM/(DJ) 'This goes out to my man the Iceman'.ogg",
+    "Playback FM/(DJ) 'I got seven digits as it is'.ogg",
+    "Playback FM/(DJ) 'Get back to the 'burbs you fools!'.ogg",
+    "Playback FM/(DJ) 'Help ain't no charity'.ogg",
+    "Playback FM/(DJ) 'Ugly like yo momma'.ogg",
+    "Playback FM/(DJ) 'Propaganda'.ogg",
+    "Playback FM/(DJ) 'Small-minded robots'.ogg",
+    "Playback FM/(DJ) 'West Coast radio suckers'.ogg",
+    "Playback FM/(DJ) 'Los Santos police'.ogg",
+    "Playback FM/(DJ) 'Be educated on the sounds that brung ya'.ogg",
+    "Playback FM/(DJ) 'Ready for your training wheels'.ogg"
+  ],
+  "ID": [
+    "Playback FM/(ID) 'The reason you put that subwoofer in your car'.ogg",
+    "Playback FM/(ID) 'Givin' it to ya' straight up, homeboy!'.ogg",
+    "Playback FM/(ID) 'The home of classic hiphop'.ogg",
+    "Playback FM/(ID) 'The man with an opinion on everything'.ogg",
+    "Playback FM/(ID) 'Layin' it down old skool'.ogg",
+    "Playback FM/(ID) 'Word to your mamma'.ogg",
+    "Playback FM/(ID) 'While you suckers were wearing diapers'.ogg",
+    "Playback FM/(ID) 'Drop out of that whack-ass school'.ogg",
+    "Playback FM/(ID) 'Skills on the mic'.ogg",
+    "Playback FM/(ID) 'Doper than anyone else'.ogg",
+    "Playback FM/(ID) 'Word up!'.ogg"
+  ],
+  "Weather": {
+    "Sunny": [
+      "Playback FM/(Atmosphere) Sunny #1.ogg",
+      "Playback FM/(Atmosphere) Sunny #2.ogg"
+    ],
+    "Rain": [
+      "Playback FM/(Atmosphere) Rain #1.ogg",
+      "Playback FM/(Atmosphere) Rain #2.ogg",
+      "Playback FM/(Atmosphere) Rain #3.ogg"
+    ],
+    "Fog": [
+      "Playback FM/(Atmosphere) Fog #1.ogg",
+      "Playback FM/(Atmosphere) Fog #2.ogg"
+    ],
+    "Smog": [
+      "Playback FM/(Atmosphere) Smog.ogg"
+    ]
+  },
+  "Time of Day": {
+    "Morning": [
+      "Playback FM/(Atmosphere) Morning #1.ogg",
+      "Playback FM/(Atmosphere) Morning #2.ogg"
+    ],
+    "Evening": [
+      "Playback FM/(Atmosphere) Evening #1.ogg",
+      "Playback FM/(Atmosphere) Evening #2.ogg"
+    ],
+    "Night": [
+      "Playback FM/(Atmosphere) Night #1.ogg",
+      "Playback FM/(Atmosphere) Night #2.ogg"
+    ]
+  },
+  "Bridge Announcement": [
+    "Playback FM/(Bridge Announce #1) Can access LS only.ogg",
+    "Playback FM/(Bridge Announce #2) Can access LS and SF.ogg",
+    "Playback FM/(Bridge Announce #3) Can access LS, SF, and LV.ogg"
+  ]
 }

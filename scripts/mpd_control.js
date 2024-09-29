@@ -137,9 +137,9 @@ async function getNextCategory(){
             // get (dict==>intros==>0th==>values), convert to array of all possible intro lines
             // randomly choose a path from the list, assign it to song_intro
             
-            const songIntro = chance.pickone(Object.values(currentTrack.intros[0]));
-            const songMid = currentTrack.mid[0].mid;
-            const songOutro = chance.pickone(Object.values(currentTrack.outros[0]));
+            const songIntro = chance.pickone(currentTrack.intros);
+            const songMid = currentTrack.mid;
+            const songOutro = chance.pickone(currentTrack.outros);
 
             songHasNotBeenPlayedFor = 0;
             return [songIntro, songMid, songOutro];

@@ -1,387 +1,273 @@
 {
-    "Songs": [
-        {
-            "title": "All My Exes Live in Texas",
-            "intros": [
-                {
-                    "dj1": "KROSE/All My Exes Live in Texas (Intro DJ #1).ogg",
-                    "dj2": "KROSE/All My Exes Live in Texas (Intro DJ #2).ogg",
-                    "dj0": "KROSE/All My Exes Live in Texas (Intro).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "KROSE/All My Exes Live in Texas (Outro).ogg",
-                    "dj2": "KROSE/All My Exes Live in Texas (Outro DJ #2).ogg",
-                    "dj1": "KROSE/All My Exes Live in Texas (Outro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/All My Exes Live in Texas (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Amos Moses",
-            "outros": [
-                {
-                    "dj2": "KROSE/Amos Moses (Outro DJ #2).ogg",
-                    "dj0": "KROSE/Amos Moses (Outro).ogg",
-                    "dj1": "KROSE/Amos Moses (Outro DJ #1).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj0": "KROSE/Amos Moses (Intro).ogg",
-                    "dj1": "KROSE/Amos Moses (Intro DJ #1).ogg",
-                    "dj2": "KROSE/Amos Moses (Intro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Amos Moses (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "I Love a Rainy Night",
-            "intros": [
-                {
-                    "dj1": "KROSE/I Love a Rainy Night (Intro DJ #1).ogg",
-                    "dj0": "KROSE/I Love a Rainy Night (Intro).ogg",
-                    "dj2": "KROSE/I Love a Rainy Night (Intro DJ #2).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "KROSE/I Love a Rainy Night (Outro DJ #2).ogg",
-                    "dj1": "KROSE/I Love a Rainy Night (Outro DJ #1).ogg",
-                    "dj0": "KROSE/I Love a Rainy Night (Outro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/I Love a Rainy Night (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "The Letter that Johnny Walker Read",
-            "intros": [
-                {
-                    "dj0": "KROSE/The Letter that Johnny Walker Read (Intro).ogg",
-                    "dj2": "KROSE/The Letter that Johnny Walker Read (Intro DJ #2).ogg",
-                    "dj1": "KROSE/The Letter that Johnny Walker Read (Intro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/The Letter that Johnny Walker Read (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "KROSE/The Letter that Johnny Walker Read (Outro).ogg",
-                    "dj1": "KROSE/The Letter that Johnny Walker Read (Outro DJ #1).ogg",
-                    "dj2": "KROSE/The Letter that Johnny Walker Read (Outro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Bed of Roses",
-            "outros": [
-                {
-                    "dj2": "KROSE/Bed of Roses (Outro DJ #2).ogg",
-                    "dj1": "KROSE/Bed of Roses (Outro DJ #1).ogg",
-                    "dj0": "KROSE/Bed of Roses (Outro).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj1": "KROSE/Bed of Roses (Intro DJ #1).ogg",
-                    "dj2": "KROSE/Bed of Roses (Intro DJ #2).ogg",
-                    "dj0": "KROSE/Bed of Roses (Intro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Bed of Roses (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "New York City",
-            "intros": [
-                {
-                    "dj1": "KROSE/New York City (Intro DJ #1).ogg",
-                    "dj2": "KROSE/New York City (Intro DJ #2).ogg",
-                    "dj0": "KROSE/New York City (Intro).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "KROSE/New York City (Outro DJ #1).ogg",
-                    "dj2": "KROSE/New York City (Outro DJ #2).ogg",
-                    "dj0": "KROSE/New York City (Outro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/New York City (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Crazy",
-            "outros": [
-                {
-                    "dj0": "KROSE/Crazy (Outro).ogg",
-                    "dj1": "KROSE/Crazy (Outro DJ #1).ogg",
-                    "dj2": "KROSE/Crazy (Outro DJ #2).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj1": "KROSE/Crazy (Intro DJ #1).ogg",
-                    "dj0": "KROSE/Crazy (Intro).ogg",
-                    "dj2": "KROSE/Crazy (Intro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Crazy (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "One Step Forward",
-            "outros": [
-                {
-                    "dj1": "KROSE/One Step Forward (Outro DJ #1).ogg",
-                    "dj0": "KROSE/One Step Forward (Outro).ogg",
-                    "dj2": "KROSE/One Step Forward (Outro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/One Step Forward (Mid).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj0": "KROSE/One Step Forward (Intro).ogg",
-                    "dj1": "KROSE/One Step Forward (Intro DJ #1).ogg",
-                    "dj2": "KROSE/One Step Forward (Intro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Always Wanting You",
-            "outros": [
-                {
-                    "dj2": "KROSE/Always Wanting You (Outro DJ #2).ogg",
-                    "dj0": "KROSE/Always Wanting You (Outro).ogg",
-                    "dj1": "KROSE/Always Wanting You (Outro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Always Wanting You (Mid).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj0": "KROSE/Always Wanting You (Intro).ogg",
-                    "dj1": "KROSE/Always Wanting You (Intro DJ #1).ogg",
-                    "dj2": "KROSE/Always Wanting You (Intro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Three Cigarettes in the Ashtray",
-            "intros": [
-                {
-                    "dj2": "KROSE/Three Cigarettes in the Ashtray (Intro DJ #2).ogg",
-                    "dj0": "KROSE/Three Cigarettes in the Ashtray (Intro).ogg",
-                    "dj1": "KROSE/Three Cigarettes in the Ashtray (Intro DJ #1).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "KROSE/Three Cigarettes in the Ashtray (Outro DJ #1).ogg",
-                    "dj2": "KROSE/Three Cigarettes in the Ashtray (Outro DJ #2).ogg",
-                    "dj0": "KROSE/Three Cigarettes in the Ashtray (Outro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Three Cigarettes in the Ashtray (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Make the World Go Away",
-            "intros": [
-                {
-                    "dj2": "KROSE/Make the World Go Away (Intro DJ #2).ogg",
-                    "dj1": "KROSE/Make the World Go Away (Intro DJ #1).ogg",
-                    "dj0": "KROSE/Make the World Go Away (Intro).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "KROSE/Make the World Go Away (Outro DJ #1).ogg",
-                    "dj2": "KROSE/Make the World Go Away (Outro DJ #2).ogg",
-                    "dj0": "KROSE/Make the World Go Away (Outro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Make the World Go Away (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Queen of Hearts",
-            "intros": [
-                {
-                    "dj2": "KROSE/Queen of Hearts (Intro DJ #2).ogg",
-                    "dj0": "KROSE/Queen of Hearts (Intro).ogg",
-                    "dj1": "KROSE/Queen of Hearts (Intro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Queen of Hearts (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "KROSE/Queen of Hearts (Outro DJ #1).ogg",
-                    "dj0": "KROSE/Queen of Hearts (Outro).ogg",
-                    "dj2": "KROSE/Queen of Hearts (Outro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Mammas Don't Let Your Babies Grow Up to be Cowboys",
-            "mid": [
-                {
-                    "mid": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Mid).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj1": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Intro DJ #1).ogg",
-                    "dj2": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Intro DJ #2).ogg",
-                    "dj0": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Intro).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Outro DJ #1).ogg",
-                    "dj0": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Outro).ogg",
-                    "dj2": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Outro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Louisiana woman, Mississippi man",
-            "intros": [
-                {
-                    "dj0": "KROSE/Louisiana woman, Mississippi man (Intro).ogg",
-                    "dj2": "KROSE/Louisiana woman, Mississippi man (Intro DJ #2).ogg",
-                    "dj1": "KROSE/Louisiana woman, Mississippi man (Intro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Louisiana woman, Mississippi man (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "KROSE/Louisiana woman, Mississippi man (Outro DJ #2).ogg",
-                    "dj1": "KROSE/Louisiana woman, Mississippi man (Outro DJ #1).ogg",
-                    "dj0": "KROSE/Louisiana woman, Mississippi man (Outro).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Hey Good Lookin'",
-            "intros": [
-                {
-                    "dj0": "KROSE/Hey Good Lookin' (Intro).ogg",
-                    "dj1": "KROSE/Hey Good Lookin' (Intro DJ #1).ogg",
-                    "dj2": "KROSE/Hey Good Lookin' (Intro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "KROSE/Hey Good Lookin' (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "KROSE/Hey Good Lookin' (Outro DJ #2).ogg",
-                    "dj1": "KROSE/Hey Good Lookin' (Outro DJ #1).ogg",
-                    "dj0": "KROSE/Hey Good Lookin' (Outro).ogg"
-                }
-            ]
-        }
-    ],
-    "Caller": [
-        "KROSE/(Caller) 'Wicked, evil, wealthy woman'.ogg",
-        "KROSE/(Caller) 'Being faithful and cheating at the same time'.ogg"
-    ],
-    "DJ": [
-        "KROSE/(DJ) 'I am shit-faced'.ogg",
-        "KROSE/(DJ) Belt buckles.ogg",
-        "KROSE/(DJ) 'It ain't easy raising nine kids'.ogg",
-        "KROSE/(DJ) 'It's like Kant said'.ogg",
-        "KROSE/(DJ) Latte.ogg",
-        "KROSE/(DJ) 'I might start to cry'.ogg",
-        "KROSE/(DJ) 'Harmonica down South again'.ogg",
-        "KROSE/(DJ) 'Love everyone like myself'.ogg",
-        "KROSE/(DJ) 'Make you want to square dance'.ogg",
-        "KROSE/(DJ) 'I keep moving on'.ogg",
-        "KROSE/(DJ) 'Play a harmonica and sing at the same time'.ogg",
-        "KROSE/(DJ) 'Harmonica in my pants'.ogg",
-        "KROSE/(DJ) 'On the prairie'.ogg",
-        "KROSE/(DJ) Legs akimbo.ogg",
-        "KROSE/(DJ) Darwinism.ogg",
-        "KROSE/(DJ) 'Euthanasia is a beautiful thing'.ogg",
-        "KROSE/(DJ) 'Like the plug, but a musical version'.ogg",
-        "KROSE/(DJ) 'Downstairs harmonica talents'.ogg",
-        "KROSE/(DJ) 'Hurts a little when I try to put it in'.ogg",
-        "KROSE/(DJ) 'You know what war I'm talking about'.ogg",
-        "KROSE/(Story) Badlands Robberies.ogg",
-        "KROSE/(Story) Gang Warfare.ogg",
-        "KROSE/(Story) Lights in Desert.ogg",
-        "KROSE/(Story) Police Trial.ogg",
-        "KROSE/(Story) Weed Farm Burned Down.ogg"
-    ],
-    "ID": [
-        "KROSE/(ID) Farm Animals.ogg",
-        "KROSE/(ID) 'When love shoots you in the back'.ogg",
-        "KROSE/(ID) 'Barefoot and pregnant again'.ogg",
-        "KROSE/(ID) 'It takes a cowboy to know when to shoot'.ogg",
-        "KROSE/(ID) 'Iron horse with a drinking problem'.ogg",
-        "KROSE/(ID) 'Whistle on a lonely night'.ogg",
-        "KROSE/(ID) 'From cow poking to cow-tipping'.ogg",
-        "KROSE/(ID) 'All America loves a cowboy'.ogg",
-        "KROSE/(ID) 'Invented the electric guitar'.ogg"
-    ],
-    "Weather": {
-        "Sunny": ["KROSE/(Atmosphere) Sunny #1.ogg", "KROSE/(Atmosphere) Sunny #2.ogg"],
-        "Rain": ["KROSE/(Atmosphere) Rain.ogg"],
-        "Fog": ["KROSE/(Atmosphere) Fog #1.ogg", "KROSE/(Atmosphere) Fog #2.ogg"],
-        "Storm": ["KROSE/(Atmosphere) Storm #1.ogg", "KROSE/(Atmosphere) Storm #2.ogg"]  
+  "Songs": [
+    {
+      "intros": [
+        "KROSE/All My Exes Live in Texas (Intro DJ #1).ogg",
+        "KROSE/All My Exes Live in Texas (Intro DJ #2).ogg",
+        "KROSE/All My Exes Live in Texas (Intro).ogg"
+      ],
+      "mid": "KROSE/All My Exes Live in Texas (Mid).ogg",
+      "outros": [
+        "KROSE/All My Exes Live in Texas (Outro).ogg",
+        "KROSE/All My Exes Live in Texas (Outro DJ #2).ogg",
+        "KROSE/All My Exes Live in Texas (Outro DJ #1).ogg"
+      ]
     },
-    "Time of Day": {
-        "Morning": ["KROSE/(Atmosphere) Morning #1.ogg", "KROSE/(Atmosphere) Morning #2.ogg"],
-        "Night": ["KROSE/(Atmosphere) Night #1.ogg", "KROSE/(Atmosphere) Night #2.ogg"]
+    {
+      "intros": [
+        "KROSE/Amos Moses (Intro).ogg",
+        "KROSE/Amos Moses (Intro DJ #1).ogg",
+        "KROSE/Amos Moses (Intro DJ #2).ogg"
+      ],
+      "mid": "KROSE/Amos Moses (Mid).ogg",
+      "outros": [
+        "KROSE/Amos Moses (Outro DJ #2).ogg",
+        "KROSE/Amos Moses (Outro).ogg",
+        "KROSE/Amos Moses (Outro DJ #1).ogg"
+      ]
     },
-    "Bridge Announcement": ["KROSE/(Bridge Announce #1) Can access LS only.ogg", "KROSE/(Bridge Announce #2) Can access LS and SF.ogg", "KROSE/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
+    {
+      "intros": [
+        "KROSE/I Love a Rainy Night (Intro DJ #1).ogg",
+        "KROSE/I Love a Rainy Night (Intro).ogg",
+        "KROSE/I Love a Rainy Night (Intro DJ #2).ogg"
+      ],
+      "mid": "KROSE/I Love a Rainy Night (Mid).ogg",
+      "outros": [
+        "KROSE/I Love a Rainy Night (Outro DJ #2).ogg",
+        "KROSE/I Love a Rainy Night (Outro DJ #1).ogg",
+        "KROSE/I Love a Rainy Night (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/The Letter that Johnny Walker Read (Intro).ogg",
+        "KROSE/The Letter that Johnny Walker Read (Intro DJ #2).ogg",
+        "KROSE/The Letter that Johnny Walker Read (Intro DJ #1).ogg"
+      ],
+      "mid": "KROSE/The Letter that Johnny Walker Read (Mid).ogg",
+      "outros": [
+        "KROSE/The Letter that Johnny Walker Read (Outro).ogg",
+        "KROSE/The Letter that Johnny Walker Read (Outro DJ #1).ogg",
+        "KROSE/The Letter that Johnny Walker Read (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Bed of Roses (Intro DJ #1).ogg",
+        "KROSE/Bed of Roses (Intro DJ #2).ogg",
+        "KROSE/Bed of Roses (Intro).ogg"
+      ],
+      "mid": "KROSE/Bed of Roses (Mid).ogg",
+      "outros": [
+        "KROSE/Bed of Roses (Outro DJ #2).ogg",
+        "KROSE/Bed of Roses (Outro DJ #1).ogg",
+        "KROSE/Bed of Roses (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/New York City (Intro DJ #1).ogg",
+        "KROSE/New York City (Intro DJ #2).ogg",
+        "KROSE/New York City (Intro).ogg"
+      ],
+      "mid": "KROSE/New York City (Mid).ogg",
+      "outros": [
+        "KROSE/New York City (Outro DJ #1).ogg",
+        "KROSE/New York City (Outro DJ #2).ogg",
+        "KROSE/New York City (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Crazy (Intro DJ #1).ogg",
+        "KROSE/Crazy (Intro).ogg",
+        "KROSE/Crazy (Intro DJ #2).ogg"
+      ],
+      "mid": "KROSE/Crazy (Mid).ogg",
+      "outros": [
+        "KROSE/Crazy (Outro).ogg",
+        "KROSE/Crazy (Outro DJ #1).ogg",
+        "KROSE/Crazy (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/One Step Forward (Intro).ogg",
+        "KROSE/One Step Forward (Intro DJ #1).ogg",
+        "KROSE/One Step Forward (Intro DJ #2).ogg"
+      ],
+      "mid": "KROSE/One Step Forward (Mid).ogg",
+      "outros": [
+        "KROSE/One Step Forward (Outro DJ #1).ogg",
+        "KROSE/One Step Forward (Outro).ogg",
+        "KROSE/One Step Forward (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Always Wanting You (Intro).ogg",
+        "KROSE/Always Wanting You (Intro DJ #1).ogg",
+        "KROSE/Always Wanting You (Intro DJ #2).ogg"
+      ],
+      "mid": "KROSE/Always Wanting You (Mid).ogg",
+      "outros": [
+        "KROSE/Always Wanting You (Outro DJ #2).ogg",
+        "KROSE/Always Wanting You (Outro).ogg",
+        "KROSE/Always Wanting You (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Three Cigarettes in the Ashtray (Intro DJ #2).ogg",
+        "KROSE/Three Cigarettes in the Ashtray (Intro).ogg",
+        "KROSE/Three Cigarettes in the Ashtray (Intro DJ #1).ogg"
+      ],
+      "mid": "KROSE/Three Cigarettes in the Ashtray (Mid).ogg",
+      "outros": [
+        "KROSE/Three Cigarettes in the Ashtray (Outro DJ #1).ogg",
+        "KROSE/Three Cigarettes in the Ashtray (Outro DJ #2).ogg",
+        "KROSE/Three Cigarettes in the Ashtray (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Make the World Go Away (Intro DJ #2).ogg",
+        "KROSE/Make the World Go Away (Intro DJ #1).ogg",
+        "KROSE/Make the World Go Away (Intro).ogg"
+      ],
+      "mid": "KROSE/Make the World Go Away (Mid).ogg",
+      "outros": [
+        "KROSE/Make the World Go Away (Outro DJ #1).ogg",
+        "KROSE/Make the World Go Away (Outro DJ #2).ogg",
+        "KROSE/Make the World Go Away (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Queen of Hearts (Intro DJ #2).ogg",
+        "KROSE/Queen of Hearts (Intro).ogg",
+        "KROSE/Queen of Hearts (Intro DJ #1).ogg"
+      ],
+      "mid": "KROSE/Queen of Hearts (Mid).ogg",
+      "outros": [
+        "KROSE/Queen of Hearts (Outro DJ #1).ogg",
+        "KROSE/Queen of Hearts (Outro).ogg",
+        "KROSE/Queen of Hearts (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Intro DJ #1).ogg",
+        "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Intro DJ #2).ogg",
+        "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Intro).ogg"
+      ],
+      "mid": "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Mid).ogg",
+      "outros": [
+        "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Outro DJ #1).ogg",
+        "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Outro).ogg",
+        "KROSE/Mammas Don't Let Your Babies Grow Up to be Cowboys (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Louisiana woman, Mississippi man (Intro).ogg",
+        "KROSE/Louisiana woman, Mississippi man (Intro DJ #2).ogg",
+        "KROSE/Louisiana woman, Mississippi man (Intro DJ #1).ogg"
+      ],
+      "mid": "KROSE/Louisiana woman, Mississippi man (Mid).ogg",
+      "outros": [
+        "KROSE/Louisiana woman, Mississippi man (Outro DJ #2).ogg",
+        "KROSE/Louisiana woman, Mississippi man (Outro DJ #1).ogg",
+        "KROSE/Louisiana woman, Mississippi man (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "KROSE/Hey Good Lookin' (Intro).ogg",
+        "KROSE/Hey Good Lookin' (Intro DJ #1).ogg",
+        "KROSE/Hey Good Lookin' (Intro DJ #2).ogg"
+      ],
+      "mid": "KROSE/Hey Good Lookin' (Mid).ogg",
+      "outros": [
+        "KROSE/Hey Good Lookin' (Outro DJ #2).ogg",
+        "KROSE/Hey Good Lookin' (Outro DJ #1).ogg",
+        "KROSE/Hey Good Lookin' (Outro).ogg"
+      ]
+    }
+  ],
+  "Caller": [
+    "KROSE/(Caller) 'Wicked, evil, wealthy woman'.ogg",
+    "KROSE/(Caller) 'Being faithful and cheating at the same time'.ogg"
+  ],
+  "DJ": [
+    "KROSE/(DJ) 'I am shit-faced'.ogg",
+    "KROSE/(DJ) Belt buckles.ogg",
+    "KROSE/(DJ) 'It ain't easy raising nine kids'.ogg",
+    "KROSE/(DJ) 'It's like Kant said'.ogg",
+    "KROSE/(DJ) Latte.ogg",
+    "KROSE/(DJ) 'I might start to cry'.ogg",
+    "KROSE/(DJ) 'Harmonica down South again'.ogg",
+    "KROSE/(DJ) 'Love everyone like myself'.ogg",
+    "KROSE/(DJ) 'Make you want to square dance'.ogg",
+    "KROSE/(DJ) 'I keep moving on'.ogg",
+    "KROSE/(DJ) 'Play a harmonica and sing at the same time'.ogg",
+    "KROSE/(DJ) 'Harmonica in my pants'.ogg",
+    "KROSE/(DJ) 'On the prairie'.ogg",
+    "KROSE/(DJ) Legs akimbo.ogg",
+    "KROSE/(DJ) Darwinism.ogg",
+    "KROSE/(DJ) 'Euthanasia is a beautiful thing'.ogg",
+    "KROSE/(DJ) 'Like the plug, but a musical version'.ogg",
+    "KROSE/(DJ) 'Downstairs harmonica talents'.ogg",
+    "KROSE/(DJ) 'Hurts a little when I try to put it in'.ogg",
+    "KROSE/(DJ) 'You know what war I'm talking about'.ogg",
+    "KROSE/(Story) Badlands Robberies.ogg",
+    "KROSE/(Story) Gang Warfare.ogg",
+    "KROSE/(Story) Lights in Desert.ogg",
+    "KROSE/(Story) Police Trial.ogg",
+    "KROSE/(Story) Weed Farm Burned Down.ogg"
+  ],
+  "ID": [
+    "KROSE/(ID) Farm Animals.ogg",
+    "KROSE/(ID) 'When love shoots you in the back'.ogg",
+    "KROSE/(ID) 'Barefoot and pregnant again'.ogg",
+    "KROSE/(ID) 'It takes a cowboy to know when to shoot'.ogg",
+    "KROSE/(ID) 'Iron horse with a drinking problem'.ogg",
+    "KROSE/(ID) 'Whistle on a lonely night'.ogg",
+    "KROSE/(ID) 'From cow poking to cow-tipping'.ogg",
+    "KROSE/(ID) 'All America loves a cowboy'.ogg",
+    "KROSE/(ID) 'Invented the electric guitar'.ogg"
+  ],
+  "Weather": {
+    "Sunny": [
+      "KROSE/(Atmosphere) Sunny #1.ogg",
+      "KROSE/(Atmosphere) Sunny #2.ogg"
+    ],
+    "Rain": [
+      "KROSE/(Atmosphere) Rain.ogg"
+    ],
+    "Fog": [
+      "KROSE/(Atmosphere) Fog #1.ogg",
+      "KROSE/(Atmosphere) Fog #2.ogg"
+    ],
+    "Storm": [
+      "KROSE/(Atmosphere) Storm #1.ogg",
+      "KROSE/(Atmosphere) Storm #2.ogg"
+    ]
+  },
+  "Time of Day": {
+    "Morning": [
+      "KROSE/(Atmosphere) Morning #1.ogg",
+      "KROSE/(Atmosphere) Morning #2.ogg"
+    ],
+    "Night": [
+      "KROSE/(Atmosphere) Night #1.ogg",
+      "KROSE/(Atmosphere) Night #2.ogg"
+    ]
+  },
+  "Bridge Announcement": [
+    "KROSE/(Bridge Announce #1) Can access LS only.ogg",
+    "KROSE/(Bridge Announce #2) Can access LS and SF.ogg",
+    "KROSE/(Bridge Announce #3) Can access LS, SF, and LV.ogg"
+  ]
 }
