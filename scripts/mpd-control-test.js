@@ -1,5 +1,4 @@
 // import libraries
-const mpd = require("mpd-api");
 const Chance = require("chance");
 
 // This script directly controls the playback of MPD.
@@ -7,16 +6,11 @@ const Chance = require("chance");
 
 // check if the incoming command was executed properly
 
-if (process.argv.length !== 4) {
-    console.log("Usage: node mpd_control.js /path/of/json [mpd socket]");
-    process.exit(1);
-}
-
 // import the JSON path specified as a CLI argument
-const tracksMetadata = require(`${process.argv[2]}`);
+const tracksMetadata = require("../metadata/Radio X.json");
 // Local sockets are defined by the name of their respective stations
-const stationAlias = process.argv[3];
-const stationMetadata = (require("./station_metadata.json"))[stationAlias]
+const stationAlias = "radiox";
+const stationMetadata = (require("./station-metadata.json"))[stationAlias]
 
 
 let categories, weights;
@@ -59,9 +53,7 @@ main function calls all other functions, gets theri array output and adds them t
 then it waits for a variable amount of time before adding another track.
 */
 async function main(){
-    const client = await mpd.connect({ path: `/radiosa/socks/${stationAlias}` });
     // Enable consume. This allows tracks to be removed from the player queue after they are played. Prevents from accumulating backlog of tracks
-    await client.api.playback.consume(1);
     console.log(`MPD Consume enabled for ${stationAlias}`);
 
     while (true){
@@ -70,28 +62,14 @@ async function main(){
             // add tracks to queue one by one
             const fullPath=(`/radiosa/music/${elem}`)
             console.log(`Adding ${fullPath} to the queue`)
-            await client.api.queue.add(fullPath)
         }
 
-        const sleepFor = await remainingTime(client);
-        await client.api.playback.play();
+        const sleepFor = 2;
 
         console.log(`Sleeping for ${sleepFor} seconds.`);
         await new Promise(resolve => setTimeout(resolve, sleepFor * 1000));
     }
 }
-
-async function remainingTime(client){
-    // Returns remaining duration of the queue (not including the first track in the queue)
-
-    let fullQueue = await client.api.queue.info();
-    let totalPlaytime = 0;
-    for (let track of fullQueue.slice(1)){
-        totalPlaytime += track.duration;
-    }
-    return totalPlaytime;
-}
-
 
 /*
 * getNextCategory() decides which category of tracks is played next
@@ -176,16 +154,15 @@ async function getNextWeather(){
     // get current weather conditions about real life counterpart location of the in game radiostation
     // this is completely bonkers
     const weatherConvert = require("./weather.json");
-    const apiResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationMetadata.latitude}&longitude=${stationMetadata.longitude}&current=weather_code`);
-    const responseBody = await apiResponse.json()
+    const currentWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationMetadata.latitude}&longitude=${stationMetadata.longitude}&current=weather_code`).then((response) => response.json());
     timeOfDay = await getPacificTime();
     // only return track if the time is morning or afternoon, so radio hosts don't say "sunny" at night or something
     isMorningorAfternoon = (timeOfDay === "Morning" || timeOfDay === "Afternoon");
-    if ((weatherConvert[responseBody.current.weather_code] === undefined) || !isMorningorAfternoon){
+    if ((weatherConvert[currentWeather.current.weather_code] === undefined) || !isMorningorAfternoon){
         return null;
     }
     else {
-        const weatherTrack = chance.pickone(tracksMetadata.Weather[weatherConvert[responseBody.current.weather_code]])
+        const weatherTrack = chance.pickone(tracksMetadata.Weather[weatherConvert[currentWeather.current.weather_code]])
         return weatherTrack;
     }
 }
@@ -193,14 +170,14 @@ async function getNextWeather(){
 async function getPacificTime(){
     // get current time of day in Pacific Timezone
     // fetch details from worldtimeapi
-    const apiResponse = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles");
-    const responseBody = await apiResponse.json();
+
+    const currentPacificTime = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles").then((response) => response.json());
     /* 
     calculate current fraction of the day by adding the offset (negative number) to the Unix Timestamp (Greenwich Time)
     Then calculate daylight savings time ONLY IF daylight savings is true
     get modulo 86400 for amount of seconds after midnight of current day
     */
-    const currentTimeOfDay = (responseBody.unixtime + responseBody.raw_offset + (responseBody.dst && responseBody.dst_offset))%86400;
+    const currentTimeOfDay = (currentPacificTime.unixtime + currentPacificTime.raw_offset + (currentPacificTime.dst && currentPacificTime.dst_offset))%86400;
     if (currentTimeOfDay >= 10800 && currentTimeOfDay < 43200){
         return "Morning";
     }
