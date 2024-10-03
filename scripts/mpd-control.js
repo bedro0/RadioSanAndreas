@@ -216,7 +216,7 @@ async function getPacificTime(){
 async function getTimeTrack(getPacificTime){
     timeOfDay = await getPacificTime();
 
-    if(timeOfDay === "Afternoon"){
+    if(tracksMetadata["Time of Day"][timeOfDay] === undefined){
         return null;
     }
     else{
