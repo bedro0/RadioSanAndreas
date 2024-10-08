@@ -79,7 +79,7 @@ set_icecast_config(){
 }
 
 start_svelte(){
-    cd /radiosa/frontend/sveltekit-src/src
+    cd /radiosa/sveltekit/src
     npm run dev -- --host
 }
 
@@ -98,10 +98,11 @@ enabled_stations_to_json(){
     json_array="[$json_array]"
 
     # Save the JSON array to a file
-    echo $json_array > enabled_stations.json
+    echo $json_array > /radiosa/sveltekit/src/enabled-stations.json
 
     echo "JSON array saved to enabled_stations.json"
 }
 
 main
-start_svelte
+
+tail -f /dev/null

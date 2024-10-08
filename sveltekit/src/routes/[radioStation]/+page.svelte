@@ -1,15 +1,19 @@
 <script>
+    export let data;
     import { onMount, onDestroy } from "svelte";
     import { page } from "$app/stores";
     import { browser } from "$app/environment";
     import { goto } from "$app/navigation";
-    import enabledStations from "/radiosa/enabled_stations.json";
+    console.log("Imported Modules")
 
+    const enabledStations = JSON.parse(data.enabledStations);
+    console.log("Fetched Enabled Stations list")
     const currentStation = $page.params.radioStation;
-    let currentStationMetadata = updateMetadata();
+    console.log("Acquired Current Station, it's", currentStation)
+    let currentStationMetadata = {};
     let nowPlaying = { artist: "", title: "" };
     let remainingTime = 0;
-    let timeoutId;
+    let timeoutId
     const notSongs = ["(ID)", "(DJ)", "(Caller)", "(Story)", "(Atmosphere)"];
     if (browser && !enabledStations.includes(currentStation)) goto("/");
 
@@ -35,18 +39,23 @@
     }
 
     async function updateMetadata() {
-        const response = await fetch(`/api/station-metadata?station=${currentStation}`);
-        return (await response.json()).currentStationMetadata;
+        try{
+            const responseBody = await fetch(`/api/station-metadata?station=${currentStation}`).then(response => response.json());
+            console.log("Current Station Details:", responseBody)
+            currentStationMetadata = responseBody.currentStationMetadata;
+        }
+        catch(error){
+            console.error("Failed to fetch current channel metadata:", error)
+        }
     }
 
     async function updateNowPlaying() {
         try {
-            const response = await fetch(`/api/now-playing?station=${currentStation}`);
-            const data = await response.json();
-            nowPlaying = data.nowPlaying;
-            remainingTime = data.remainingTime;
+            const responseBody = await fetch(`/api/now-playing?station=${currentStation}`).then(response => response.json());
+            nowPlaying = responseBody.nowPlaying;
+            remainingTime = responseBody.remainingTime;
         } catch (error) {
-            console.error("Failed to fetch now playing data:", error);
+            console.error("Failed to fetch Now-Playing data:", error);
         } finally {
             scheduleNextUpdate();
         }
@@ -58,7 +67,9 @@
     }
 
     onMount(() => {
+        console.log("HELLOOOOOOOOOOOOOOOOOOOOO!")
         updateNowPlaying();
+        updateMetadata()
     });
 
     onDestroy(() => clearTimeout(timeoutId));
@@ -69,7 +80,7 @@
         <title>Radio San Andreas</title>
     {:then metadata}
         <title>{metadata.station_name}</title>
-        <link rel="icon" href="/src/visual-assets/logos/{currentStation}.webp" />
+        <link rel="icon" href="/visual-assets/logos/{currentStation}.webp" />
     {/await}
 </svelte:head>
 
@@ -79,7 +90,7 @@
             <div class="channel-id-member">You are listening to:</div>
             <div class="channel-id-member" id="station-name">{metadata.station_name}</div>
             <div>
-                <img id="station-logo" src="src/visual-assets/logos/{currentStation}.webp" alt={currentStation}/>
+                <img id="station-logo" src="/visual-assets/logos/{currentStation}.webp" alt={currentStation}/>
             </div>
             <div class="channel-id-member" id="station-genre"> <br> Genre: {metadata.genre} </div> 
             <div class="channel-id-member" id="host">Host: {metadata.host}</div>
@@ -104,7 +115,7 @@
 
     <div id="audio-controls">
         <button id="play-button" on:click={togglePlayPause}>
-            <img src="/src/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? "Play" : "Pause"}">
+            <img src="/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? "Play" : "Pause"}">
         </button>
         <br>
         <input id="volume" type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>

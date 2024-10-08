@@ -91,7 +91,6 @@ const metadata = {
 }
 export async function GET({ url }) {
     const station = url.searchParams.get("station");
-    console.log(station);
     const currentStationMetadata=metadata[station];
     return new Response(JSON.stringify({ currentStationMetadata }), {
         headers: { "Content-Type": "application/json" }
