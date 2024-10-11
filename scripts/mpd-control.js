@@ -174,9 +174,14 @@ async function getNextTrack(selectedCategory){
 }
 
 async function getNextWeather(){
-    // get current weather conditions about real life counterpart location of the in game radiostation
-    // this is completely bonkers
-    const currentWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationMetadata.latitude}&longitude=${stationMetadata.longitude}&current=weather_code`).then((response) => response.json());
+    // get current weather conditions where radio station is located
+    // the location is based on an estimation of where radio stations are located in game and what that location corresponds to in real life.
+    try {
+        currentWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationMetadata.latitude}&longitude=${stationMetadata.longitude}&current=weather_code`).then((response) => response.json());
+    }
+    catch (error){
+        return null;
+    }
     timeOfDay = await getPacificTime();
     // only return track if the time is morning or afternoon, so radio hosts don't say "sunny" at night or something
     isMorningorAfternoon = (timeOfDay === "Morning" || timeOfDay === "Afternoon");
@@ -199,18 +204,11 @@ async function getPacificTime(){
     get modulo 86400 for amount of seconds after midnight of current day
     */
     const currentTimeOfDay = (currentPacificTime.unixtime + currentPacificTime.raw_offset + (currentPacificTime.dst && currentPacificTime.dst_offset))%86400;
-    if (currentTimeOfDay >= 10800 && currentTimeOfDay < 43200){
-        return "Morning";
-    }
-    else if (currentTimeOfDay >= 43200 && currentTimeOfDay < 54000){
-        return "Afternoon";
-    }
-    else if (currentTimeOfDay >= 54000 && currentTimeOfDay < 75600){
-        return "Evening"
-    }
-    else if (currentTimeOfDay < 10800 || currentTimeOfDay >= 75600){
-        return "Night"
-    }
+
+    if (currentTimeOfDay < 10800 || currentTimeOfDay >= 75600) return "Night";
+    if (currentTimeOfDay < 43200) return "Morning";
+    if (currentTimeOfDay < 54000) return "Afternoon";
+    return "Evening";
 }
 
 // returns a track based on the time provided by getPacificTime function
