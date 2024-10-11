@@ -31,19 +31,19 @@ console.log(`Connected to MPD socket: ${stationAlias}`);
 // This switch ensures the elements are chosen properly depending on the station
 switch (stationAlias) {
     case "kjah":
-        categories = ["Songs", "DJ", "ID", "Weather", "Time of Day"];
+        categories = ["Song", "DJ", "ID", "Weather", "Time of Day"];
         weights = [1, 1, 1, 0.05, 0.04];
         break;
     case "radiols":
-        categories = ["Songs", "DJ", "ID", "Weather", "Time of Day"];
+        categories = ["Song", "DJ", "ID", "Weather", "Time of Day"];
         weights = [1, 1, 1, 0.05, 0.04];
         break
     case "sfur":
-        categories = ["Songs", "Caller", "DJ", "Time of Day"];
+        categories = ["Song", "Caller", "DJ", "Time of Day"];
         weights = [1, 0.0625, 1, 0.04];
         break
     default:
-        categories = ["Songs", "Caller", "DJ", "ID", "Weather", "Time of Day"];
+        categories = ["Song", "Caller", "DJ", "ID", "Weather", "Time of Day"];
         weights = [1, 0.0625, 1, 1, 0.05, 0.04];
 }
 
@@ -96,14 +96,14 @@ async function remainingTime(client){
 
 /*
 * getNextCategory() decides which category of tracks is played next
-* Typically, these are "Songs", "Caller", "DJ", "ID", "Weather", "Time of Day".
+* Typically, these are "Song", "Caller", "DJ", "ID", "Weather", "Time of Day".
 */
 async function getNextCategory(){
     while (true) {
         let selectedCategory;
         // if 2 non-song tracks have been played, it ensures that next one is a song
         if (songHasNotBeenPlayedFor > 1 || lastCategory === "Caller"){
-            selectedCategory = "Songs";
+            selectedCategory = "Song";
         }
         else {
             selectedCategory = chance.weighted(categories, weights);
@@ -134,7 +134,7 @@ async function getNextCategory(){
         dj0:path, dj1:path, dj2:path
         */
 
-        if (selectedCategory === "Songs"){
+        if (selectedCategory === "Song"){
             // get (dict==>intros==>0th==>values), convert to array of all possible intro lines
             // randomly choose a path from the list, assign it to song_intro
             

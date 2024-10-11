@@ -11,7 +11,7 @@
     let nowPlaying = { artist: "", title: "" };
     let remainingTime = 0;
     let timeoutId
-    const notSongs = ["(ID)", "(DJ)", "(Caller)", "(Story)", "(Atmosphere)"];
+    const notSong = ["(ID)", "(DJ)", "(Caller)", "(Story)", "(Atmosphere)"];
     if (browser && !enabledStations.includes(currentStation)) goto("/");
 
     let playerObj;
@@ -92,7 +92,7 @@
         </div>
 
         <div class="currently-playing">
-            {#if notSongs.some(currentTrack => nowPlaying.title.includes(currentTrack))}
+            {#if notSong.some(currentTrack => nowPlaying.title.includes(currentTrack))}
             <div id="break">BREAK</div>
             {:else}
             <div id="now-playing">NOW PLAYING</div>
