@@ -1,5 +1,5 @@
 // import libraries
-const mpd = require("mpd-api");
+const MPC = require('mpc-js').MPC;
 const Chance = require("chance");
 const weatherCodeReference = require("./weather.json")
 // This script directly controls the playback of MPD.
@@ -59,9 +59,10 @@ main function calls all other functions, gets theri array output and adds them t
 then it waits for a variable amount of time before adding another track.
 */
 async function main(){
-    const client = await mpd.connect({ path: `/radiosa/socks/${stationAlias}` });
+    const client = new MPC();
+    client.connectUnixSocket(`/radiosa/socks/${stationAlias}`);
     // Enable consume. This allows tracks to be removed from the player queue after they are played. Prevents from accumulating backlog of tracks
-    await client.api.playback.consume(1);
+    await client.playbackOptions.setConsume(true);
     console.log(`MPD Consume enabled for ${stationAlias}`);
 
     while (true){
@@ -70,11 +71,11 @@ async function main(){
             // add tracks to queue one by one
             const fullPath=(`/radiosa/music/${elem}`)
             console.log(`Adding ${fullPath} to the queue`)
-            await client.api.queue.add(fullPath)
+            await client.currentPlaylist.add(fullPath)
         }
 
         const sleepFor = await remainingTime(client);
-        await client.api.playback.play();
+        await client.playback.play();
 
         console.log(`Sleeping for ${sleepFor} seconds.`);
         await new Promise(resolve => setTimeout(resolve, sleepFor * 1000));
@@ -84,7 +85,7 @@ async function main(){
 async function remainingTime(client){
     // Returns remaining duration of the queue (not including the first track in the queue)
 
-    let fullQueue = await client.api.queue.info();
+    let fullQueue = await client.currentPlaylist.playlistInfo();
     let totalPlaytime = 0;
     for (let track of fullQueue.slice(1)){
         totalPlaytime += track.duration;
@@ -173,9 +174,14 @@ async function getNextTrack(selectedCategory){
 }
 
 async function getNextWeather(){
-    // get current weather conditions about real life counterpart location of the in game radiostation
-    // this is completely bonkers
-    const currentWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationMetadata.latitude}&longitude=${stationMetadata.longitude}&current=weather_code`).then((response) => response.json());
+    // get current weather conditions where radio station is located
+    // the location is based on an estimation of where radio stations are located in game and what that location corresponds to in real life.
+    try {
+        currentWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationMetadata.latitude}&longitude=${stationMetadata.longitude}&current=weather_code`).then((response) => response.json());
+    }
+    catch (error){
+        return null;
+    }
     timeOfDay = await getPacificTime();
     // only return track if the time is morning or afternoon, so radio hosts don't say "sunny" at night or something
     isMorningorAfternoon = (timeOfDay === "Morning" || timeOfDay === "Afternoon");
@@ -198,25 +204,18 @@ async function getPacificTime(){
     get modulo 86400 for amount of seconds after midnight of current day
     */
     const currentTimeOfDay = (currentPacificTime.unixtime + currentPacificTime.raw_offset + (currentPacificTime.dst && currentPacificTime.dst_offset))%86400;
-    if (currentTimeOfDay >= 10800 && currentTimeOfDay < 43200){
-        return "Morning";
-    }
-    else if (currentTimeOfDay >= 43200 && currentTimeOfDay < 54000){
-        return "Afternoon";
-    }
-    else if (currentTimeOfDay >= 54000 && currentTimeOfDay < 75600){
-        return "Evening"
-    }
-    else if (currentTimeOfDay < 10800 || currentTimeOfDay >= 75600){
-        return "Night"
-    }
+
+    if (currentTimeOfDay < 10800 || currentTimeOfDay >= 75600) return "Night";
+    if (currentTimeOfDay < 43200) return "Morning";
+    if (currentTimeOfDay < 54000) return "Afternoon";
+    return "Evening";
 }
 
 // returns a track based on the time provided by getPacificTime function
 async function getTimeTrack(getPacificTime){
     timeOfDay = await getPacificTime();
 
-    if(timeOfDay === "Afternoon"){
+    if(tracksMetadata["Time of Day"][timeOfDay] === undefined){
         return null;
     }
     else{

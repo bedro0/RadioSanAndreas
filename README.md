@@ -13,8 +13,8 @@ Prerequisite:
 
 Steps to install:
 1. Clone/Download the repo
-2. `docker build -t gradio .` inside the downloaded dir
-3. `docker run -d --volume [path-to-music-files-exported-from-game]:/music -p 8000:8000 -p 5173:5173 gradio` (you can omit exposing port 8000)
+2. `docker build -t radiosa .` inside the downloaded dir
+3. `docker run -d --volume [path-to-music-files-exported-from-game]:/radiosa/music -p 8000:8000 -p 5173:5173 radiosa` (you can omit exposing port 8000)
 4. Go to localhost:5173 for new custom front end interface (recommended) or localhost:8000 for Icecast interface.
 5. Enjoy!
 

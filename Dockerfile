@@ -1,6 +1,6 @@
-FROM debian
+FROM node:22
 
-COPY ["frontend/", "/radiosa/frontend"]
+COPY ["sveltekit/", "/radiosa/sveltekit"]
 COPY ["config/", "/radiosa/config"]
 COPY ["scripts/", "/radiosa/scripts"]
 COPY ["metadata/", "/radiosa/metadata"]
@@ -10,15 +10,17 @@ RUN apt update
 RUN apt install -y \
 icecast2 \
 mpd \
-openssl \
-nodejs \
-npm
+openssl
 
 RUN npm install \
 vite \
 chance \
-mpd-api
+mpc-js
 
+RUN npm install -D sass-embedded
+
+WORKDIR /radiosa/sveltekit/src
+RUN npm run build
 
 # Default Environmental Variables
 ENV HOSTNAME localhost
