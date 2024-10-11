@@ -1,6 +1,6 @@
 <svelte:head>
     <title>{title}</title>
-    <link rel="icon" href={favicon}/>
+    <link rel="icon" href={favicon} type="image/webp"/>
 </svelte:head>
 
 <script>
@@ -9,7 +9,7 @@
 
     const enabledStations = JSON.parse(data.enabledStations);
     const title="Radio San Andreas";
-    const favicon="/favicon.png"
+    const favicon="/favicon.webp"
     const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"];
     let activeStates = Array(enabledStations.length).fill(false);
     let hover=false;

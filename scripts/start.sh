@@ -80,7 +80,7 @@ set_icecast_config(){
 
 start_frontend(){
     cd /radiosa/sveltekit/
-    npm build
+    node build
 }
 
 enabled_stations_to_json(){

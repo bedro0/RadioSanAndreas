@@ -19,7 +19,7 @@ mpc-js
 
 RUN npm install -D sass-embedded
 
-WORKDIR /radiosa/sveltekit/src
+WORKDIR /radiosa/sveltekit/
 RUN npm run build
 
 # Default Environmental Variables
