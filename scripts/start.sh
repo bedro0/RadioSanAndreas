@@ -78,9 +78,9 @@ set_icecast_config(){
     sed -i 's|%ICECAST_ADMIN_PASS%|'"$ICECAST_ADMIN_PASS"'|g' /radiosa/config/icecast.xml
 }
 
-start_svelte(){
-    cd /radiosa/sveltekit/src
-    npm run dev -- --host
+start_frontend(){
+    cd /radiosa/sveltekit/
+    npm build
 }
 
 enabled_stations_to_json(){
@@ -104,5 +104,6 @@ enabled_stations_to_json(){
 }
 
 main
+start_frontend
 
 tail -f /dev/null
