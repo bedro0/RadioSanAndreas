@@ -15,7 +15,7 @@ openssl
 RUN npm install \
 vite \
 chance \
-mpd-api
+mpc-js
 
 RUN npm install -D sass-embedded
 

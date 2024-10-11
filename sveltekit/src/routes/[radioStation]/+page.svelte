@@ -4,12 +4,9 @@
     import { page } from "$app/stores";
     import { browser } from "$app/environment";
     import { goto } from "$app/navigation";
-    console.log("Imported Modules")
 
     const enabledStations = JSON.parse(data.enabledStations);
-    console.log("Fetched Enabled Stations list")
     const currentStation = $page.params.radioStation;
-    console.log("Acquired Current Station, it's", currentStation)
     let currentStationMetadata = {};
     let nowPlaying = { artist: "", title: "" };
     let remainingTime = 0;
@@ -41,7 +38,6 @@
     async function updateMetadata() {
         try{
             const responseBody = await fetch(`/api/station-metadata?station=${currentStation}`).then(response => response.json());
-            console.log("Current Station Details:", responseBody)
             currentStationMetadata = responseBody.currentStationMetadata;
         }
         catch(error){
@@ -67,7 +63,6 @@
     }
 
     onMount(() => {
-        console.log("HELLOOOOOOOOOOOOOOOOOOOOO!")
         updateNowPlaying();
         updateMetadata()
     });
