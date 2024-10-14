@@ -1,5 +1,5 @@
 if (process.argv.length !== 4){
-    console.log("Usage: node get-station-metadata.js [Station Alias] [Requested Metadata]");
+    console.error("Usage: node get-station-metadata.js [Station Alias] [Requested Metadata]");
     process.exit(1);
 }
 

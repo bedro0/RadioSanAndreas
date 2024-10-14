@@ -13,7 +13,7 @@ main(){
     chown -R mpd /radiosa/socks  # Assuming MPD runs as the 'mpd' user
 
 
-    enabled_stations_to_json
+    ENABLED_STATIONS="$ENABLED_STATIONS" node /radiosa/scripts/split-enabled-stations.js
 
     IFS=', ' read -r -a ENABLED_STATIONS_ARRAY <<< "$ENABLED_STATIONS"
 
@@ -55,8 +55,6 @@ set_icecast_config(){
     sed -i 's|%ADMIN_ACC%|'"$ADMIN_ACC"'|g' /radiosa/config/icecast.xml
     sed -i 's|%ICECAST_PORT%|'"$ICECAST_PORT"'|g' /radiosa/config/icecast.xml
 
-    # I don't feel like writing a sketchy for loop for the following.
-    # Maybe if bash was a proper programming language
     if [ "$ICECAST_SOURCE_PASS" == "" ]
     then
         ICECAST_SOURCE_PASS=$(openssl rand -base64 12)
@@ -81,26 +79,6 @@ set_icecast_config(){
 start_frontend(){
     cd /radiosa/sveltekit/
     node build
-}
-
-enabled_stations_to_json(){
-    # Read the ENABLED_STATIONS environment variable
-    stations=$ENABLED_STATIONS
-
-    # Remove any whitespace around commas
-    stations=$(echo $stations | sed 's/\s*,\s*/,/g')
-
-    # Split the string into an array
-    IFS=',' read -ra station_array <<< "$stations"
-
-    # Create a JSON array
-    json_array=$(printf '"%s",' "${station_array[@]}" | sed 's/,$//')
-    json_array="[$json_array]"
-
-    # Save the JSON array to a file
-    echo $json_array > /radiosa/sveltekit/src/enabled-stations.json
-
-    echo "JSON array saved to enabled_stations.json"
 }
 
 main
