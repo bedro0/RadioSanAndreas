@@ -25,11 +25,10 @@ Steps to install:
 | HOSTNAME            | Hostname for Icecast. (As far as I know, it's only for display.) | localhost                                                                           |
 | DISPLAY_ADMIN       | Display name for an administrator on Icecast version page        | admin                                                                               |
 | ADMIN_USER          | Username for administrator login                                 | admin                                                                               |
-| ICECAST_PORT        | HTTP port for Icecast                                            | 8000                                                                                |
 | ENABLED_STATIONS    | Enabled Radio Stations                                           | "bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur" |
-| ICECAST_SOURCE_PASS | Source Password for Icecast (ShoutCast) stream                   | (Random string of 12 ASCII characters)                                              |
-| ICECAST_RELAY_PASS  | Relay Password for Icecast                                       | (Random string of 12 ASCII characters)                                              |
-| ICECAST_ADMIN_PASS  | Administrator password for Icecast web login                     | (Random string of 12 ASCII characters)                                              |
+| ICECAST_SOURCE_PASS | Source Password for Icecast (ShoutCast) stream                   | (Random string of 16 CAPITAL alphanumeric characters)                                              |
+| ICECAST_RELAY_PASS  | Relay Password for Icecast                                       | (Random string of 16 CAPITAL alphanumeric characters)                                              |
+| ICECAST_ADMIN_PASS  | Administrator password for Icecast web login                     | (Random string of 16 CAPITAL alphanumeric characters)                                              |
 
 
 Additional Resources

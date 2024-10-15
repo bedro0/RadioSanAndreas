@@ -23,7 +23,7 @@
     </authentication>
 
     <listen-socket>
-        <port>%ICECAST_PORT%</port>
+        <port>8000</port>
     </listen-socket>
 
     <logging>

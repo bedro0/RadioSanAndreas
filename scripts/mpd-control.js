@@ -3,20 +3,13 @@ const MPC = require('mpc-js').MPC;
 const Chance = require("chance");
 const weatherCodeReference = require("./weather.json")
 // This script directly controls the playback of MPD.
-// It accepts CLI arguments /path/to/json, mpd-socket, and mpd-control-port
 
-// check if the incoming command was executed properly
-
-if (process.argv.length !== 4) {
-    console.log("Usage: node mpd_control.js /path/of/json [mpd socket]");
-    process.exit(1);
-}
+// Local sockets are defined by the name of their respective stations
+const channelAlias = process.env.CHANNEL_ALIAS;
 
 // import the JSON path specified as a CLI argument
-const tracksMetadata = require(`${process.argv[2]}`);
-// Local sockets are defined by the name of their respective stations
-const stationAlias = process.argv[3];
-const stationMetadata = (require("./station-metadata.json"))[stationAlias]
+const tracksMetadata = require(`/radiosa/metadata/${channelAlias}.json`);
+const stationMetadata = (require("./station-metadata.json"))[channelAlias]
 
 
 let categories, weights;
@@ -25,11 +18,11 @@ let lastCategory = "";
 
 const chance = new Chance();
 
-console.log(`Connected to MPD socket: ${stationAlias}`);
+console.log(`Connected to MPD socket: ${channelAlias}`);
 
 // Some stations contain certain kinds of audio tracks, but not others. 
 // This switch ensures the elements are chosen properly depending on the station
-switch (stationAlias) {
+switch (channelAlias) {
     case "kjah":
         categories = ["Song", "DJ", "ID", "Weather", "Time of Day"];
         weights = [1, 1, 1, 0.05, 0.04];
@@ -60,10 +53,10 @@ then it waits for a variable amount of time before adding another track.
 */
 async function main(){
     const client = new MPC();
-    client.connectUnixSocket(`/radiosa/socks/${stationAlias}`);
+    client.connectUnixSocket(`/radiosa/socks/${channelAlias}`);
     // Enable consume. This allows tracks to be removed from the player queue after they are played. Prevents from accumulating backlog of tracks
     await client.playbackOptions.setConsume(true);
-    console.log(`MPD Consume enabled for ${stationAlias}`);
+    console.log(`MPD Consume enabled for ${stationMetadata.channel_name}`);
 
     while (true){
         output= await getNextCategory();

@@ -9,8 +9,7 @@ WORKDIR /radiosa
 RUN apt update 
 RUN apt install -y \
 icecast2 \
-mpd \
-openssl
+mpd
 
 RUN npm install \
 vite \
@@ -26,7 +25,6 @@ RUN npm run build
 ENV HOSTNAME localhost
 ENV DISPLAY_ADMIN admin
 ENV ADMIN_USER admin
-ENV ICECAST_PORT 8000
 ENV ENABLED_STATIONS="bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur"
 
 ENTRYPOINT ["/radiosa/scripts/start.sh"]
