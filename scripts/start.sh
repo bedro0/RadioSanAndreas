@@ -33,17 +33,17 @@ main(){
         CHANNEL_ALIAS=$CHANNEL_ALIAS node /radiosa/scripts/update-mpd-config.js
 
         mpd /radiosa/config/$CHANNEL_ALIAS.conf
-        echo "$STATION_NAME launched successfully"
-        CHANNEL_ALIAS=$CHANNEL_ALIAS node /radiosa/scripts/mpd-control.js &
+        if [[ "$CHANNEL_ALIAS" == "wctr" ]]
+        then
+            node /radiosa/scripts/talk-radio.js &
+        else
+            CHANNEL_ALIAS=$CHANNEL_ALIAS node /radiosa/scripts/mpd-control.js &
+        fi
     done
-}
 
-start_frontend(){
-    cd /radiosa/sveltekit/
-    node build
+    node /radiosa/sveltekit/build/index.js
 }
 
 main
-start_frontend
 
 tail -f /dev/null

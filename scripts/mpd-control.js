@@ -1,6 +1,7 @@
 // import libraries
-const MPC = require('mpc-js').MPC;
+const MPC = require("mpc-js").MPC;
 const Chance = require("chance");
+const chance = new Chance();
 const weatherCodeReference = require("./weather.json")
 // This script directly controls the playback of MPD.
 
@@ -11,17 +12,12 @@ const channelAlias = process.env.CHANNEL_ALIAS;
 const tracksMetadata = require(`/radiosa/metadata/${channelAlias}.json`);
 const stationMetadata = (require("./station-metadata.json"))[channelAlias]
 
-
 let categories, weights;
 let songHasNotBeenPlayedFor = 0;
 let lastCategory = "";
 
-const chance = new Chance();
-
-console.log(`Connected to MPD socket: ${channelAlias}`);
-
 // Some stations contain certain kinds of audio tracks, but not others. 
-// This switch ensures the elements are chosen properly depending on the station
+// This switch ensures the elements are selected properly depending on the station
 switch (channelAlias) {
     case "kjah":
         categories = ["Song", "DJ", "ID", "Weather", "Time of Day"];
@@ -40,7 +36,7 @@ switch (channelAlias) {
         weights = [1, 0.0625, 1, 1, 0.05, 0.04];
 }
 
-for (let cat of categories) {
+for (cat of categories) {
     if(!(["Weather", "Time of Day"].includes(cat))){
         tracksMetadata[cat]=chance.shuffle(tracksMetadata[cat]);
     }
@@ -54,16 +50,17 @@ then it waits for a variable amount of time before adding another track.
 async function main(){
     const client = new MPC();
     client.connectUnixSocket(`/radiosa/socks/${channelAlias}`);
+    console.log(`Connected to MPD socket: ${stationMetadata.channel_name}.`);
     // Enable consume. This allows tracks to be removed from the player queue after they are played. Prevents from accumulating backlog of tracks
     await client.playbackOptions.setConsume(true);
-    console.log(`MPD Consume enabled for ${stationMetadata.channel_name}`);
+    console.log(`MPD Consume enabled for ${stationMetadata.channel_name}.`);
 
     while (true){
         output= await getNextCategory();
-        for (let elem of output){
+        for (elem of output){
             // add tracks to queue one by one
             const fullPath=(`/radiosa/music/${elem}`)
-            console.log(`Adding ${fullPath} to the queue`)
+            console.log(`Adding ${fullPath} to the queue.`)
             await client.currentPlaylist.add(fullPath)
         }
 
@@ -158,11 +155,11 @@ async function getNextTrack(selectedCategory){
     else {
         // After receiving an array of tracks, randomly choose between indexes 0 and 1, then append that track at the back of the array
         // This FiFo like approach ensures that songs are spread apart from each other, but still random to simulate radio-like quality
-        const tracksInCategory = tracksMetadata[selectedCategory];
-        const randomBit = chance.integer({min: 0, max: 1});
-        const chosenTrack = tracksInCategory.splice(randomBit, 1)[0];
-        tracksInCategory.push(chosenTrack);
-        return chosenTrack;
+        const tracksInCurrentCategory = tracksMetadata[selectedCategory];
+        const randomBit = chance.bool();
+        const [selectedTrack] = tracksInCurrentCategory.splice(+randomBit, 1);
+        tracksInCurrentCategory.push(selectedTrack);
+        return selectedTrack;
     }
 }
 
