@@ -1,6 +1,6 @@
 const fs = require("fs");
 const icecastPasswords = require("./pass.json")
-const channelMetadata = require("./station-metadata.json");
+const channelMetadata = require("./all-stations.json");
 const channelAlias=process.env.CHANNEL_ALIAS;
 const replacePatternWith = {
     "CHANNEL_NAME": channelMetadata[channelAlias].channel_name,

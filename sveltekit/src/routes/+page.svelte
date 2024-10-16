@@ -7,7 +7,7 @@
     import { goto } from '$app/navigation';
     export let data;
 
-    const enabledStations = JSON.parse(data.enabledStations);
+    const enabledStations = Object.keys(data.enabledStations);
     const title="Radio San Andreas";
     const favicon="/favicon.webp"
     const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"];

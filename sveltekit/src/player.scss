@@ -1,86 +1,61 @@
 $bg-color: #01011a;
-:global(body){
+$player-width: min(90vw, 600px);
+$font-size: clamp(14px, 3vw, 18px);
+
+:global(body) {
     background-color: $bg-color;
+    margin: 0;
+    padding: 0;
 }
 
-#allfather{
-    $bannerw: calc(256px + 20%);
-    $fontsize: calc( calc($bannerw/32) + 1vw);
-    width: $bannerw;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background-color: rgba(0, 0, 0, 0.303);
+.player {
+    width: $player-width;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: $fontsize;
+    padding: 1rem;
     font-family: monospace;
-    text-shadow: 1.75px 1.75px 1.75px #000000; 
-    font-weight: 500;
-    padding: 1ch;
+    font-size: $font-size;
+    text-align: center;
+    color: cyan;
+    text-shadow: 1px 1px 1px #000;
 
-    #channel-id{
-        padding-bottom: 1em;
-        color:cyan;
-
-        .channel-id-member{
-            padding: 0.25ch;
-        }
+    .channel-info, .now-playing, .controls {
+        margin-bottom: 1rem;
     }
 
-    .currently-playing{
-        #break{
-            color:cyan;
-        }
+    .logo {
+        width: min(50%, 200px);
+    }
 
-        #now-playing{
-            color:greenyellow;
+    .now-playing {
+        h3 {
+            color: greenyellow;
         }
-
-        .display-artist{
-            display: flex; 
+        p {
+            display: flex;
             justify-content: space-between;
-            align-content: center;
-            color: rgb(255, 255, 0);
-
-            #artist-id{
-                padding-left: 10%;
+            strong {
+                color: yellow;
             }
-        }
-        .display-track-title{
-            display: flex; 
-            justify-content: space-between;
-            align-items: center;
-            color: rgb(0, 255, 0);
-
-            #track-title-id{
-                padding-left: 10%;
+            &:last-child strong {
+                color: lime;
             }
         }
     }
 
-    #play-button{
-        padding-top: 2ch;
-        width: calc(($bannerw / 20) + 128px);
-        border-radius: 50%;
-        border: 0px;
-        background-color: transparent;
-
-        img{
-            width: 100%;
+    .controls {
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            img {
+                width: min(50%, 128px);
+            }
         }
-    }
-
-    #volume {
-        width: 25%;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgb(0, 0, 0);
-    }
-
-    #station-logo{
-        width: calc(($bannerw / 20) + 128px) ;
+        input[type="range"] {
+            width: 80%;
+            margin-top: 1rem;
+        }
     }
 }

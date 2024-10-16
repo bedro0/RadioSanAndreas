@@ -10,7 +10,7 @@ const channelAlias = process.env.CHANNEL_ALIAS;
 
 // import the JSON path specified as a CLI argument
 const tracksMetadata = require(`/radiosa/metadata/${channelAlias}.json`);
-const stationMetadata = (require("./station-metadata.json"))[channelAlias]
+const stationMetadata = (require("./all-stations.json"))[channelAlias]
 
 let categories, weights;
 let songHasNotBeenPlayedFor = 0;

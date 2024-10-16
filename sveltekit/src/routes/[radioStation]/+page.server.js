@@ -1,7 +1,5 @@
-import fs from "fs";
+import getEnabledStations from '$lib/get-enabled-stations.js';
 
-export function load(){
-
-    const enabledStations = fs.readFileSync("src/enabled-stations.json", "utf8");
-    return {"enabledStations": enabledStations}
+export function load() {
+    return { enabledStations: getEnabledStations() };
 }
