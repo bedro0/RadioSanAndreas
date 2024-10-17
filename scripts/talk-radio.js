@@ -58,6 +58,7 @@ function getNextCategory(){
     else selectedCategory = chance.weighted(currentCategories, currentWeights);
 
     if(selectedCategory !== "Show") showHasNotBeenPlayedFor++;
+    else showHasNotBeenPlayedFor = 0;
 
     lastCategory = selectedCategory;
     return selectedCategory;
