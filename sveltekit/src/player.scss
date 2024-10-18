@@ -25,7 +25,7 @@ $font-size: clamp(14px, 3vw, 18px);
     }
 
     .logo {
-        width: min(50%, 200px);
+        width: min(50%, 150px);
     }
 
     .now-playing {
@@ -45,16 +45,17 @@ $font-size: clamp(14px, 3vw, 18px);
     }
 
     .controls {
+        $button_w: min(50%, 128px);
         button {
             background: none;
             border: none;
             cursor: pointer;
             img {
-                width: min(50%, 128px);
+                width: $button_w;
             }
         }
         input[type="range"] {
-            width: 80%;
+            width: $button_w;
             margin-top: 1rem;
         }
     }

@@ -7,7 +7,8 @@
         "location_real":"East Los Angeles, California",
         "host":"The Funktipus",
         "latitude": "34.03409058551883",
-        "longitude": "-118.18109424485043"
+        "longitude": "-118.18109424485043",
+        "logs-color": "cyan"
         
     },
     "csr":{
@@ -18,7 +19,8 @@
         "location_real":"San Francisco, California",
         "host":"Philip 'PM' Michaels",
         "latitude": "37.76049012251422",
-        "longitude": "-122.44793153935414"
+        "longitude": "-122.44793153935414",
+        "logs-color": "purple"
     },
     "kdst":{
         "channel_name":"K-DST",
@@ -28,7 +30,8 @@
         "location_real":"Los Angeles, California",
         "host":"Tommy \"The Nightmare\" Smith",
         "latitude": "34.084670054406786",
-        "longitude": "-118.40691502938269"
+        "longitude": "-118.40691502938269",
+        "logs-color": "gold"
     },
     "kjah":{
         "channel_name":"K-JAH West",
@@ -38,7 +41,8 @@
         "location_real":"Paradise, Nevada",
         "host":"Marshall Peters, Johnny Lawton",
         "latitude": "36.09449283564147",
-        "longitude": "-115.18323950597356"
+        "longitude": "-115.18323950597356",
+        "log-color": "greenyellow"
     },
     "krose":{
         "channel_name":"K-Rose",
@@ -48,7 +52,8 @@
         "location_real":"Mojave Desert, Nevada",
         "host":"Mary-Beth Maybell",
         "latitude": "35.0329809601477",
-        "longitude": "-115.47420033734288"
+        "longitude": "-115.47420033734288",
+        "log-color": "yellow"
     },
     "mastersounds":{
         "channel_name":"Master Sounds 98.3",
@@ -58,7 +63,8 @@
         "location_real":"Paradise, Nevada",
         "host":"Johnny \"The Love Giant\" Parkinson",
         "latitude": "36.09449283564147",
-        "longitude": "-115.18323950597356"
+        "longitude": "-115.18323950597356",
+        "log-color": "darkorange"
     },
     "playbackfm":{
         "channel_name":"Playback FM",
@@ -68,7 +74,8 @@
         "location_real":"San Francisco, California",
         "host":"Forth Right MC",
         "latitude": "37.76049012251422",
-        "longitude": "-122.44793153935414"
+        "longitude": "-122.44793153935414",
+        "log-color": "darkolivegreen"        
     },
     "radiols":{
         "channel_name":"Radio Los Santos",
@@ -78,7 +85,8 @@
         "location_real":"Downtown Los Angeles, California",
         "host":"Julio G",
         "latitude": "34.04250236885846",
-        "longitude": "-118.24536664845455"
+        "longitude": "-118.24536664845455",
+        "log-color": "brown"
     },
     "radiox":{
         "channel_name":"Radio:X",
@@ -88,7 +96,8 @@
         "location_real":"Las Vegas, Nevada",
         "host":"Sage",
         "latitude": "36.17441984107815",
-        "longitude": "-115.15532756187191"
+        "longitude": "-115.15532756187191",
+        "log-color": "cyan"
     },
     "sfur":{
         "channel_name":"San Fierro Underground Radio",
@@ -98,7 +107,8 @@
         "location_real":"San Francisco, California",
         "host":"Hans Oberlander",
         "latitude": "37.76049012251422",
-        "longitude": "-122.44793153935414"
+        "longitude": "-122.44793153935414",
+        "log-color": "navy"
     },
     "wctr":{
         "channel_name":"West Coast Talk Radio",
@@ -108,6 +118,7 @@
         "location_real":"Sutro Tower, San Francisco, California",
         "host":"Ammu-Nation",
         "latitude": "37.75531790034594",
-        "longitude": "-122.45272692937759"
+        "longitude": "-122.45272692937759",
+        "log-color": "plum"
     }
 }
