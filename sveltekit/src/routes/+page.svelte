@@ -20,12 +20,8 @@
 	}
 </script>
 
-<style lang="scss">
-    @import "../main.scss";
-</style>
-{#await enabledStations then channels}
 <div id="stations">
-    {#each channels as station, index}
+    {#each enabledStations as station, index}
     <button 
     class:hover={activeStates[index]}
     on:mouseenter={() => setHover(index, true)} 
@@ -37,4 +33,7 @@
     </button>
     {/each}
 </div>
-{/await}
+
+<style lang="scss">
+    @import "../main.scss";
+</style>
