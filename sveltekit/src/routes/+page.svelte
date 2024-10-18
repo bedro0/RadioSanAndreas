@@ -10,7 +10,7 @@
     const enabledStations = Object.keys(data.enabledStations);
     const title="Radio San Andreas";
     const favicon="/favicon.webp"
-    const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur"];
+    const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur", "wctr"];
     let activeStates = Array(enabledStations.length).fill(false);
     let hover=false;
     
