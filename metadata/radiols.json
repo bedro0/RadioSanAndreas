@@ -1,0 +1,265 @@
+{
+  "Song": [
+    {
+      "intros": [
+        "Radio Los Santos/Guerillas in tha Mist (Intro).ogg",
+        "Radio Los Santos/Guerillas in tha Mist (Intro DJ #1).ogg",
+        "Radio Los Santos/Guerillas in tha Mist (Intro DJ #2).ogg"
+      ],
+      "mid": "Radio Los Santos/Guerillas in tha Mist (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Guerillas in tha Mist (Outro).ogg",
+        "Radio Los Santos/Guerillas in tha Mist (Outro DJ #2).ogg",
+        "Radio Los Santos/Guerillas in tha Mist (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/La Raza (Intro DJ #1).ogg",
+        "Radio Los Santos/La Raza (Intro DJ #2).ogg",
+        "Radio Los Santos/La Raza (Intro).ogg"
+      ],
+      "mid": "Radio Los Santos/La Raza (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/La Raza (Outro).ogg",
+        "Radio Los Santos/La Raza (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Deep Cover (Intro DJ #1).ogg",
+        "Radio Los Santos/Deep Cover (Intro).ogg"
+      ],
+      "mid": "Radio Los Santos/Deep Cover (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Deep Cover (Outro DJ #1).ogg",
+        "Radio Los Santos/Deep Cover (Outro).ogg",
+        "Radio Los Santos/Deep Cover (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Nuthin' but a 'G' Thang (Intro DJ #1).ogg",
+        "Radio Los Santos/Nuthin' but a 'G' Thang (Intro).ogg",
+        "Radio Los Santos/Nuthin' but a 'G' Thang (Intro DJ #2).ogg"
+      ],
+      "mid": "Radio Los Santos/Nuthin' but a 'G' Thang (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Nuthin' but a 'G' Thang (Outro DJ #2).ogg",
+        "Radio Los Santos/Nuthin' but a 'G' Thang (Outro DJ #1).ogg",
+        "Radio Los Santos/Nuthin' but a 'G' Thang (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Eazy-er Said than Dunn (Intro DJ #1).ogg",
+        "Radio Los Santos/Eazy-er Said than Dunn (Intro DJ #2).ogg",
+        "Radio Los Santos/Eazy-er Said than Dunn (Intro).ogg"
+      ],
+      "mid": "Radio Los Santos/Eazy-er Said than Dunn (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Eazy-er Said than Dunn (Outro DJ #1).ogg",
+        "Radio Los Santos/Eazy-er Said than Dunn (Outro).ogg",
+        "Radio Los Santos/Eazy-er Said than Dunn (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/It was a Good Day (Intro DJ #1).ogg",
+        "Radio Los Santos/It was a Good Day (Intro).ogg"
+      ],
+      "mid": "Radio Los Santos/It was a Good Day (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/It was a Good Day (Outro DJ #1).ogg",
+        "Radio Los Santos/It was a Good Day (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/I Don't Give a Fuck (Intro DJ #2).ogg",
+        "Radio Los Santos/I Don't Give a Fuck (Intro).ogg",
+        "Radio Los Santos/I Don't Give a Fuck (Intro DJ #1).ogg"
+      ],
+      "mid": "Radio Los Santos/I Don't Give a Fuck (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/I Don't Give a Fuck (Outro DJ #2).ogg",
+        "Radio Los Santos/I Don't Give a Fuck (Outro).ogg",
+        "Radio Los Santos/I Don't Give a Fuck (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Express Yourself (Intro DJ #2).ogg",
+        "Radio Los Santos/Express Yourself (Intro).ogg",
+        "Radio Los Santos/Express Yourself (Intro DJ #1).ogg"
+      ],
+      "mid": "Radio Los Santos/Express Yourself (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Express Yourself (Outro).ogg",
+        "Radio Los Santos/Express Yourself (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/How I Could Just Kill a Man (Intro DJ #1).ogg",
+        "Radio Los Santos/How I Could Just Kill a Man (Intro).ogg"
+      ],
+      "mid": "Radio Los Santos/How I Could Just Kill a Man (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/How I Could Just Kill a Man (Outro DJ #1).ogg",
+        "Radio Los Santos/How I Could Just Kill a Man (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Hood Took Me Under (Intro DJ #1).ogg",
+        "Radio Los Santos/Hood Took Me Under (Intro).ogg",
+        "Radio Los Santos/Hood Took Me Under (Intro DJ #2).ogg"
+      ],
+      "mid": "Radio Los Santos/Hood Took Me Under (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Hood Took Me Under (Outro).ogg",
+        "Radio Los Santos/Hood Took Me Under (Outro DJ #2).ogg",
+        "Radio Los Santos/Hood Took Me Under (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/The Ghetto (Intro).ogg"
+      ],
+      "mid": "Radio Los Santos/The Ghetto (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/The Ghetto (Outro).ogg",
+        "Radio Los Santos/The Ghetto (Outro DJ #1).ogg",
+        "Radio Los Santos/The Ghetto (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Alwayz Into Somethin' (Intro DJ #1).ogg",
+        "Radio Los Santos/Alwayz Into Somethin' (Intro).ogg",
+        "Radio Los Santos/Alwayz Into Somethin' (Intro DJ #2).ogg"
+      ],
+      "mid": "Radio Los Santos/Alwayz Into Somethin' (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Alwayz Into Somethin' (Outro DJ #1).ogg",
+        "Radio Los Santos/Alwayz Into Somethin' (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Fuck wit Dre Day (Intro).ogg",
+        "Radio Los Santos/Fuck wit Dre Day (Intro DJ #1).ogg",
+        "Radio Los Santos/Fuck wit Dre Day (Intro DJ #2).ogg"
+      ],
+      "mid": "Radio Los Santos/Fuck wit Dre Day (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Fuck wit Dre Day (Outro DJ #2).ogg",
+        "Radio Los Santos/Fuck wit Dre Day (Outro).ogg",
+        "Radio Los Santos/Fuck wit Dre Day (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/Murder Rap (Intro DJ #2).ogg",
+        "Radio Los Santos/Murder Rap (Intro DJ #1).ogg",
+        "Radio Los Santos/Murder Rap (Intro).ogg"
+      ],
+      "mid": "Radio Los Santos/Murder Rap (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/Murder Rap (Outro DJ #1).ogg",
+        "Radio Los Santos/Murder Rap (Outro DJ #2).ogg",
+        "Radio Los Santos/Murder Rap (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "Radio Los Santos/It's Funky Enough (Intro DJ #1).ogg",
+        "Radio Los Santos/It's Funky Enough (Intro).ogg",
+        "Radio Los Santos/It's Funky Enough (Intro DJ #2).ogg"
+      ],
+      "mid": "Radio Los Santos/It's Funky Enough (Mid).ogg",
+      "outros": [
+        "Radio Los Santos/It's Funky Enough (Outro DJ #1).ogg",
+        "Radio Los Santos/It's Funky Enough (Outro).ogg",
+        "Radio Los Santos/It's Funky Enough (Outro DJ #2).ogg"
+      ]
+    }
+  ],
+  "DJ": [
+    "Radio Los Santos/(DJ) 'The hottest shit around'.ogg",
+    "Radio Los Santos/(DJ) 'The home of gangsta rap'.ogg",
+    "Radio Los Santos/(DJ) 'Ruling the airwaves'.ogg",
+    "Radio Los Santos/(DJ) 'Not the home of gangster fools'.ogg",
+    "Radio Los Santos/(DJ) 'Original home of the drive-by'.ogg",
+    "Radio Los Santos/(DJ) 'We play the real shit'.ogg",
+    "Radio Los Santos/(DJ) 'Denise is desperate'.ogg",
+    "Radio Los Santos/(DJ) 'The rest of the world can follow'.ogg",
+    "Radio Los Santos/(DJ) 'My man Les in the north'.ogg",
+    "Radio Los Santos/(DJ) 'Your man Julio G'.ogg",
+    "Radio Los Santos/(DJ) 'I get it first, the others get it last'.ogg",
+    "Radio Los Santos/(DJ) 'Don't touch that dial'.ogg",
+    "Radio Los Santos/(DJ) 'Burglary and carjacking is both up'.ogg",
+    "Radio Los Santos/(DJ) 'Difference between a rapper and a gangster'.ogg",
+    "Radio Los Santos/(DJ) 'Sam and the boys from Liberty City'.ogg",
+    "Radio Los Santos/(DJ) 'Self-styled Audio Boys'.ogg",
+    "Radio Los Santos/(Story) Gang Warfare -- Ballas and Vagos taking over.ogg",
+    "Radio Los Santos/(Story) Gang Warfare -- Grove Street getting stronger.ogg",
+    "Radio Los Santos/(Story) Gang Warfare.ogg",
+    "Radio Los Santos/(Story) Riot.ogg"
+  ],
+  "ID": [
+    "Radio Los Santos/(ID) Shout-outs.ogg",
+    "Radio Los Santos/(ID) 'Can I have a t-shirt'.ogg",
+    "Radio Los Santos/(ID) 'Your voice is sooo sexy'.ogg",
+    "Radio Los Santos/(ID) O.G. Loc.ogg",
+    "Radio Los Santos/(ID) 'The home of gansta rap and gangsta bitches'.ogg",
+    "Radio Los Santos/(ID) 'Fool gave me the clap'.ogg",
+    "Radio Los Santos/(ID) 'Doin' it evolution-style'.ogg",
+    "Radio Los Santos/(ID) B-Real of Cypress Hill.ogg",
+    "Radio Los Santos/(ID) 'Julio's the man'.ogg",
+    "Radio Los Santos/(ID) Madd Dogg.ogg",
+    "Radio Los Santos/(ID) 'I sent you my demo nine times'.ogg"
+  ],
+  "Weather": {
+    "Sunny": [
+      "Radio Los Santos/(Atmosphere) Sunny #1.ogg",
+      "Radio Los Santos/(Atmosphere) Sunny #2.ogg"
+    ],
+    "Rain": [
+      "Radio Los Santos/(Atmosphere) Rain #1.ogg",
+      "Radio Los Santos/(Atmosphere) Rain #2.ogg"
+    ],
+    "Smog": [
+      "Radio Los Santos/(Atmosphere) Smog #1.ogg",
+      "Radio Los Santos/(Atmosphere) Smog #2.ogg"
+    ],
+    "Fog": [
+      "Radio Los Santos/(Atmosphere) Fog #1.ogg",
+      "Radio Los Santos/(Atmosphere) Fog #2.ogg"
+    ],
+    "Storm": [
+      "Radio Los Santos/(Atmosphere) Storm #1.ogg",
+      "Radio Los Santos/(Atmosphere) Storm #2.ogg"
+    ]
+  },
+  "Time of Day": {
+    "Morning": [
+      "Radio Los Santos/(Atmosphere) Morning #1.ogg",
+      "Radio Los Santos/(Atmosphere) Morning #2.ogg"
+    ],
+    "Evening": [
+      "Radio Los Santos/(Atmosphere) Evening #1.ogg",
+      "Radio Los Santos/(Atmosphere) Evening #2.ogg"
+    ],
+    "Night": [
+      "Radio Los Santos/(Atmosphere) Night #1.ogg",
+      "Radio Los Santos/(Atmosphere) Night #2.ogg"
+    ]
+  },
+  "Bridge Announcement": [
+    "Radio Los Santos/(Bridge Announce #1) Can access LS only.ogg",
+    "Radio Los Santos/(Bridge Announce #2) Can access LS and SF.ogg",
+    "Radio Los Santos/(Bridge Announce #3) Can access LS, SF, and LV.ogg"
+  ]
+}

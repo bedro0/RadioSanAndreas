@@ -1,311 +1,223 @@
 {
-    "Songs": [
-        {
-            "title": "New Jack Swing",
-            "intros": [
-                {
-                    "dj2": "CSR/New Jack Swing (Intro DJ #2).ogg",
-                    "dj0": "CSR/New Jack Swing (Intro).ogg",
-                    "dj1": "CSR/New Jack Swing (Intro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/New Jack Swing (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "CSR/New Jack Swing (Outro DJ #2).ogg",
-                    "dj1": "CSR/New Jack Swing (Outro DJ #1).ogg",
-                    "dj0": "CSR/New Jack Swing (Outro).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Motownphilly",
-            "mid": [
-                {
-                    "mid": "CSR/Motownphilly (Mid).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj0": "CSR/Motownphilly (Intro).ogg",
-                    "dj1": "CSR/Motownphilly (Intro DJ #1).ogg",
-                    "dj2": "CSR/Motownphilly (Intro DJ #2).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "CSR/Motownphilly (Outro DJ #1).ogg",
-                    "dj0": "CSR/Motownphilly (Outro).ogg",
-                    "dj2": "CSR/Motownphilly (Outro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Groove Me",
-            "mid": [
-                {
-                    "mid": "CSR/Groove Me (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "CSR/Groove Me (Outro DJ #2).ogg",
-                    "dj0": "CSR/Groove Me (Outro).ogg",
-                    "dj1": "CSR/Groove Me (Outro DJ #1).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj1": "CSR/Groove Me (Intro DJ #1).ogg",
-                    "dj0": "CSR/Groove Me (Intro).ogg",
-                    "dj2": "CSR/Groove Me (Intro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "I Got the Feeling",
-            "outros": [
-                {
-                    "dj2": "CSR/I Got the Feeling (Outro DJ #2).ogg",
-                    "dj1": "CSR/I Got the Feeling (Outro DJ #1).ogg",
-                    "dj0": "CSR/I Got the Feeling (Outro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/I Got the Feeling (Mid).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj0": "CSR/I Got the Feeling (Intro).ogg",
-                    "dj2": "CSR/I Got the Feeling (Intro DJ #2).ogg",
-                    "dj1": "CSR/I Got the Feeling (Intro DJ #1).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Keep on Movin'",
-            "intros": [
-                {
-                    "dj0": "CSR/Keep on Movin' (Intro).ogg",
-                    "dj1": "CSR/Keep on Movin' (Intro DJ #1).ogg",
-                    "dj2": "CSR/Keep on Movin' (Intro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/Keep on Movin' (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "CSR/Keep on Movin' (Outro DJ #2).ogg",
-                    "dj0": "CSR/Keep on Movin' (Outro).ogg",
-                    "dj1": "CSR/Keep on Movin' (Outro DJ #1).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Rub You the Right Way",
-            "intros": [
-                {
-                    "dj0": "CSR/Rub You the Right Way (Intro).ogg",
-                    "dj1": "CSR/Rub You the Right Way (Intro DJ #1).ogg",
-                    "dj2": "CSR/Rub You the Right Way (Intro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/Rub You the Right Way (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "CSR/Rub You the Right Way (Outro DJ #1).ogg",
-                    "dj0": "CSR/Rub You the Right Way (Outro).ogg",
-                    "dj2": "CSR/Rub You the Right Way (Outro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Don't Be Afraid",
-            "intros": [
-                {
-                    "dj0": "CSR/Don't Be Afraid (Intro).ogg",
-                    "dj1": "CSR/Don't Be Afraid (Intro DJ #1).ogg",
-                    "dj2": "CSR/Don't Be Afraid (Intro DJ #2).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "CSR/Don't Be Afraid (Outro).ogg",
-                    "dj2": "CSR/Don't Be Afraid (Outro DJ #2).ogg",
-                    "dj1": "CSR/Don't Be Afraid (Outro DJ #1).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/Don't Be Afraid (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Don't Be Cruel",
-            "intros": [
-                {
-                    "dj0": "CSR/Don't Be Cruel (Intro).ogg",
-                    "dj2": "CSR/Don't Be Cruel (Intro DJ #2).ogg",
-                    "dj1": "CSR/Don't Be Cruel (Intro DJ #1).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj1": "CSR/Don't Be Cruel (Outro DJ #1).ogg",
-                    "dj2": "CSR/Don't Be Cruel (Outro DJ #2).ogg",
-                    "dj0": "CSR/Don't Be Cruel (Outro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/Don't Be Cruel (Mid).ogg"
-                }
-            ]
-        },
-        {
-            "title": "I'm So Into You",
-            "mid": [
-                {
-                    "mid": "CSR/I'm So Into You (Mid).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj1": "CSR/I'm So Into You (Intro DJ #1).ogg",
-                    "dj0": "CSR/I'm So Into You (Intro).ogg",
-                    "dj2": "CSR/I'm So Into You (Intro DJ #2).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj0": "CSR/I'm So Into You (Outro).ogg",
-                    "dj2": "CSR/I'm So Into You (Outro DJ #2).ogg",
-                    "dj1": "CSR/I'm So Into You (Outro DJ #1).ogg"
-                }
-            ]
-        },
-        {
-            "title": "So You Like What You See",
-            "intros": [
-                {
-                    "dj2": "CSR/So You Like What You See (Intro DJ #2).ogg",
-                    "dj1": "CSR/So You Like What You See (Intro DJ #1).ogg",
-                    "dj0": "CSR/So You Like What You See (Intro).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/So You Like What You See (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "CSR/So You Like What You See (Outro DJ #2).ogg",
-                    "dj1": "CSR/So You Like What You See (Outro DJ #1).ogg",
-                    "dj0": "CSR/So You Like What You See (Outro).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Poison",
-            "mid": [
-                {
-                    "mid": "CSR/Poison (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "CSR/Poison (Outro DJ #2).ogg",
-                    "dj0": "CSR/Poison (Outro).ogg",
-                    "dj1": "CSR/Poison (Outro DJ #1).ogg"
-                }
-            ],
-            "intros": [
-                {
-                    "dj1": "CSR/Poison (Intro DJ #1).ogg",
-                    "dj0": "CSR/Poison (Intro).ogg",
-                    "dj2": "CSR/Poison (Intro DJ #2).ogg"
-                }
-            ]
-        },
-        {
-            "title": "Sensitivity",
-            "intros": [
-                {
-                    "dj1": "CSR/Sensitivity (Intro DJ #1).ogg",
-                    "dj0": "CSR/Sensitivity (Intro).ogg",
-                    "dj2": "CSR/Sensitivity (Intro DJ #2).ogg"
-                }
-            ],
-            "mid": [
-                {
-                    "mid": "CSR/Sensitivity (Mid).ogg"
-                }
-            ],
-            "outros": [
-                {
-                    "dj2": "CSR/Sensitivity (Outro DJ #2).ogg",
-                    "dj0": "CSR/Sensitivity (Outro).ogg",
-                    "dj1": "CSR/Sensitivity (Outro DJ #1).ogg"
-                }
-            ]
-        }
-    ],
-    "Caller": [
-        "CSR/(Caller) 'I'm in love with a girl'.ogg",
-        "CSR/(Caller) 'Male chauvanist pigs'.ogg"
-    ],
-    "DJ": [
-        "CSR/(DJ) 'Get off your fat ass and dance'.ogg",
-        "CSR/(DJ) 'Get ready to get down'.ogg",
-        "CSR/(DJ) 'With a good voice and some music...'.ogg",
-        "CSR/(DJ) 'Sing my name'.ogg",
-        "CSR/(DJ) Buying a cane.ogg",
-        "CSR/(DJ) Contemporary Soul Radio.ogg",
-        "CSR/(DJ) 'Swing with your wife'.ogg",
-        "CSR/(DJ) 'Never trust a big butt and a smile'.ogg",
-        "CSR/(DJ) 'One is music, the other belongs in therapy'.ogg",
-        "CSR/(DJ) 'The home of modern soul'.ogg",
-        "CSR/(DJ) Momentum.ogg",
-        "CSR/(DJ) 'People that can really sing'.ogg",
-        "CSR/(Story) Casino Opening.ogg",
-        "CSR/(Story) Lights in Desert.ogg",
-        "CSR/(Story) Weed Farm Burned Down.ogg"
-    ],
-    "ID": [
-        "CSR/(ID) 'Soul has to have integrity'.ogg",
-        "CSR/(ID) 'Swing on this, baby'.ogg",
-        "CSR/(ID) 'The home of New Jack Swing'.ogg",
-        "CSR/(ID) 'Sold my soul to the Devil'.ogg",
-        "CSR/(ID) 'Old Jack We killed his old ass'.ogg",
-        "CSR/(ID) 'What do you call it...'.ogg",
-        "CSR/(ID) 'Why are you dressed like a preppie'.ogg",
-        "CSR/(ID) 'What happens when you mix...'.ogg"
-    ],
-    "Weather": {
-        "Sunny": ["CSR/(Atmosphere) Sunny #1.ogg", "CSR/(Atmosphere) Sunny #2.ogg"],
-        "Rain": ["CSR/(Atmosphere) Rain #1.ogg", "CSR/(Atmosphere) Rain #2.ogg"],
-        "Fog": ["CSR/(Atmosphere) Fog #1.ogg", "CSR/(Atmosphere) Fog #2.ogg"]
+  "Song": [
+    {
+      "intros": [
+        "CSR/New Jack Swing (Intro DJ #2).ogg",
+        "CSR/New Jack Swing (Intro).ogg",
+        "CSR/New Jack Swing (Intro DJ #1).ogg"
+      ],
+      "mid": "CSR/New Jack Swing (Mid).ogg",
+      "outros": [
+        "CSR/New Jack Swing (Outro DJ #2).ogg",
+        "CSR/New Jack Swing (Outro DJ #1).ogg",
+        "CSR/New Jack Swing (Outro).ogg"
+      ]
     },
-    "Time of Day": {
-        "Morning": ["CSR/(Atmosphere) Morning #1.ogg", "CSR/(Atmosphere) Morning #2.ogg"],
-        "Evening": ["CSR/(Atmosphere) Evening.ogg"],
-        "Night": ["CSR/(Atmosphere) Night #1.ogg", "CSR/(Atmosphere) Night #2.ogg"]    
+    {
+      "intros": [
+        "CSR/Motownphilly (Intro).ogg",
+        "CSR/Motownphilly (Intro DJ #1).ogg",
+        "CSR/Motownphilly (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/Motownphilly (Mid).ogg",
+      "outros": [
+        "CSR/Motownphilly (Outro DJ #1).ogg",
+        "CSR/Motownphilly (Outro).ogg",
+        "CSR/Motownphilly (Outro DJ #2).ogg"
+      ]
     },
-    "Bridge Announcement": ["CSR/(Bridge Announce #1) Can access LS only.ogg", "CSR/(Bridge Announce #2) Can access LS and SF.ogg", "CSR/(Bridge Announce #3) Can access LS, SF, and LV.ogg"]
-
+    {
+      "intros": [
+        "CSR/Groove Me (Intro DJ #1).ogg",
+        "CSR/Groove Me (Intro).ogg",
+        "CSR/Groove Me (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/Groove Me (Mid).ogg",
+      "outros": [
+        "CSR/Groove Me (Outro DJ #2).ogg",
+        "CSR/Groove Me (Outro).ogg",
+        "CSR/Groove Me (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/I Got the Feeling (Intro).ogg",
+        "CSR/I Got the Feeling (Intro DJ #2).ogg",
+        "CSR/I Got the Feeling (Intro DJ #1).ogg"
+      ],
+      "mid": "CSR/I Got the Feeling (Mid).ogg",
+      "outros": [
+        "CSR/I Got the Feeling (Outro DJ #2).ogg",
+        "CSR/I Got the Feeling (Outro DJ #1).ogg",
+        "CSR/I Got the Feeling (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/Keep on Movin' (Intro).ogg",
+        "CSR/Keep on Movin' (Intro DJ #1).ogg",
+        "CSR/Keep on Movin' (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/Keep on Movin' (Mid).ogg",
+      "outros": [
+        "CSR/Keep on Movin' (Outro DJ #2).ogg",
+        "CSR/Keep on Movin' (Outro).ogg",
+        "CSR/Keep on Movin' (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/Rub You the Right Way (Intro).ogg",
+        "CSR/Rub You the Right Way (Intro DJ #1).ogg",
+        "CSR/Rub You the Right Way (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/Rub You the Right Way (Mid).ogg",
+      "outros": [
+        "CSR/Rub You the Right Way (Outro DJ #1).ogg",
+        "CSR/Rub You the Right Way (Outro).ogg",
+        "CSR/Rub You the Right Way (Outro DJ #2).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/Don't Be Afraid (Intro).ogg",
+        "CSR/Don't Be Afraid (Intro DJ #1).ogg",
+        "CSR/Don't Be Afraid (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/Don't Be Afraid (Mid).ogg",
+      "outros": [
+        "CSR/Don't Be Afraid (Outro).ogg",
+        "CSR/Don't Be Afraid (Outro DJ #2).ogg",
+        "CSR/Don't Be Afraid (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/Don't Be Cruel (Intro).ogg",
+        "CSR/Don't Be Cruel (Intro DJ #2).ogg",
+        "CSR/Don't Be Cruel (Intro DJ #1).ogg"
+      ],
+      "mid": "CSR/Don't Be Cruel (Mid).ogg",
+      "outros": [
+        "CSR/Don't Be Cruel (Outro DJ #1).ogg",
+        "CSR/Don't Be Cruel (Outro DJ #2).ogg",
+        "CSR/Don't Be Cruel (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/I'm So Into You (Intro DJ #1).ogg",
+        "CSR/I'm So Into You (Intro).ogg",
+        "CSR/I'm So Into You (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/I'm So Into You (Mid).ogg",
+      "outros": [
+        "CSR/I'm So Into You (Outro).ogg",
+        "CSR/I'm So Into You (Outro DJ #2).ogg",
+        "CSR/I'm So Into You (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/So You Like What You See (Intro DJ #2).ogg",
+        "CSR/So You Like What You See (Intro DJ #1).ogg",
+        "CSR/So You Like What You See (Intro).ogg"
+      ],
+      "mid": "CSR/So You Like What You See (Mid).ogg",
+      "outros": [
+        "CSR/So You Like What You See (Outro DJ #2).ogg",
+        "CSR/So You Like What You See (Outro DJ #1).ogg",
+        "CSR/So You Like What You See (Outro).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/Poison (Intro DJ #1).ogg",
+        "CSR/Poison (Intro).ogg",
+        "CSR/Poison (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/Poison (Mid).ogg",
+      "outros": [
+        "CSR/Poison (Outro DJ #2).ogg",
+        "CSR/Poison (Outro).ogg",
+        "CSR/Poison (Outro DJ #1).ogg"
+      ]
+    },
+    {
+      "intros": [
+        "CSR/Sensitivity (Intro DJ #1).ogg",
+        "CSR/Sensitivity (Intro).ogg",
+        "CSR/Sensitivity (Intro DJ #2).ogg"
+      ],
+      "mid": "CSR/Sensitivity (Mid).ogg",
+      "outros": [
+        "CSR/Sensitivity (Outro DJ #2).ogg",
+        "CSR/Sensitivity (Outro).ogg",
+        "CSR/Sensitivity (Outro DJ #1).ogg"
+      ]
+    }
+  ],
+  "Caller": [
+    "CSR/(Caller) 'I'm in love with a girl'.ogg",
+    "CSR/(Caller) 'Male chauvanist pigs'.ogg"
+  ],
+  "DJ": [
+    "CSR/(DJ) 'Get off your fat ass and dance'.ogg",
+    "CSR/(DJ) 'Get ready to get down'.ogg",
+    "CSR/(DJ) 'With a good voice and some music...'.ogg",
+    "CSR/(DJ) 'Sing my name'.ogg",
+    "CSR/(DJ) Buying a cane.ogg",
+    "CSR/(DJ) Contemporary Soul Radio.ogg",
+    "CSR/(DJ) 'Swing with your wife'.ogg",
+    "CSR/(DJ) 'Never trust a big butt and a smile'.ogg",
+    "CSR/(DJ) 'One is music, the other belongs in therapy'.ogg",
+    "CSR/(DJ) 'The home of modern soul'.ogg",
+    "CSR/(DJ) Momentum.ogg",
+    "CSR/(DJ) 'People that can really sing'.ogg",
+    "CSR/(Story) Casino Opening.ogg",
+    "CSR/(Story) Lights in Desert.ogg",
+    "CSR/(Story) Weed Farm Burned Down.ogg"
+  ],
+  "ID": [
+    "CSR/(ID) 'Soul has to have integrity'.ogg",
+    "CSR/(ID) 'Swing on this, baby'.ogg",
+    "CSR/(ID) 'The home of New Jack Swing'.ogg",
+    "CSR/(ID) 'Sold my soul to the Devil'.ogg",
+    "CSR/(ID) 'Old Jack We killed his old ass'.ogg",
+    "CSR/(ID) 'What do you call it...'.ogg",
+    "CSR/(ID) 'Why are you dressed like a preppie'.ogg",
+    "CSR/(ID) 'What happens when you mix...'.ogg"
+  ],
+  "Weather": {
+    "Sunny": [
+      "CSR/(Atmosphere) Sunny #1.ogg",
+      "CSR/(Atmosphere) Sunny #2.ogg"
+    ],
+    "Rain": [
+      "CSR/(Atmosphere) Rain #1.ogg",
+      "CSR/(Atmosphere) Rain #2.ogg"
+    ],
+    "Fog": [
+      "CSR/(Atmosphere) Fog #1.ogg",
+      "CSR/(Atmosphere) Fog #2.ogg"
+    ]
+  },
+  "Time of Day": {
+    "Morning": [
+      "CSR/(Atmosphere) Morning #1.ogg",
+      "CSR/(Atmosphere) Morning #2.ogg"
+    ],
+    "Evening": [
+      "CSR/(Atmosphere) Evening.ogg"
+    ],
+    "Night": [
+      "CSR/(Atmosphere) Night #1.ogg",
+      "CSR/(Atmosphere) Night #2.ogg"
+    ]
+  },
+  "Bridge Announcement": [
+    "CSR/(Bridge Announce #1) Can access LS only.ogg",
+    "CSR/(Bridge Announce #2) Can access LS and SF.ogg",
+    "CSR/(Bridge Announce #3) Can access LS, SF, and LV.ogg"
+  ]
 }

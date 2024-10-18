@@ -9,13 +9,13 @@ Prerequisite:
 2. Extract the archive and open SaatGuiFrontend.exe inside the folder named Alci_s_SAAT_GUI_FrontEnd_1.0.
 3. Click File ==> Set Working Directory, to choose the folder where all the Audio files will be exported.
 4. Click File ==> Set GTA Directory, and choose the folder with original GTA San Andreas installed.
-5. To export radio tracks, simply double click the labels under the tab labeled "Archiv". The files are simply going to appear in the working directory. (Currently supported radio stations are: Bounce FM, CSR, K-DST, K-JAH, KROSE, Master Sounds, Playback FM, Radio Los Santos, Radio X, SFUR.)
+5. To export radio tracks, simply double click the labels under the tab labeled "Archiv". The files are simply going to appear in the working directory. This project now supports all channels from the game.
 
 Steps to install:
 1. Clone/Download the repo
 2. `docker build -t radiosa .` inside the downloaded dir
-3. `docker run -d --volume [path-to-music-files-exported-from-game]:/radiosa/music -p 8000:8000 -p 5173:5173 radiosa` (you can omit exposing port 8000)
-4. Go to localhost:5173 for new custom front end interface (recommended) or localhost:8000 for Icecast interface.
+3. `docker run -d --volume [path-to-music-files-exported-from-game]:/radiosa/music -p 8000:8000 -p 3000:3000 radiosa` (you can omit exposing port 8000)
+4. Go to localhost:3000 for new custom front end interface (recommended) or localhost:8000 for Icecast interface.
 5. Enjoy!
 
 **Environmental Variables (Only For Advanced Users):**
@@ -25,11 +25,10 @@ Steps to install:
 | HOSTNAME            | Hostname for Icecast. (As far as I know, it's only for display.) | localhost                                                                           |
 | DISPLAY_ADMIN       | Display name for an administrator on Icecast version page        | admin                                                                               |
 | ADMIN_USER          | Username for administrator login                                 | admin                                                                               |
-| ICECAST_PORT        | HTTP port for Icecast                                            | 8000                                                                                |
 | ENABLED_STATIONS    | Enabled Radio Stations                                           | "bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur" |
-| ICECAST_SOURCE_PASS | Source Password for Icecast (ShoutCast) stream                   | (Random string of 12 ASCII characters)                                              |
-| ICECAST_RELAY_PASS  | Relay Password for Icecast                                       | (Random string of 12 ASCII characters)                                              |
-| ICECAST_ADMIN_PASS  | Administrator password for Icecast web login                     | (Random string of 12 ASCII characters)                                              |
+| ICECAST_SOURCE_PASS | Source Password for Icecast (ShoutCast) stream                   | (Random string of 16 CAPITAL alphanumeric characters)                                              |
+| ICECAST_RELAY_PASS  | Relay Password for Icecast                                       | (Random string of 16 CAPITAL alphanumeric characters)                                              |
+| ICECAST_ADMIN_PASS  | Administrator password for Icecast web login                     | (Random string of 16 CAPITAL alphanumeric characters)                                              |
 
 
 Additional Resources
