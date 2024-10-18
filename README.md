@@ -9,7 +9,7 @@ Prerequisite:
 2. Extract the archive and open SaatGuiFrontend.exe inside the folder named Alci_s_SAAT_GUI_FrontEnd_1.0.
 3. Click File ==> Set Working Directory, to choose the folder where all the Audio files will be exported.
 4. Click File ==> Set GTA Directory, and choose the folder with original GTA San Andreas installed.
-5. To export radio tracks, simply double click the labels under the tab labeled "Archiv". The files are simply going to appear in the working directory. (Currently supported radio stations are: Bounce FM, CSR, K-DST, K-JAH, K-ROSE, Master Sounds, Playback FM, Radio Los Santos, Radio X, SFUR.)
+5. To export radio tracks, simply double click the labels under the tab labeled "Archiv". The files are simply going to appear in the working directory. This project now supports all channels from the game.
 
 Steps to install:
 1. Clone/Download the repo
