@@ -6,9 +6,8 @@
     import WCTRNowPlaying from "./wctr-now-playing.svelte"
     import MusicNowPlaying from "./music-now-playing.svelte"
     const currentStation = $page.params.radioStation;
-    const enabledStations = data.enabledStations;
+    const currentStationData = data.currentStationObject;
 
-    const currentStationData = enabledStations[currentStation];
     let nowPlaying = { artist: "" , title: "" , path: ""};
     let remainingTime = 0;
     let timeoutID;

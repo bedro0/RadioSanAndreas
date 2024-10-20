@@ -2,11 +2,12 @@ import { error } from '@sveltejs/kit';
 import getEnabledStations from '$lib/get-enabled-stations.js';
 
 export function load({ params }) {
-    const enabledStations = getEnabledStations();
-    const enabledStationsArray = Object.keys(enabledStations);
-    const station = enabledStationsArray.find((station) => station === params.radioStation);
+    const enabledStationsObject = getEnabledStations();
+    const currentStation = Object.keys(enabledStationsObject).find((station) => station === params.radioStation);
 
-    if(!station) throw error(404);
+    if(!currentStation) throw error(404, { message: "Not Found" });
 
-    return {enabledStations};
+    return {
+        currentStationObject: enabledStationsObject[currentStation]
+    }
 }
