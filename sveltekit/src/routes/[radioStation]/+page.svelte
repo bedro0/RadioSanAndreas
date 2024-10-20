@@ -1,14 +1,12 @@
 <script>
     export let data;
     import { onMount, onDestroy } from "svelte";
-    import { browser } from "$app/environment";
     import { goto } from "$app/navigation";
     import { page } from "$app/stores";
     import WCTRNowPlaying from "./wctr-now-playing.svelte"
     import MusicNowPlaying from "./music-now-playing.svelte"
     const currentStation = $page.params.radioStation;
     const enabledStations = data.enabledStations;
-    if ( browser && !(currentStation in enabledStations) ) goto("/");
 
     const currentStationData = enabledStations[currentStation];
     let nowPlaying = { artist: "" , title: "" , path: ""};
