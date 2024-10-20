@@ -3,6 +3,8 @@
     import { onMount, onDestroy } from "svelte";
     import { goto } from "$app/navigation";
     import { page } from "$app/stores";
+    import { browser } from "$app/environment"
+
     import WCTRNowPlaying from "./wctr-now-playing.svelte"
     import MusicNowPlaying from "./music-now-playing.svelte"
     const currentStation = $page.params.radioStation;
@@ -13,7 +15,10 @@
     let timeoutID;
 
     let playerObj;
-    let playerVolume = 1;
+    let playerVolume = (browser && localStorage.volume || 0.5);
+
+    $: localStorage.volume = playerVolume;
+
     let isAudio = true;
     let isPaused = true;
     const getAudioSrc = (format) => `/api/radio?format=${format}&station=${currentStation}&nocache=${Date.now()}`;
