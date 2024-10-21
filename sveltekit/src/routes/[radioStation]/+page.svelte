@@ -15,9 +15,9 @@
     let timeoutID;
 
     let playerObj;
-    let playerVolume = (browser && localStorage.volume || 0.5);
+    let playerVolume = (browser && localStorage.getItem("volume") || 0.5);
 
-    $: localStorage.volume = playerVolume;
+    $: if (browser) localStorage.setItem("volume", playerVolume);
 
     let isAudio = true;
     let isPaused = true;
