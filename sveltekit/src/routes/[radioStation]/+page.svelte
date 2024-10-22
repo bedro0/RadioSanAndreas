@@ -76,6 +76,10 @@
     <MusicNowPlaying nowPlaying={nowPlaying}/>
     {/if}
     <div class="controls">
+        <button on:click={() => goto("/")}>
+            <img src="/visual-assets/buttons/back.webp">
+        </button>
+
         <button on:click={togglePlayPause}>
             <img src="/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? 'Play' : 'Pause'}">
         </button>
