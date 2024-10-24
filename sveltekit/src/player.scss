@@ -1,6 +1,6 @@
 $bg-color: #01011a;
-$player-width: min(90vw, 600px);
-$font-size: clamp(16px, 3vw, 20px);
+$player-width: min(90vw, 1024px);
+$font-size: clamp(16pt, 1.5vw, 20pt);
 
 :global(body) {
     background-color: $bg-color;
@@ -31,17 +31,46 @@ $font-size: clamp(16px, 3vw, 20px);
     }
 
     .now-playing {
+        $artist_color: yellow;
+        $title_color: lime;
         h3 {
             color:greenyellow;
             font-weight: normal;
         }
-        p {
+        .playing-artist {
             display: flex;
             justify-content: space-between;
-            color: yellow;
+            color: $artist_color;
             font-weight: normal;
-            &:last-child {
-                color: lime;
+        }
+        .playing-track {
+            display: flex;
+            justify-content: space-between;
+            color: $title_color;
+            font-weight: normal;
+        }
+        #artist {
+            background-color: $artist_color;
+            -webkit-mask: url(/visual-assets/now-playing/artist.svg) no-repeat center;
+            mask: url(/visual-assets/now-playing/artist.svg) no-repeat center;
+            span {
+                height: 1em;
+                width: 1em;
+                background-color: $artist_color;
+                border-radius: 0px;
+                display: inherit;
+            }
+        }
+        #title {
+            background-color: $title_color;
+            -webkit-mask: url(visual-assets/now-playing/title.svg) no-repeat center;
+            mask: url(visual-assets/now-playing/title.svg) no-repeat center;
+            span {
+                height: 1em;
+                width: 1em;
+                background-color: $title_color;
+                border-radius: 0px;
+                display: inherit;
             }
         }
     }

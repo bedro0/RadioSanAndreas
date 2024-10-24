@@ -1,0 +1,112 @@
+{
+    "bouncefm": {
+        "channel_name": "Bounce FM",
+        "folder": "Bounce FM",
+        "genre": "Funk, Disco, Soul, R&B",
+        "location": "East Los Santos",
+        "location_real": "East Los Angeles, California",
+        "host": "The Funktipus",
+        "latitude": "34.03409058551883",
+        "longitude": "-118.18109424485043"
+    },
+    "csr": {
+        "channel_name": "CSR 103.9",
+        "folder": "CSR",
+        "genre": "New Jack Swing, '90s Soul, '90s Pop",
+        "location": "San Fierro",
+        "location_real": "San Francisco, California",
+        "host": "Philip 'PM' Michaels",
+        "latitude": "37.76049012251422",
+        "longitude": "-122.44793153935414"
+    },
+    "kdst": {
+        "channel_name": "K-DST",
+        "folder": "K-DST",
+        "genre": "Classic Rock",
+        "location": "Los Santos",
+        "location_real": "Los Angeles, California",
+        "host": "Tommy \"The Nightmare\" Smith",
+        "latitude": "34.084670054406786",
+        "longitude": "-118.40691502938269"
+    },
+    "kjah": {
+        "channel_name": "K-JAH West",
+        "folder": "K-JAH",
+        "genre": "Reggae, Dub, Dancehall",
+        "location": "Las Venturas",
+        "location_real": "Paradise, Nevada",
+        "host": "Marshall Peters, Johnny Lawton",
+        "latitude": "36.09449283564147",
+        "longitude": "-115.18323950597356"
+    },
+    "krose": {
+        "channel_name": "K-Rose",
+        "folder": "KROSE",
+        "genre": "Country",
+        "location": "Bone County",
+        "location_real": "Mojave Desert, Nevada",
+        "host": "Mary-Beth Maybell",
+        "latitude": "35.0329809601477",
+        "longitude": "-115.47420033734288"
+    },
+    "mastersounds": {
+        "channel_name": "Master Sounds 98.3",
+        "folder": "Master Sounds",
+        "genre": "Groove, Classic Funk, Classic Soul",
+        "location": "Blackfield, Las Venturas",
+        "location_real": "Paradise, Nevada",
+        "host": "Johnny \"The Love Giant\" Parkinson",
+        "latitude": "36.09449283564147",
+        "longitude": "-115.18323950597356"
+    },
+    "playbackfm": {
+        "channel_name": "Playback FM",
+        "folder": "Playback FM",
+        "genre": "Classic East Coast Hip-Hop",
+        "location": "San Fierro",
+        "location_real": "San Francisco, California",
+        "host": "Forth Right MC",
+        "latitude": "37.76049012251422",
+        "longitude": "-122.44793153935414"
+    },
+    "radiols": {
+        "channel_name": "Radio Los Santos",
+        "folder": "Radio Los Santos",
+        "genre": "'90s Hip-Hop",
+        "location": "Downtown Lost Santos",
+        "location_real": "Downtown Los Angeles, California",
+        "host": "Julio G",
+        "latitude": "34.04250236885846",
+        "longitude": "-118.24536664845455"
+    },
+    "radiox": {
+        "channel_name": "Radio:X",
+        "folder": "Radio X",
+        "genre": "Alternative Rock, Grunge",
+        "location": "Las Venturas",
+        "location_real": "Las Vegas, Nevada",
+        "host": "Sage",
+        "latitude": "36.17441984107815",
+        "longitude": "-115.15532756187191"
+    },
+    "sfur": {
+        "channel_name": "San Fierro Underground Radio",
+        "folder": "SFUR",
+        "genre": "House",
+        "location": "San Fierro",
+        "location_real": "San Francisco, California",
+        "host": "Hans Oberlander",
+        "latitude": "37.76049012251422",
+        "longitude": "-122.44793153935414"
+    },
+    "wctr": {
+        "channel_name": "West Coast Talk Radio",
+        "folder": "WCTR",
+        "genre": "Talk Radio Station",
+        "location": "Missionary Hill, San Fierro",
+        "location_real": "Sutro Tower, San Francisco, California",
+        "host": "Ammu-Nation",
+        "latitude": "37.75531790034594",
+        "longitude": "-122.45272692937759"
+    }
+}
