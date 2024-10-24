@@ -76,13 +76,15 @@
     <MusicNowPlaying nowPlaying={nowPlaying}/>
     {/if}
     <div class="controls">
-        <button on:click={() => goto("/")}>
-            <img src="/visual-assets/buttons/back.webp">
-        </button>
-
-        <button on:click={togglePlayPause}>
-            <img src="/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? 'Play' : 'Pause'}">
-        </button>
+        <div class="buttons">
+            <button on:click={() => goto("/")}>
+                <img src="/visual-assets/buttons/back.webp" alt="Back">
+            </button>
+    
+            <button on:click={togglePlayPause}>
+                <img src="/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? 'Play' : 'Pause'}">
+            </button>
+        </div>
         <input type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>
     </div>
 </div>

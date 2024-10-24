@@ -28,6 +28,7 @@ $xpadding: calc(((100%) - (5.1*$button-diameter))/2);
         min-width: $button-diameter;
         width: $button-diameter;
         height: $button-diameter;
+        cursor: pointer;
         
         img {
             width: $image-diameter;
