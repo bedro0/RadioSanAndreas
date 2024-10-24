@@ -1,6 +1,6 @@
 $bg-color: #01011a;
 $player-width: min(90vw, 600px);
-$font-size: clamp(14px, 3vw, 18px);
+$font-size: clamp(16px, 3vw, 20px);
 
 :global(body) {
     background-color: $bg-color;
@@ -12,7 +12,7 @@ $font-size: clamp(14px, 3vw, 18px);
     width: $player-width;
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 32px;
     padding: 1rem;
     font-family: monospace;
     font-size: $font-size;
@@ -20,43 +20,50 @@ $font-size: clamp(14px, 3vw, 18px);
     color: cyan;
     text-shadow: 1px 1px 1px #000;
 
-    .channel-info, .now-playing, .controls {
-        margin-bottom: 1rem;
+    .channel-info {
+        h2 {
+            font-weight: normal;
+        }
     }
 
     .logo {
-        width: min(50%, 150px);
+        width: min(50%, 160px);
     }
 
     .now-playing {
         h3 {
-            color: greenyellow;
+            color:greenyellow;
+            font-weight: normal;
         }
         p {
             display: flex;
             justify-content: space-between;
-            strong {
-                color: yellow;
-            }
-            &:last-child strong {
+            color: yellow;
+            font-weight: normal;
+            &:last-child {
                 color: lime;
             }
         }
     }
 
     .controls {
-        $button_w: min(50%, 128px);
-        button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            img {
-                width: $button_w;
+        $button_w: min(25vw, 128px);
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                img{
+                    width: $button_w;
+                }
             }
         }
-        input[type="range"] {
-            width: $button_w;
-            margin-top: 1rem;
+        input[type="range"]{
+            width: calc(3.6 * $button_w);
         }
     }
+
 }

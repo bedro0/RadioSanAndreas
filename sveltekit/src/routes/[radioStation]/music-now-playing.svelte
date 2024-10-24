@@ -7,8 +7,8 @@
     <h3>BREAK</h3>
     {:else}
     <h3>NOW PLAYING</h3>
-    <p><strong>ARTIST:</strong> {nowPlaying.artist}</p>
-    <p><strong>TRACK:</strong> {nowPlaying.title}</p>
+    <p> {nowPlaying.artist} </p>
+    <p> {nowPlaying.title} </p>
     {/if}
 </div>
 
