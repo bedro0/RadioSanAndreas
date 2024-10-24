@@ -47,18 +47,13 @@ $font-size: clamp(16px, 3vw, 20px);
     }
 
     .controls {
-        $button_w: min(25vw, 128px);
-        .buttons{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            button {
-                background: none;
-                border: none;
-                cursor: pointer;
-                img{
-                    width: $button_w;
-                }
+        $button_w: min(50%, 128px);
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            img {
+                width: $button_w;
             }
         }
         input[type="range"]{

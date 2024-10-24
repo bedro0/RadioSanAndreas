@@ -1,22 +1,24 @@
 <script>
     export let data;
     import { onMount, onDestroy } from "svelte";
-    import { browser } from "$app/environment";
     import { goto } from "$app/navigation";
     import { page } from "$app/stores";
+    import { browser } from "$app/environment"
+
     import WCTRNowPlaying from "./wctr-now-playing.svelte"
     import MusicNowPlaying from "./music-now-playing.svelte"
     const currentStation = $page.params.radioStation;
-    const enabledStations = data.enabledStations;
-    if ( browser && !(currentStation in enabledStations) ) goto("/");
+    const currentStationData = data.currentStationObject;
 
-    const currentStationData = enabledStations[currentStation];
     let nowPlaying = { artist: "" , title: "" , path: ""};
     let remainingTime = 0;
     let timeoutID;
 
     let playerObj;
-    let playerVolume = 1;
+    let playerVolume = (browser && localStorage.getItem("volume") || 0.5);
+
+    $: if (browser) localStorage.setItem("volume", playerVolume);
+
     let isAudio = true;
     let isPaused = true;
     const getAudioSrc = (format) => `/api/radio?format=${format}&station=${currentStation}&nocache=${Date.now()}`;
