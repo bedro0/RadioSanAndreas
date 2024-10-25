@@ -5,28 +5,26 @@
 
 <script>
     import { goto } from '$app/navigation';
-    export let data;
+    let { data } = $props();
 
     const enabledStations = Object.keys(data.enabledStations);
     const title="Radio San Andreas";
-    const favicon="/favicon.webp"
+    const favicon="/favicon.webp";
     const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur", "wctr"];
-    let activeStates = Array(enabledStations.length).fill(false);
-    let hover=false;
-    
-    
-    function setHover(index, state) {
-		activeStates = activeStates.map((active, i) => i === index ? state : hover);
-	}
+    let activeStates = $state(Array(enabledStations.length).fill(false));
+
+    const setHover = (index, state) => {
+        activeStates = activeStates.map((active, i) => (i === index ? state : false));
+    }
 </script>
 
 <div id="stations">
     {#each enabledStations as station, index}
     <button 
     class:hover={activeStates[index]}
-    on:mouseenter={() => setHover(index, true)} 
-    on:mouseleave={() => setHover(index, false)} 
-    on:click={() => goto(station)}
+    onmouseenter={() => setHover(index, true)} 
+    onmouseleave={() => setHover(index, false)} 
+    onclick={() => goto(station)}
     >
         <img src="/visual-assets/logos/{station}.webp" alt={station}>
 
