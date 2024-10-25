@@ -63,7 +63,7 @@
     <link rel="icon" href="/visual-assets/logos/{currentStation}.webp" />
 </svelte:head>
 
-<div class=player>
+<div class="player">
     <div class="channel-info">
         <h2>{currentStationData.channel_name}</h2>
         <img class="logo" src="/visual-assets/logos/{currentStation}.webp" alt={currentStation}>
