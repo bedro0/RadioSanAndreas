@@ -2,7 +2,7 @@ $bg-color: #01011a;
 $player-width: min(90vw, 1024px);
 $font-size: clamp(16pt, 1.5vw, 20pt);
 
-:global(body) {
+body {
     background-color: $bg-color;
     margin: 0;
     padding: 0;
