@@ -1,26 +1,26 @@
 <script>
-    export let data;
+    let { data } = $props();
     import { onMount, onDestroy } from "svelte";
     import { goto } from "$app/navigation";
     import { page } from "$app/stores";
-    import { browser } from "$app/environment"
-
-    import WCTRNowPlaying from "./wctr-now-playing.svelte"
-    import MusicNowPlaying from "./music-now-playing.svelte"
-    const currentStation = $page.params.radioStation;
+    import { browser } from "$app/environment";
+    const currentStation = $page.params.channel;
     const currentStationData = data.currentStationObject;
 
-    let nowPlaying = { artist: "" , title: "" , path: ""};
-    let remainingTime = 0;
-    let timeoutID;
+    let nowPlaying = $state({path: ""});
+    let remainingTime = $state(0);
+    let timeoutID = $state();
 
-    let playerObj;
-    let playerVolume = (browser && localStorage.getItem("volume") || 0.5);
+    let playerObj = $state();
+    let playerVolume = $state(browser && localStorage.getItem("volume") || 0.5);
 
-    $: if (browser) localStorage.setItem("volume", playerVolume);
+    $effect(() => {
+        if (browser) localStorage.setItem("volume", playerVolume)
+        });
 
-    let isAudio = true;
-    let isPaused = true;
+    let isAudio = $state(true);
+    let isPaused = $state(true);
+
     const getAudioSrc = (format) => `/api/radio?format=${format}&station=${currentStation}&nocache=${Date.now()}`;
 
     const togglePlayPause = () => {
@@ -63,31 +63,37 @@
     <link rel="icon" href="/visual-assets/logos/{currentStation}.webp" />
 </svelte:head>
 
-<div class="player">
+<div class=player>
     <div class="channel-info">
         <h2>{currentStationData.channel_name}</h2>
         <img class="logo" src="/visual-assets/logos/{currentStation}.webp" alt={currentStation}>
         <p>Genre: {currentStationData.genre}</p>
         <p>Host: {currentStationData.host}</p>
     </div>
-    {#if (currentStation==="wctr")}
-    <WCTRNowPlaying nowPlaying = {nowPlaying}/>
-    {:else}
-    <MusicNowPlaying nowPlaying={nowPlaying}/>
-    {/if}
+    <div class="now-playing">
+        {#if ["Intro", "Mid", "Outro"].some(suffix => nowPlaying.path.includes(suffix))}
+            <h3>NOW PLAYING</h3>
+            <div class="playing-artist"><div id="artist"> <span></span> </div> {nowPlaying.artist}</div>
+            <div class="playing-track"><div id="title"> <span></span> </div> {nowPlaying.title}</div>
+        {:else}
+            <h3>BREAK</h3>
+        {/if}
+    </div>
+
     <div class="controls">
         <div class="buttons">
-            <button on:click={() => goto("/")}>
+            <button onclick={() => goto("/")}>
                 <img src="/visual-assets/buttons/back.webp" alt="Back">
             </button>
     
-            <button on:click={togglePlayPause}>
+            <button onclick={togglePlayPause}>
                 <img src="/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? 'Play' : 'Pause'}">
             </button>
         </div>
         <input type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>
     </div>
 </div>
+
 {#if isAudio}
     <audio bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused} autoplay>
         <source src={getAudioSrc("ogg")}>

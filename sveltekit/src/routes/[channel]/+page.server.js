@@ -3,7 +3,7 @@ import getEnabledStations from '$lib/get-enabled-stations.js';
 
 export function load({ params }) {
     const enabledStationsObject = getEnabledStations();
-    const currentStation = Object.keys(enabledStationsObject).find((station) => station === params.radioStation);
+    const currentStation = Object.keys(enabledStationsObject).find((station) => station === params.channel);
 
     if(!currentStation) throw error(404, { message: "Not Found" });
 
