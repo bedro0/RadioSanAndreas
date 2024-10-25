@@ -14,7 +14,8 @@ mpd
 RUN npm install \
 vite \
 chance \
-mpc-js
+mpc-js \
+@sveltejs/adapter-node
 
 RUN npm install -D sass-embedded
 
