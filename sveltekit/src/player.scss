@@ -2,7 +2,7 @@ $bg-color: #01011a;
 $player-width: min(90vw, 1024px);
 $font-size: clamp(16pt, 1.5vw, 20pt);
 
-body {
+:global(body) {
     background-color: $bg-color;
     margin: 0;
     padding: 0;
@@ -39,13 +39,13 @@ body {
         }
         .playing-artist {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             color: $artist_color;
             font-weight: normal;
         }
         .playing-track {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             color: $title_color;
             font-weight: normal;
         }
@@ -61,10 +61,10 @@ body {
                 display: inherit;
             }
         }
-        #title {
+        #track {
             background-color: $title_color;
-            -webkit-mask: url(visual-assets/now-playing/title.svg) no-repeat center;
-            mask: url(visual-assets/now-playing/title.svg) no-repeat center;
+            -webkit-mask: url(/visual-assets/now-playing/track.svg) no-repeat center;
+            mask: url(/visual-assets/now-playing/track.svg) no-repeat center;
             span {
                 height: 1em;
                 width: 1em;
