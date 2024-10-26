@@ -73,8 +73,8 @@
     <div class="now-playing">
         {#if ["Intro", "Mid", "Outro"].some(suffix => nowPlaying.path.includes(suffix))}
             <h3>NOW PLAYING</h3>
-            <div class="playing-artist"><div id="artist"> <span></span> </div> {nowPlaying.artist}</div>
-            <div class="playing-track"><div id="title"> <span></span> </div> {nowPlaying.title}</div>
+            <div class="playing-artist"><div id="artist"> <span></span> </div> &nbsp; {nowPlaying.artist}</div>
+            <div class="playing-track"><div id="track"> <span></span> </div> &nbsp; {nowPlaying.title}</div>
         {:else}
             <h3>BREAK</h3>
         {/if}
@@ -102,5 +102,5 @@
 {/if}
 
 <style lang="scss">
-    @import "../../player.scss";
+    @use "../../player.scss";
 </style>

@@ -14,10 +14,10 @@ mpd
 RUN npm install \
 vite \
 chance \
-mpc-js \
-@sveltejs/adapter-node
+mpc-js
 
-RUN npm install -D sass-embedded
+RUN npm install -D sass-embedded \
+@sveltejs/adapter-node
 
 WORKDIR /radiosa/sveltekit/
 RUN npm run build
