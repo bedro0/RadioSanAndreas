@@ -1,5 +1,5 @@
 $bg-color: #01011a;
-$player-width: min(90vw, 1024px);
+$player-width: min(90vw, 800px);
 $font-size: clamp(16pt, 1.5vw, 20pt);
 
 :global(body) {
@@ -13,7 +13,6 @@ $font-size: clamp(16pt, 1.5vw, 20pt);
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 32px;
-    padding: 1rem;
     font-family: monospace;
     font-size: $font-size;
     text-align: center;
