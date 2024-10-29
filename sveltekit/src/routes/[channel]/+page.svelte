@@ -14,6 +14,7 @@
     let playerObj = $state();
     let playerVolume = $state(browser && localStorage.getItem("volume") || 0.5);
 
+    let isSong = $derived(["Intro", "Mid", "Outro"].some(suffix => nowPlaying.path.includes(suffix)))
     $effect(() => {
         if (browser) localStorage.setItem("volume", playerVolume)
         });
@@ -47,15 +48,29 @@
         finally {
             timeoutID = setTimeout(updateNowPlaying, 1000*(Math.max(1, remainingTime)));
         }
+        if ("mediaSession" in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: isSong ? nowPlaying.title : "BREAK",
+                artist: isSong ? nowPlaying.artist : "",
+                album: currentStationData.channel_name,
+                artwork: [{ src: `/visual-assets/logos/${currentStation}.webp` }],
+            });
+        }
     }
 
     onMount(() => {
         updateNowPlaying();
+        
+        if ("mediaSession" in navigator){
+            navigator.mediaSession.setActionHandler("pause", togglePlayPause);
+            navigator.mediaSession.setActionHandler("play", togglePlayPause);
+        }
     });
 
     onDestroy(() => {
         clearTimeout(timeoutID)
     })
+
 </script>
 
 <svelte:head>
@@ -65,13 +80,13 @@
 
 <div class="player">
     <div class="channel-info">
-        <h2>{currentStationData.channel_name}</h2>
+        <h2 style="padding-top:0.5ch;">{currentStationData.channel_name}</h2>
         <img class="logo" src="/visual-assets/logos/{currentStation}.webp" alt={currentStation}>
         <p>Genre: {currentStationData.genre}</p>
         <p>Host: {currentStationData.host}</p>
     </div>
-    <div class="now-playing">
-        {#if ["Intro", "Mid", "Outro"].some(suffix => nowPlaying.path.includes(suffix))}
+    <div class="now-playing" style="margin-bottom:0.5ch;">
+        {#if isSong}
             <h3>NOW PLAYING</h3>
             <div class="playing-artist"><div id="artist"> <span></span> </div> &nbsp; {nowPlaying.artist}</div>
             <div class="playing-track"><div id="track"> <span></span> </div> &nbsp; {nowPlaying.title}</div>
@@ -90,7 +105,7 @@
                 <img src="/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? 'Play' : 'Pause'}">
             </button>
         </div>
-        <input type="range" min="0" max="1" step="0.01" bind:value={playerVolume}>
+        <input type="range" style="padding-bottom: 1ch;" min="0" max="1" step="0.01" bind:value={playerVolume}>
     </div>
 </div>
 
