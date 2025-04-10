@@ -20,12 +20,13 @@ RUN npm install -D sass-embedded \
 @sveltejs/adapter-node
 
 WORKDIR /radiosa/sveltekit/
+RUN npm update
 RUN npm run build
 
 # Default Environmental Variables
-ENV HOSTNAME localhost
-ENV DISPLAY_ADMIN admin
-ENV ADMIN_USER admin
+ENV HOSTNAME="localhost"
+ENV DISPLAY_ADMIN="admin"
+ENV ADMIN_USER="admin"
 ENV ENABLED_STATIONS="bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur, wctr"
 
 ENTRYPOINT ["/radiosa/scripts/start.sh"]
