@@ -22,7 +22,7 @@ Steps to install:
 
 | Variable            | Purpose                                                          | Default Value                                                                       |
 | ------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| HOSTNAME            | Hostname for Icecast. (As far as I know, it's only for display.) | localhost                                                                           |
+| HOSTNAME            | Hostname for Icecast. (As far as I understand, it's only to display on the Icecast WebUI.) | localhost                                                 |
 | DISPLAY_ADMIN       | Display name for an administrator on Icecast version page        | admin                                                                               |
 | ADMIN_USER          | Username for administrator login                                 | admin                                                                               |
 | ENABLED_STATIONS    | Enabled Radio Stations                                           | "bouncefm, csr, kdst, kjah, krose, mastersounds, playbackfm, radiols, radiox, sfur, wctr" |
