@@ -20,10 +20,14 @@ RUN npm install -D sass-embedded \
 @sveltejs/adapter-node
 
 WORKDIR /radiosa/sveltekit/
+
+ARG DEV_MODE="false"
+
 RUN npm update
-RUN npm run build
+RUN if [ "$DEV_MODE" = "false" ]; then npm run build; fi
 
 # Default Environmental Variables
+ENV DEV_MODE_ENABLED=$DEV_MODE
 ENV HOSTNAME="localhost"
 ENV DISPLAY_ADMIN="admin"
 ENV ADMIN_USER="admin"

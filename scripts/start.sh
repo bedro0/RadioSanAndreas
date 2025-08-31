@@ -18,6 +18,7 @@ main(){
     ICECAST_SOURCE_PASS=$ICECAST_SOURCE_PASS \
     ICECAST_RELAY_PASS=$ICECAST_RELAY_PASS \
     ICECAST_ADMIN_PASS=$ICECAST_ADMIN_PASS \
+    DEV_MODE=$DEV_MODE_ENABLED \
     node /radiosa/scripts/update-icecast-config.js
 
     # This launches Icecast using the custom config
@@ -37,7 +38,13 @@ main(){
         CHANNEL_ALIAS=$CHANNEL_ALIAS node /radiosa/scripts/control-mpd-playback.js &
     done
 
-    node /radiosa/sveltekit/build/index.js
+    if [ "$DEV_MODE" = "false" ];
+    then
+    node /radiosa/sveltekit/build/index.js;
+    else
+    cd /radiosa/sveltekit
+    npm run dev -- --host;
+    fi
 }
 
 main
