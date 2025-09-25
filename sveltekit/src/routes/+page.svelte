@@ -1,15 +1,12 @@
 <svelte:head>
-    <title>{title}</title>
-    <link rel="icon" href={favicon} type="image/webp"/>
+    <title>GTA:SA Radio</title>
 </svelte:head>
-
 <script>
     import { goto } from '$app/navigation';
+    const logos="/src/lib/assets/logos"
     let { data } = $props();
 
     const enabledStations = Object.keys(data.enabledStations);
-    const title="Radio San Andreas";
-    const favicon="/favicon.webp";
     const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur", "wctr"];
     let activeStates = $state(Array(enabledStations.length).fill(false));
 
@@ -17,7 +14,18 @@
         activeStates = activeStates.map((active, i) => (i === index ? state : false));
     }
 </script>
-
+<!--
+<div 
+style="font-size: clamp(16pt, 1.5vw, 20pt);
+margin:32px;
+text-shadow: 1px 1px 1px #000;
+color:cyan;
+font-family:monospace;
+text-align:center;" >
+Welcome to Grand Theft Auto: San Andreas radio!<br>
+Please pick a channel.
+</div>
+-->
 <div id="stations">
     {#each enabledStations as station, index}
     <button 
@@ -26,12 +34,12 @@
     onmouseleave={() => setHover(index, false)} 
     onclick={() => goto(station)}
     >
-        <img src="/visual-assets/logos/{station}.webp" alt={station}>
+        <img src="{logos}/{station}.webp" alt={station}>
 
     </button>
     {/each}
 </div>
 
 <style lang="scss">
-    @use "../main.scss";
+    @use "home.scss";
 </style>
