@@ -50,8 +50,8 @@ $font-size: clamp(16pt, 1.5vw, 20pt);
         }
         #artist {
             background-color: $artist_color;
-            -webkit-mask: url(/src/lib/assets/now-playing/artist.svg) no-repeat center;
-            mask: url(/src/lib/assets/now-playing/artist.svg) no-repeat center;
+            -webkit-mask: url(/assets/now-playing/artist.svg) no-repeat center;
+            mask: url(/assets/now-playing/artist.svg) no-repeat center;
             span {
                 height: 1em;
                 width: 1em;
@@ -62,8 +62,8 @@ $font-size: clamp(16pt, 1.5vw, 20pt);
         }
         #track {
             background-color: $title_color;
-            -webkit-mask: url(/src/lib/assets/now-playing/track.svg) no-repeat center;
-            mask: url(/src/lib/assets/now-playing/track.svg) no-repeat center;
+            -webkit-mask: url(/assets/now-playing/track.svg) no-repeat center;
+            mask: url(/assets/now-playing/track.svg) no-repeat center;
             span {
                 height: 1em;
                 width: 1em;

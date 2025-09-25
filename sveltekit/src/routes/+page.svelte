@@ -3,9 +3,8 @@
 </svelte:head>
 <script>
     import { goto } from '$app/navigation';
-    const logos="/src/lib/assets/logos"
     let { data } = $props();
-
+    const logos = "/assets/logos"
     const enabledStations = Object.keys(data.enabledStations);
     const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur", "wctr"];
     let activeStates = $state(Array(enabledStations.length).fill(false));

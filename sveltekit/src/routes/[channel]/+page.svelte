@@ -69,7 +69,7 @@
                 title: isSong ? nowPlaying.title : "BREAK",
                 artist: isSong ? nowPlaying.artist : "",
                 album: currentStationData.channel_name,
-                artwork: [{ src: `/src/lib/assets/logos/${currentStation}.webp` }],
+                artwork: [{ src: `/assets/logos/${currentStation}.webp` }],
             });
         }
     }
@@ -92,7 +92,7 @@
 <div class="player">
     <div class="channel-info">
         <h2 style="padding-top:0.5ch;">{currentStationData.channel_name}</h2>
-        <img class="logo" src="/src/lib/assets/logos/{currentStation}.webp" alt={currentStation}>
+        <img class="logo" src="/assets/logos/{currentStation}.webp" alt={currentStation}>
         <p>Genre: {currentStationData.genre}</p>
         <p>Host: {currentStationData.host}</p>
     </div>
@@ -109,11 +109,11 @@
     <div class="controls">
         <div class="buttons">
             <button onclick={() => goto("/")}>
-                <img src="/src/lib/assets/buttons/back.webp" alt="Back">
+                <img src="/assets/buttons/back.webp" alt="Back">
             </button>
     
             <button onclick={togglePlayPause}>
-                <img src="/src/lib/assets/buttons/{isPaused}.webp" alt="{(isPaused) ? 'Play' : 'Pause'}">
+                <img src="/assets/buttons/{isPaused}.webp" alt="{(isPaused) ? 'Play' : 'Pause'}">
             </button>
         </div>
         <input type="range" style="padding-bottom: 1ch;" min="0" max="1" step="0.01" bind:value={playerVolume}>

@@ -1,5 +1,6 @@
 <script>
 	import favicon from '$lib/assets/favicon.webp';
+    import logoSA from "$lib/assets/san_andreas_logo.webp"
 	let { children } = $props();
 </script>
 
@@ -9,7 +10,7 @@
 
 <nav>
     <div>
-        <a href="/"><img src="/src/lib/assets/san_andreas_logo.webp" alt="home" style="width: min(50%, 196px)"/></a>
+        <a href="/"><img src={logoSA} alt="home" style="width: min(50%, 196px)"/></a>
 
     </div>
     <div id="left">
