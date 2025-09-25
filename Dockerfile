@@ -5,7 +5,7 @@ COPY ["config/", "/radiosa/config"]
 COPY ["scripts/", "/radiosa/scripts"]
 COPY ["metadata/", "/radiosa/metadata"]
 WORKDIR /radiosa
-
+RUN chmod -R u+rwx /radiosa
 RUN apt update 
 RUN apt install -y \
 icecast2 \

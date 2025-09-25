@@ -1,0 +1,20 @@
+$bg-color: #01011a;
+:global(body) {
+    background-color: $bg-color;
+}
+#text{
+    color:rgb(200, 255, 255);
+    font-family:Roboto, Arial, Helvetica, sans-serif;
+    margin: 0 10%;
+    width: min(800px, 80%);
+    justify-items:left;
+    overflow-wrap: break-word;
+    p, ul, ol{
+        font-size:larger;
+        line-height: 1.5;
+    } 
+    a{
+        color:cyan;
+        text-decoration: none;
+    }
+}

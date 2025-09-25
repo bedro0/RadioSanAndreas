@@ -1,3 +1,8 @@
+
+<svelte:head>
+    <title>{"GTA:SA ("+currentStationData.channel_name+")"}</title>
+</svelte:head>
+
 <script>
     let { data } = $props();
     import { onMount, onDestroy } from "svelte";
@@ -19,22 +24,33 @@
         if (browser) localStorage.setItem("volume", playerVolume)
         });
 
-    let isAudio = $state(true);
     let isPaused = $state(true);
-
-    const getAudioSrc = (format) => `/api/radio?format=${format}&station=${currentStation}&nocache=${Date.now()}`;
+    let sources = $derived({ogg:"", mp3:""});
 
     const togglePlayPause = () => {
-        if(isAudio){
-            if(playerObj.paused){
-                playerObj.play();
-            }
-            else{
-                isAudio=false;
-            }
+        isPaused = !isPaused
+        console.log(playerObj)
+    }
+
+    let allowSetSources = $state(true);
+
+    const syncSources = () => {
+        if (!allowSetSources) return;
+        let unixstamp = Date.now()
+        sources = ({
+            ogg: `/api/radio?format=${"ogg"}&station=${currentStation}&nocache=${unixstamp}`,
+            mp3: `/api/radio?format=${"mp3"}&station=${currentStation}&nocache=${unixstamp}`
+        });
+        setSources();
+        allowSetSources = false;
+        setTimeout(()=>{allowSetSources=true}, 2000)
+    }
+    const setSources = () => {
+        if(playerObj.canPlayType("audio/ogg")) {
+            playerObj.setAttribute("src", sources.ogg);
         }
-        else{
-            isAudio=true;
+        else if (playerObj.canPlayType("audio/mpeg")){
+            playerObj.setAttribute("src", sources.mp3)
         }
     }
 
@@ -53,35 +69,30 @@
                 title: isSong ? nowPlaying.title : "BREAK",
                 artist: isSong ? nowPlaying.artist : "",
                 album: currentStationData.channel_name,
-                artwork: [{ src: `/visual-assets/logos/${currentStation}.webp` }],
+                artwork: [{ src: `/src/lib/assets/logos/${currentStation}.webp` }],
             });
         }
     }
 
     onMount(() => {
         updateNowPlaying();
-        
         if ("mediaSession" in navigator){
             navigator.mediaSession.setActionHandler("pause", togglePlayPause);
             navigator.mediaSession.setActionHandler("play", togglePlayPause);
         }
+        syncSources()
+        setSources()
     });
 
     onDestroy(() => {
         clearTimeout(timeoutID)
     })
-
 </script>
-
-<svelte:head>
-    <title>{currentStationData.channel_name}</title>
-    <link rel="icon" href="/visual-assets/logos/{currentStation}.webp" />
-</svelte:head>
 
 <div class="player">
     <div class="channel-info">
         <h2 style="padding-top:0.5ch;">{currentStationData.channel_name}</h2>
-        <img class="logo" src="/visual-assets/logos/{currentStation}.webp" alt={currentStation}>
+        <img class="logo" src="/src/lib/assets/logos/{currentStation}.webp" alt={currentStation}>
         <p>Genre: {currentStationData.genre}</p>
         <p>Host: {currentStationData.host}</p>
     </div>
@@ -98,24 +109,20 @@
     <div class="controls">
         <div class="buttons">
             <button onclick={() => goto("/")}>
-                <img src="/visual-assets/buttons/back.webp" alt="Back">
+                <img src="/src/lib/assets/buttons/back.webp" alt="Back">
             </button>
     
             <button onclick={togglePlayPause}>
-                <img src="/visual-assets/buttons/{!isAudio || isPaused}.webp" alt="{(!isAudio || isPaused) ? 'Play' : 'Pause'}">
+                <img src="/src/lib/assets/buttons/{isPaused}.webp" alt="{(isPaused) ? 'Play' : 'Pause'}">
             </button>
         </div>
         <input type="range" style="padding-bottom: 1ch;" min="0" max="1" step="0.01" bind:value={playerVolume}>
     </div>
 </div>
 
-{#if isAudio}
-    <audio bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused} autoplay>
-        <source src={getAudioSrc("ogg")}>
-        <source src={getAudioSrc("mp3")}>
-    </audio>
-{/if}
+<audio bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused} onplay={syncSources} autoplay> </audio>
+
 
 <style lang="scss">
-    @use "../../player.scss";
+    @use "player.scss";
 </style>

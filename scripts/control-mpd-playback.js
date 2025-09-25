@@ -20,10 +20,11 @@ let lastCategory = "";
 // get all playable categories from the metadata file
 // then get their probability weights using their length.
 // Weather and Time of Day don't have length. they will be replaced with chance of 1 part. We want these to be pretty rare so it doesn't really matter.
+// Test: We are squaring the lengths of the arrays to decrease the frequency of certain tracks, like Caller, since they kept repeating
 const categories = Object.keys(channelMetadata);
 if (categories.includes("Bridge Announcement")) categories.splice(categories.indexOf("Bridge Announcement"), 1);
 const weights = Object.fromEntries(
-    categories.map(cat => [cat, channelMetadata[cat]?.length ?? 1])
+    categories.map(cat => [cat, (channelMetadata[cat]?.length ?? 1)**2])
   );
 
 // To make playback more radio-like, we shuffle tracks in each category on initial run
