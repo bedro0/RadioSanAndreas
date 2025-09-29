@@ -29,7 +29,6 @@
 
     const togglePlayPause = () => {
         isPaused = !isPaused
-        console.log(playerObj)
     }
 
     let allowSetSources = $state(true);
@@ -46,11 +45,11 @@
         setTimeout(()=>{allowSetSources=true}, 2000)
     }
     const setSources = () => {
-        if(playerObj.canPlayType("audio/ogg")) {
-            playerObj.setAttribute("src", sources.ogg);
-        }
-        else if (playerObj.canPlayType("audio/mpeg")){
+        if (playerObj.canPlayType("audio/mpeg")){
             playerObj.setAttribute("src", sources.mp3)
+        }
+        else if(playerObj.canPlayType("audio/ogg")) {
+            playerObj.setAttribute("src", sources.ogg);
         }
     }
 
@@ -77,8 +76,8 @@
     onMount(() => {
         updateNowPlaying();
         if ("mediaSession" in navigator){
-            navigator.mediaSession.setActionHandler("pause", togglePlayPause);
-            navigator.mediaSession.setActionHandler("play", togglePlayPause);
+            navigator.mediaSession.setActionHandler("pause", ()=>{isPaused=true});
+            navigator.mediaSession.setActionHandler("play", ()=>{isPaused = false});
         }
         syncSources()
         setSources()
@@ -108,10 +107,6 @@
 
     <div class="controls">
         <div class="buttons">
-            <button onclick={() => goto("/")}>
-                <img src="/assets/buttons/back.webp" alt="Back">
-            </button>
-    
             <button onclick={togglePlayPause}>
                 <img src="/assets/buttons/{isPaused}.webp" alt="{(isPaused) ? 'Play' : 'Pause'}">
             </button>
@@ -120,7 +115,7 @@
     </div>
 </div>
 
-<audio bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused} onplay={syncSources} autoplay> </audio>
+<audio bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused} onplay={syncSources} autoplay></audio>
 
 
 <style lang="scss">

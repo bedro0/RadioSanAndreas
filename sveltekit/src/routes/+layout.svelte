@@ -14,8 +14,8 @@
 
     </div>
     <div id="left">
-        <a href="/blog">blog</a>
         <a href="/about">about</a>
+        <a href="/blog">blog</a>
         <a href="https://github.com/bedro0/RadioSanAndreas">github</a>
     </div>
 </nav>
