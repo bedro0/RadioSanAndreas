@@ -16,8 +16,10 @@
     let remainingTime = $state(0);
     let timeoutID = $state();
 
+    let radioStatic = $state();
     let playerObj = $state();
     let playerVolume = $state(browser && localStorage.getItem("volume") || 0.5);
+    let staticVolume = playerVolume/2;
 
     let isSong = $derived(["Intro", "Mid", "Outro"].some(suffix => nowPlaying.path.includes(suffix)))
     $effect(() => {
@@ -73,6 +75,17 @@
         }
     }
 
+    const playStatic = async () => {
+        radioStatic.src = (()=>{
+            var randBit = Math.floor(Math.random() * 2) + 1;
+            return new String("/assets/radio-static/"+randBit+".wav")
+        })()
+        console.log(radioStatic.src);
+        radioStatic.play()
+        await new Promise (resolve => radioStatic.onended = resolve);
+        playerObj.play();
+    }
+
     onMount(() => {
         updateNowPlaying();
         if ("mediaSession" in navigator){
@@ -81,6 +94,7 @@
         }
         syncSources()
         setSources()
+        playStatic();
     });
 
     onDestroy(() => {
@@ -115,7 +129,8 @@
     </div>
 </div>
 
-<audio bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused} onplay={syncSources} autoplay></audio>
+<audio bind:this={playerObj} bind:volume={playerVolume} bind:paused={isPaused} onplay={syncSources} preload="auto"></audio>
+<audio bind:this={radioStatic} bind:volume={staticVolume} preload="auto"></audio>
 
 
 <style lang="scss">

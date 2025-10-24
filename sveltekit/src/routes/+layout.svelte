@@ -10,7 +10,7 @@
 
 <nav>
     <div>
-        <a href="/"><img src={logoSA} alt="home" style="width: min(50%, 196px)"/></a>
+        <a href="/"><img src={logoSA} alt="home" style="width: 7em"/></a>
 
     </div>
     <div id="left">
@@ -25,9 +25,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1% 10%;
+        padding: 1% 1%;
         font-size: clamp(11pt, 1.5vw, 20pt);
-        margin:24px;
+        margin:0 5%;
         font-family:monospace;
         a{
             text-decoration:none;

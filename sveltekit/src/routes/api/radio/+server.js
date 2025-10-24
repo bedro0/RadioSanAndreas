@@ -10,8 +10,11 @@ export async function GET({ url }) {
 
     try {
         const response = await fetch(icecastUrl);
-
-        const contentType = format === "mp3" ? "audio/mpeg" : "application/ogg";
+        const formatReference = {
+            "mp3": "audio/mpeg",
+            "ogg": "audio/ogg"
+        }
+        const contentType = formatReference[format];
 
         return new Response(response.body, {
             status: 200,
