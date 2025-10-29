@@ -3,7 +3,6 @@ FROM node:22
 COPY ["sveltekit/", "/radiosa/sveltekit"]
 COPY ["config/", "/radiosa/config"]
 COPY ["scripts/", "/radiosa/scripts"]
-COPY ["metadata/", "/radiosa/metadata"]
 WORKDIR /radiosa
 RUN chmod -R u+rwx /radiosa
 RUN apt update 

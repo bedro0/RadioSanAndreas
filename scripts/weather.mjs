@@ -1,4 +1,4 @@
-{
+export default {
     "0": "Sunny",
     "1": "Sunny",
     "2": "Sunny",

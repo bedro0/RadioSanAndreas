@@ -1,7 +1,7 @@
 // Modifies variable patterns inside icecast.xml to match environment variables
 
-const fs = require("fs");
-const Chance = require ("chance");
+import fs from "fs";
+import Chance from "chance";
 const chance = new Chance();
 
 const patternsToReplace = ["HOSTNAME", "DISPLAY_ADMIN", "ADMIN_USER"]
@@ -12,11 +12,11 @@ const passwordsToReplace = {
 }
 
 let icecastConfigFile = fs.readFileSync( "../config/icecast.xml", "utf-8");
-for(pattern of patternsToReplace){
+for(let pattern of patternsToReplace){
     icecastConfigFile=icecastConfigFile.replaceAll(`%${pattern}%`, process.env[pattern]);
     console.log(`Changed %${pattern}% to ${process.env[pattern]} in Icecast config.`);
 }
-for(passwordPattern in passwordsToReplace){
+for(let passwordPattern in passwordsToReplace){
     if(passwordsToReplace[passwordPattern] === ""){
         passwordsToReplace[passwordPattern] = chance.string({ length:16, casing: 'upper', alpha: true, numeric: true });
     }

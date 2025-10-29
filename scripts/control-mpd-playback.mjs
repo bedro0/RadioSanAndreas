@@ -1,67 +1,65 @@
-const MPC = require("mpc-js").MPC;
-const client = new MPC();
+import { MPC } from "mpc-js";
+import Chance from "chance";
+import weatherCodes from "./weather.mjs";
 
-const Chance = require("chance");
+const mpdClient = new MPC();
 const chance = new Chance();
-const weatherCodes = require("./weather.json");
 
 // Local sockets are defined by the name of their respective stations
-const channelAlias = process.env.CHANNEL_ALIAS;
-
-// channelMetadata contains metadata about tracks contained in the radio channel program
-const channelMetadata = require(`../metadata/${channelAlias}.json`);
-// stationData contains name, host, and supposed real life location of the radio station, etc.
-const stationData = (require("./all-stations.json"))[channelAlias];
+const channelAlias = process.env.CHANNEL_ALIAS
+// channelMetadata contains metadata about tracks contained in the radio channel program, as well as name, host, and supposed real life location of the radio station, etc.
+const channelMetadata = await import("./metadata.mjs").then(obj => obj[channelAlias]);
 
 // This variable tracks how many tracks ago a song (or a talk show in case of WCTR) was played.
 let songHasNotBeenPlayedFor = 0;
-let lastCategory = "";
+let lastCategory;
 
-// get all playable categories from the metadata file
-// then get their probability weights using their length.
+// get all playable categories from the metadata file then get their probability weights using their length.
 // Weather and Time of Day don't have length. they will be replaced with chance of 1 part. We want these to be pretty rare so it doesn't really matter.
 // Test: We are squaring the lengths of the arrays to decrease the frequency of certain tracks, like Caller, since they kept repeating
-const categories = Object.keys(channelMetadata);
-if (categories.includes("Bridge Announcement")) categories.splice(categories.indexOf("Bridge Announcement"), 1);
+const categoriesFilter = new Set(["Song", "Caller", "DJ", "ID", "Weather", "Time of Day", "Show", "Advert"]);
+const categories = (new Set(Object.keys(channelMetadata)).intersection(categoriesFilter));
 const weights = Object.fromEntries(
-    categories.map(cat => [cat, (channelMetadata[cat]?.length ?? 1)**2])
-  );
+    [...categories].map(cat => [cat, (channelMetadata[cat]?.length ?? 1)**2])
+);
 
 // To make playback more radio-like, we shuffle tracks in each category on initial run
 // (except for weather and ToD ones, they don't need that).
-const excludedCategories = ["Weather", "Time of Day"];
 categories
-  .filter(cat => !excludedCategories.includes(cat))
-  .forEach(cat => {
-    channelMetadata[cat] = chance.shuffle(channelMetadata[cat]);
-  });
-
-async function main(){
-    client.connectUnixSocket(`/radiosa/socks/${channelAlias}`);
-    console.log(`Connected to MPD socket: ${stationData.channel_name}.`);
-    // Enable consume. This allows tracks to be removed from the player queue after they are played. Prevents from accumulating backlog of tracks
-    await client.playbackOptions.setConsume(true);
-    console.log(`MPD Consume enabled for ${stationData.channel_name}.`);
-
-    while(true){
-        selectedTrack = await getNextTrack();
-        for (elem of selectedTrack){
-            const fullPath = (`/radiosa/music/${elem}`);
-            console.log(`Adding ${fullPath} to the queue.`)
-            await client.currentPlaylist.add(fullPath);
-        }
-        const sleepFor = await remainingTime();
-        await client.playback.play();
-
-        console.log(`Sleeping for ${sleepFor} seconds.`);
-        await new Promise(resolve => setTimeout(resolve, sleepFor * 1000));
+    .difference(new Set(["Weather", "Time of Day"]))
+    .forEach(cat => {
+        channelMetadata[cat] = chance.shuffle(channelMetadata[cat]);
     }
+);
+
+mpdClient.connectUnixSocket(`/radiosa/socks/${channelAlias}`);
+console.log(`Connected to MPD socket: ${channelMetadata.channel_name}.`);
+// Enable consume. This allows tracks to be removed from the player queue after they are played. Prevents from accumulating backlog of tracks
+await mpdClient.playbackOptions.setConsume(true);
+console.log(`MPD Consume enabled for ${channelMetadata.channel_name}.`);
+
+while(true){
+    let selectedTrack = await getNextTrack();
+
+    for (const elem of selectedTrack){
+        const fullPath = (`/radiosa/music/${elem}`);
+        await mpdClient.currentPlaylist.add(fullPath);
+        console.log(`Added ${fullPath} to the queue.`)
+    }
+
+    await mpdClient.playback.play();
+    
+    const sleepFor = await remainingTime();
+    console.log(`Sleeping for ${sleepFor} seconds.`);
+    
+    // Wait for that duration before adding more tracks
+    await new Promise(resolve => setTimeout(resolve, sleepFor * 1000));
 }
 
 async function remainingTime(){
     // Returns remaining duration of the queue (not including the first track in the queue)
 
-    let fullQueue = await client.currentPlaylist.playlistInfo();
+    let fullQueue = await mpdClient.currentPlaylist.playlistInfo();
     let totalPlaytime = 0;
     for (let track of fullQueue.slice(1)){
         totalPlaytime += track.duration;
@@ -69,6 +67,7 @@ async function remainingTime(){
     return totalPlaytime;
 
 }
+
 
 /*
 * getNextCategory() decides which category of tracks is played next
@@ -110,7 +109,7 @@ async function getNextTrack(){
             continue;
         }
 
-        if(selectedCategory !== categories[0]) songHasNotBeenPlayedFor++;
+        if ( !( ["Song", "Show"].includes(selectedCategory) ) ) songHasNotBeenPlayedFor++;
         else songHasNotBeenPlayedFor = 0;
 
         lastCategory = selectedCategory;
@@ -128,7 +127,9 @@ function getNextCategory(categorySet){
     let categoriesToChooseFrom = Array.from(categorySet.difference(categoriesToRemove));
     let chancesToChooseWith = categoriesToChooseFrom.map(cat => weights[cat]);
     
-    if (songHasNotBeenPlayedFor >1) selectedCategory = categories[0];
+    if (songHasNotBeenPlayedFor >1){
+        [selectedCategory] = [...(new Set(["Song", "Show"]).intersection(categorySet))];
+    }
     else selectedCategory = chance.weighted(categoriesToChooseFrom, chancesToChooseWith);
 
     return selectedCategory;
@@ -147,13 +148,8 @@ function getRandomBitTrack(selectedCategory){
 async function getPacificTime(){
     // get current time of day in Pacific Timezone
     // fetch details from worldtimeapi
-    let currentPacificTime;
-    try {
-        currentPacificTime = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles").then((response) => response.json());
-    }
-    catch (error){
-        return null;
-    }
+    let currentPacificTime = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles").then((response) => response.json()).catch(e => null);
+
     /* 
     calculate current fraction of the day by adding the offset (negative number) to the Unix Timestamp (Greenwich Time)
     Then calculate daylight savings time ONLY IF daylight savings is true
@@ -161,7 +157,7 @@ async function getPacificTime(){
     */
     const currentTimeOfDay = (currentPacificTime.unixtime + currentPacificTime.raw_offset + (currentPacificTime.dst && currentPacificTime.dst_offset))%86400;
 
-    if (currentTimeOfDay < 10800 || currentTimeOfDay >= 75600) return "Night";
+    if (currentTimeOfDay >= 75600 || currentTimeOfDay < 10800) return "Night";
     if (currentTimeOfDay < 43200) return "Morning";
     if (currentTimeOfDay < 54000) return "Afternoon";
     return "Evening";
@@ -172,14 +168,14 @@ async function getNextWeather(){
     // the location is based on an estimation of where radio stations are located in game and what that location corresponds to in real life.
     let currentWeather;
     try {
-        currentWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${stationData.latitude}&longitude=${stationData.longitude}&current=weather_code`).then((response) => response.json());
+        currentWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${channelMetadata.latitude}&longitude=${channelMetadata.longitude}&current=weather_code`).then((response) => response.json());
     }
     catch (error){
         return null;
     }
-    timeOfDay = await getPacificTime();
+    let timeOfDay = await getPacificTime();
     // only return track if the time is morning or afternoon, so radio hosts don't say "sunny" at night or something
-    isMorningorAfternoon = (timeOfDay === "Morning" || timeOfDay === "Afternoon");
+    let isMorningorAfternoon = (timeOfDay === "Morning" || timeOfDay === "Afternoon");
     if (timeOfDay === null || (weatherCodes[currentWeather.current.weather_code] === undefined) || !isMorningorAfternoon){
         return null;
     }
@@ -191,7 +187,7 @@ async function getNextWeather(){
 
 // returns a track based on the time provided by getPacificTime function
 async function getTimeTrack(){
-    timeOfDay = await getPacificTime();
+    let timeOfDay = await getPacificTime();
 
     if(channelMetadata["Time of Day"][timeOfDay] === undefined){
         return null;
@@ -200,5 +196,3 @@ async function getTimeTrack(){
         return (chance.pickone(channelMetadata["Time of Day"][timeOfDay]));
     }
 }
-
-main();
