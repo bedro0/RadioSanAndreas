@@ -5,25 +5,25 @@ COPY ["config/", "/radiosa/config"]
 COPY ["scripts/", "/radiosa/scripts"]
 WORKDIR /radiosa
 RUN chmod -R u+rwx /radiosa
-RUN apt update 
+RUN apt update
 RUN apt install -y \
-icecast2 \
-mpd
+    icecast2 \
+    mpd
 
 RUN npm install \
-vite \
-chance \
-mpc-js
+    vite \
+    chance \
+    mpc-js
 
 RUN npm install -D sass-embedded \
-@sveltejs/adapter-node
+    @sveltejs/adapter-node
 
 WORKDIR /radiosa/sveltekit/
 
 ARG DEV_MODE="false"
 
 RUN npm update
-RUN if [ "$DEV_MODE" = "false" ]; then npm run build; fi
+RUN if [ "$DEV_MODE" = "false" ]; then npm run build; apt install -y vim mpc; fi
 
 # Default Environmental Variables
 ENV DEV_MODE_ENABLED=$DEV_MODE

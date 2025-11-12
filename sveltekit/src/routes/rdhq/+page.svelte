@@ -4,7 +4,7 @@
 <style lang="scss">
     @use "$lib/blog.scss";
 </style>
-<div id="text">
+<div class="text">
     <h2>Randomized Dual-Head Queue</h2>
     <p>
         Imagine you have a list, a playlist if you will. Playlist with limited amount of entries in it. How could you make a music player keep playing this playlist for an indefinite amount of time?
@@ -45,7 +45,7 @@
         <li><code>songQueue = [..., b, d, a, b, ...]</code></li>
         <li><code>songQueue = [..., b, c, d, a, b, ...]</code></li>
     </ul>
-    <p>Note: A song being repeated with 3 tracks in between is guaranteed to happen when working with only 4 elements, but the probability stays the same as playlist size is scaled up.</p>
+    <p>Note: A song being repeated with 3 tracks in between is guaranteed to happen when working with only 4 elements, but as playlist size is scaled up, the probability of a track repeating too soon stays disproportionately high.</p>
     <h3>Attempt #3 (Randomized Queue)</h3>
     <p>
         Let's start with an array of 6 elements this time. <br>
