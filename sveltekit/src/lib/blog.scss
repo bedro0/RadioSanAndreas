@@ -2,14 +2,15 @@ $bg-color: #01011a;
 :global(body) {
     background-color: $bg-color;
 }
-#text{
+.text{
     color:rgb(200, 255, 255);
     font-family:Roboto, Arial, Helvetica, sans-serif;
     margin: 0 10%;
+    margin-bottom: 128px;
     width: min(800px, 80%);
     justify-items:left;
     overflow-wrap: break-word;
-    p, ul, ol{
+    p, ul, ol, select, button, code{
         font-size:larger;
         line-height: 1.5;
     } 
