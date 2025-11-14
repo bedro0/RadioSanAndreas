@@ -1,7 +1,7 @@
 import Chance from "chance";
 const chance = new Chance();
 export const getRandomTrackSource = async (station, category) => {
-    const channelMetadata = await import("/radiosa/scripts/metadata.mjs").then(obj=>obj[station])
+    const channelMetadata = await import("/radiosa/scripts/metadata.mjs").then(obj=>obj[station].Content)
     let trackList = [];
     switch(category){
         case "Song (Intro)":

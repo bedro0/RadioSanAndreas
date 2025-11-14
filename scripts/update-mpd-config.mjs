@@ -1,7 +1,7 @@
 import fs from "fs";
 const icecastPasswords = await import("./pass.json", { with: { type: "json" } }).then(obj=>obj.default);
 const channelAlias=process.env.CHANNEL_ALIAS;
-const channelMetadata = await import("./metadata.mjs").then(obj => obj[channelAlias]);
+const channelMetadata = await import("./metadata.mjs").then(obj => obj[channelAlias].Identity);
 const replacePatternWith = {
     "CHANNEL_NAME": channelMetadata.channel_name,
     "CHANNEL_ALIAS": channelAlias,

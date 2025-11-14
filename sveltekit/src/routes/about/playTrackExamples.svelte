@@ -21,7 +21,7 @@
 <div class="text" style="margin: 0">
     {#await import("/radiosa/scripts/metadata.mjs").then(
         async (obj) => {
-            channelMetadata = obj[selectedStation];
+            channelMetadata = obj[selectedStation].Content;
             return await setChannelCategories(channelMetadata);
         })}
     <p>Loading the player...</p>

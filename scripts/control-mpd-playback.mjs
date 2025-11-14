@@ -8,7 +8,7 @@ const chance = new Chance();
 // Local sockets are defined by the name of their respective stations
 const channelAlias = process.env.CHANNEL_ALIAS
 // channelMetadata contains metadata about tracks contained in the radio channel program, as well as name, host, and supposed real life location of the radio station, etc.
-const channelMetadata = await import("./metadata.mjs").then(obj => obj[channelAlias]);
+const channelMetadata = await import("./metadata.mjs").then(obj => obj[channelAlias].Content);
 
 // This variable tracks how many tracks ago a song (or a talk show in case of WCTR) was played.
 let songHasNotBeenPlayedFor = 0;
