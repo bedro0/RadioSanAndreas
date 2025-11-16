@@ -23,7 +23,7 @@ WORKDIR /radiosa/sveltekit/
 ARG DEV_MODE="false"
 
 RUN npm update
-RUN if [ "$DEV_MODE" = "false" ]; then npm run build; apt install -y vim mpc; fi
+RUN if [ "$DEV_MODE" = "false" ]; then npm run build; else apt install -y vim mpc; fi
 
 # Default Environmental Variables
 ENV DEV_MODE_ENABLED=$DEV_MODE
