@@ -10,7 +10,7 @@
     import { page } from "$app/stores";
     import { browser } from "$app/environment";
     const currentStation = $page.params.channel;
-    const currentStationData = data.currentStationObject;
+    const currentStationData = data.currentStationObject.Identity;
 
     let nowPlaying = $state({path: ""});
     let remainingTime = $state(0);
@@ -19,7 +19,7 @@
     let radioStatic = $state();
     let playerObj = $state();
     let playerVolume = $state(browser && localStorage.getItem("volume") || 0.5);
-    let staticVolume = playerVolume/2;
+    let staticVolume = $derived(playerVolume/2);
 
     let isSong = $derived(["Intro", "Mid", "Outro"].some(suffix => nowPlaying.path.includes(suffix)))
     $effect(() => {

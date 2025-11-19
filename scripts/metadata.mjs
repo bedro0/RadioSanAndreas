@@ -559,7 +559,7 @@ export const csr = {
     }
 }
 export const kdst = {
-    "Idendity": {
+    "Identity": {
         "channel_name":"K-DST",
         "folder":"K-DST",
         "genre":"Classic Rock",
