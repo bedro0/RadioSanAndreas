@@ -1,12 +1,11 @@
 import { MPC } from "mpc-js";
+import { json, error } from "@sveltejs/kit";
 
 export async function GET({ url }){
     const stationName = url.searchParams.get("station");
     const client = new MPC();
     if (stationName===null){
-        return new Response("You are not supposed to be here!",
-        {headers: {"Content-Type": "string"}
-        });
+        throw error(400, "Invalid request");
     }
     client.connectUnixSocket(`/radiosa/socks/${stationName}`);
     const nowPlaying = await client.status.currentSong();
@@ -15,7 +14,5 @@ export async function GET({ url }){
     await client.disconnect();
     const remainingTime = (Math.max(0, status.duration - status.elapsed) + 4);
 
-    return new Response(JSON.stringify({ nowPlaying, remainingTime }), {
-        headers: { "Content-Type": "application/json" }
-    });
+    return json({ nowPlaying, remainingTime});
 }

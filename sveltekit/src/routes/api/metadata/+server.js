@@ -1,5 +1,5 @@
 import { applyAction } from "$app/forms";
-import { error } from "@sveltejs/kit";
+import { error, json } from "@sveltejs/kit";
 
 const all_stations=["bouncefm", "csr", "kdst", "kjah", "krose", "mastersounds", "playbackfm", "radiols", "radiox", "sfur", "wctr"];
 
@@ -27,14 +27,5 @@ export async function GET({ url }){
         response = await import("/radiosa/scripts/metadata.mjs").then(obj => obj[station][metadataType]);
     }
 
-    response = JSON.stringify(response);
-    return new Response(
-        response,
-        {
-            status: 200,
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }
-    )
+    return json(response);
 }

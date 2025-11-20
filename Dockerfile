@@ -26,7 +26,7 @@ RUN npm update
 RUN if [ "$DEV_MODE" = "false" ]; then \
         npm run build; \
     else \
-        apt install -y vim mpc; \
+        apt install -y vim mpc tmux; \
     fi
 
 # Default Environmental Variables
