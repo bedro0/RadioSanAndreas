@@ -9,6 +9,7 @@
     import { goto } from "$app/navigation";
     import { page } from "$app/stores";
     import { browser } from "$app/environment";
+    import SameStationListeners from "./SameStationListeners.svelte";
     const currentStation = $page.params.channel;
     const currentStationData = data.currentStationObject.Identity;
 
@@ -80,7 +81,6 @@
             var randBit = Math.floor(Math.random() * 2) + 1;
             return new String("/assets/radio-static/"+randBit+".wav")
         })()
-        console.log(radioStatic.src);
         radioStatic.play()
         await new Promise (resolve => radioStatic.onended = resolve);
         playerObj.play();
@@ -109,6 +109,7 @@
         <p>Genre: {currentStationData.genre}</p>
         <p>Host: {currentStationData.host}</p>
     </div>
+    <SameStationListeners/>
     <div class="now-playing" style="margin-bottom:0.5ch;">
         {#if isSong}
             <h3>NOW PLAYING</h3>
