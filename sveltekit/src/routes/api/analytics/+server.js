@@ -20,7 +20,7 @@ async function insertListener(userAddressHash, path){
 }
 
 export async function GET(){
-    return json(uniqueListeners);
+    return json(Object.keys(uniqueListeners));
 }
 
 export async function POST({ request, getClientAddress }){
