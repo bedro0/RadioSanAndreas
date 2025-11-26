@@ -104,8 +104,7 @@
 
 <div class="player">
     <div class="channel-info">
-        <h2 style="padding-top:0.5ch;">{currentStationData.channel_name}</h2>
-        <img class="logo" src="/assets/logos/{currentStation}.webp" alt={currentStation}>
+        <img class="logo" src="/assets/logos/{currentStation}.webp" alt={currentStationData.channel_name}>
         <p>Genre: {currentStationData.genre}</p>
         <p>Host: {currentStationData.host}</p>
     </div>

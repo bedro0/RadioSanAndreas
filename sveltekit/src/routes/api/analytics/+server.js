@@ -3,6 +3,7 @@ import { json, error } from "@sveltejs/kit";
 import { sha256 } from "$lib/sha256.js"
 
 let uniqueListeners = {};
+let initialDate;
 
 async function insertListener(userAddressHash, path){
     if (uniqueListeners[userAddressHash]){
@@ -20,10 +21,17 @@ async function insertListener(userAddressHash, path){
 }
 
 export async function GET(){
-    return json(Object.keys(uniqueListeners));
+    if (!initialDate){
+        initialDate = new Date();
+    }
+    const responseString = `Total amount of unique IPs since ${initialDate.toISOString()} is ${Object.keys(uniqueListeners).length}`;
+    return json(responseString);
 }
 
 export async function POST({ request, getClientAddress }){
+    if (!initialDate){
+        initialDate = new Date();
+    }
     const { currentUserURLPath } = await request.json();
     const clientIP = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || getClientAddress();
     const addressHash = await sha256(clientIP);
