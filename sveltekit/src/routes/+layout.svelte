@@ -3,10 +3,12 @@
     import logoSA from "$lib/assets/san_andreas_logo.webp"
     import ActiveUsers from "./ActiveUsers.svelte";
     import { page } from "$app/stores"
-    import { onMount, setContext } from "svelte";
+     import { onMount, setContext, untrack } from "svelte";
     import { POLLING_RATE_MS } from "$lib/pollingRate.js"
 	let { children } = $props();
 
+    let userAnalyticsPollingIntervalID = $state();
+    let currentPath = $derived($page.url.pathname)
     let userAnalytics = $state({})
     let activeUsers = $derived(userAnalytics.activeUsers);
     const returnUserAnalytics = () => userAnalytics;
@@ -23,14 +25,22 @@
 
     async function analyticsLoop(){
         while (true){
-            await updateUserAnalytics({ urlPath: $page.url.pathname});
             await new Promise((resolve)=>{
-                setTimeout(resolve, POLLING_RATE_MS)
+                userAnalyticsPollingIntervalID = setTimeout(()=>{
+                    updateUserAnalytics({ urlPath: currentPath});
+                    resolve();
+                },
+                    POLLING_RATE_MS
+                )
             })
         }
     }
 
-    onMount(() => {
+    $effect(()=>{
+        untrack(()=>{
+            if (userAnalyticsPollingIntervalID) clearInterval(userAnalyticsPollingIntervalID)
+        })
+        updateUserAnalytics({ urlPath: currentPath })
         analyticsLoop();
     })
 </script>
