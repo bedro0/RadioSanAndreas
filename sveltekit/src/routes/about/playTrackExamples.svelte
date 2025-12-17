@@ -1,19 +1,21 @@
 <script>
-    import { getRandomTrackSource, setTrackSource } from "./trackSource.js";
     const {selectedStation} = $props();
-    const categoriesFilter = new Set(["DJ", "ID", "Song", "Caller", "Weather", "Time of Day", "Advert", "Bridge Announcement"]);
     let channelMetadata = $state();
     let audioPlayer=$state();
     let playerVolume=$state();
 
     const setChannelCategories = async (channelMetadata) => {
-        let categories=new Set(Object.keys(channelMetadata)).intersection(categoriesFilter);
+        let categories=new Set(Object.keys(channelMetadata));
         if (categories.delete("Song")){
             categories.add("Song (Intro)");
             categories.add("Song (Outro)")
         }
         return categories;
     }
+    export const setTrackSource = async (station, category, player) => {
+    player.src = (`/api/getTrackByCategory?station=${encodeURIComponent(station)}&category=${category}`);
+    player.play();
+}
 </script>
 <style lang="scss">
     @use "$lib/blog.scss";
@@ -35,7 +37,7 @@
             <div style="display: flex;">
             {#each categories as cat}
                 <button 
-                onclick={ async ()=>{ setTrackSource(await getRandomTrackSource(selectedStation, cat), audioPlayer) } } 
+                onclick={ async ()=>{ setTrackSource(selectedStation, cat, audioPlayer) } } 
                 style="margin: 0 0.5%; width: min(50%, 200px)">
                     {cat}
                 </button><br>
